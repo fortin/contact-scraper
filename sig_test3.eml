@@ -1,0 +1,531 @@
+Received: from LNXP265MB0410.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:9::21) by
+ LNXP265MB0410.GBRP265.PROD.OUTLOOK.COM with HTTPS via
+ LO2P265CA0153.GBRP265.PROD.OUTLOOK.COM; Wed, 23 Jan 2019 14:03:37 +0000
+Received: from CWLP265CA0158.GBRP265.PROD.OUTLOOK.COM (2603:10a6:401:52::26)
+ by LNXP265MB0410.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:1d::19) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1537.29; Wed, 23 Jan
+ 2019 14:03:36 +0000
+Received: from HE1EUR02FT026.eop-EUR02.prod.protection.outlook.com
+ (2a01:111:f400:7e05::202) by CWLP265CA0158.outlook.office365.com
+ (2603:10a6:401:52::26) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1558.17 via Frontend
+ Transport; Wed, 23 Jan 2019 14:03:36 +0000
+Authentication-Results: spf=pass (sender IP is 163.1.154.215)
+ smtp.mailfrom=maillist.ox.ac.uk; UniOxfordNexus.mail.onmicrosoft.com;
+ dkim=none (message not signed)
+ header.d=none;UniOxfordNexus.mail.onmicrosoft.com; dmarc=bestguesspass
+ action=none header.from=lmh.ox.ac.uk;
+Received-SPF: Pass (protection.outlook.com: domain of maillist.ox.ac.uk
+ designates 163.1.154.215 as permitted sender)
+ receiver=protection.outlook.com; client-ip=163.1.154.215;
+ helo=smtp.nexus.ox.ac.uk;
+Received: from smtp.nexus.ox.ac.uk (163.1.154.215) by
+ HE1EUR02FT026.mail.protection.outlook.com (10.152.10.130) with Microsoft SMTP
+ Server (version=TLS1_0, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.1558.11 via Frontend Transport; Wed, 23 Jan 2019 14:03:36 +0000
+Received: from relay13.mail.ox.ac.uk (129.67.1.166) by HUB04.ad.oak.ox.ac.uk
+ (163.1.154.215) with Microsoft SMTP Server (TLS) id 14.3.382.0; Wed, 23 Jan
+ 2019 14:03:10 +0000
+Received: from dramatic-exit.it.ox.ac.uk ([163.1.160.180])	by
+ relay13.mail.ox.ac.uk with esmtps (TLS1.2:DHE_RSA_AES_128_CBC_SHA1:128)	(Exim
+ 4.89)	(envelope-from
+ <bounce+antonio.fortin==a==lmh.ox.ac.uk==lmh-scr@maillist.ox.ac.uk>)	id
+ 1gmJ7W-0006mN-hg	for antonio.fortin@lmh.ox.ac.uk; Wed, 23 Jan 2019 14:03:10
+ +0000
+Received: from sympa by dramatic-exit.it.ox.ac.uk with local (Exim 4.80)
+	(envelope-from
+ <bounce+antonio.fortin==a==lmh.ox.ac.uk==lmh-scr@maillist.ox.ac.uk>)	id
+ 1gmJ7W-0007gB-17	for antonio.fortin@lmh.ox.ac.uk; Wed, 23 Jan 2019 14:03:10
+ +0000
+Received: from relay12.mail.ox.ac.uk ([129.67.1.163])	by
+ recent-convert.it.ox.ac.uk with esmtp (Exim 4.80)	(envelope-from
+ <headofcatering@lmh.ox.ac.uk>)	id 1gmJ7P-00049s-An	for
+ lmh-scr@maillist.ox.ac.uk; Wed, 23 Jan 2019 14:03:03 +0000
+Received: from hub03.nexus.ox.ac.uk ([163.1.154.216]
+ helo=HUB03.ad.oak.ox.ac.uk)	by relay12.mail.ox.ac.uk with esmtps
+ (TLS1.0:RSA_AES_128_CBC_SHA1:128)	(Exim 4.89)	(envelope-from
+ <headofcatering@lmh.ox.ac.uk>)	id 1gmJ7O-0006hA-ft	for scr@lmh.ox.ac.uk; Wed,
+ 23 Jan 2019 14:03:03 +0000
+Received: from GBR01-CWL-obe.outbound.protection.outlook.com (104.47.20.54) by
+ smtp.nexus.ox.ac.uk (163.1.154.216) with Microsoft SMTP Server (TLS) id
+ 14.3.382.0; Wed, 23 Jan 2019 14:03:01 +0000
+Received: from CWXP265MB1061.GBRP265.PROD.OUTLOOK.COM (20.176.44.138) by
+ CWXP265MB0472.GBRP265.PROD.OUTLOOK.COM (10.164.185.21) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1537.27; Wed, 23 Jan 2019 14:03:00 +0000
+Received: from CWXP265MB1061.GBRP265.PROD.OUTLOOK.COM
+ ([fe80::e937:9a7d:fcd5:24]) by CWXP265MB1061.GBRP265.PROD.OUTLOOK.COM
+ ([fe80::e937:9a7d:fcd5:24%4]) with mapi id 15.20.1558.016; Wed, 23 Jan 2019
+ 14:03:00 +0000
+From: "Tom Noakes (LMH Catering Manager)" <headofcatering@lmh.ox.ac.uk>
+To: "scr@lmh.ox.ac.uk" <scr@lmh.ox.ac.uk>
+Subject: Catering on the Twittersphere
+Thread-Topic: Catering on the Twittersphere
+Thread-Index: AdSzJFMVPx9SPOD3SjyaJ8g4B8D7jA==
+Date: Wed, 23 Jan 2019 14:03:00 +0000
+Message-ID: <CWXP265MB1061B8512A6BC5C8AB65C976B6990@CWXP265MB1061.GBRP265.PROD.OUTLOOK.COM>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+Authentication-Results-Original: lmh.ox.ac.uk; dkim=none (message not signed)
+ header.d=none;lmh.ox.ac.uk; dmarc=none action=none header.from=lmh.ox.ac.uk;
+x-originating-ip: [129.67.114.33]
+x-ms-publictraffictype: Email
+X-Microsoft-Exchange-Diagnostics-untrusted:
+ 1;CWXP265MB0472;7:g2QKb1CQtBGZFUifp25SdWKM580a4Svo97QzVffNCLjcUAzgz9Ubj0O7ytFmnqDf9FJM7NePLFpBoTNjr8n8sx1xjDfi+d0Oz+LAMXDAAOIMmG1+c12FYlgYGEAY3pzXlcd+PMrpUP9RJPVJKu+Cgg==
+x-ms-exchange-antispam-srfa-diagnostics: SOS;
+X-MS-Office365-Filtering-Correlation-Id: 2bd8ea87-f3c2-4555-18c9-08d6813b917e
+X-Microsoft-Antispam-Untrusted:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(8989299)(5600110)(711020)(4605077)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(2017052603328)(7153060)(49563074)(7193020);SRVR:CWXP265MB0472;
+X-MS-TrafficTypeDiagnostic: CWXP265MB0472:|LNXP265MB0410:
+X-Forefront-Antispam-Report-Untrusted:
+ SFV:SKI;SFS:;DIR:INB;SFP:;SCL:-1;SRVR:CWXP265MB0472;H:CWXP265MB1061.GBRP265.PROD.OUTLOOK.COM;FPR:;SPF:None;LANG:en;
+X-Microsoft-Antispam-Message-Info-Original:
+ l4SCHo5VW6iOt4FypaRaFU2yjNBeagxWkL7LdCU0gWv1U7lZqyiqw90Aqe4IxDNvikiFYWhcnpWankSvXD6AC+YCIOYujjF0So1EGjTYHJcVL+3FhHlWn9QLwuuteIdCtwyU4aTglXqC6c+xELZCyIfAmb0zxi71MXYVZLWv9m9mlr7jVOH6Jyl+P2mM88mqtjJ0ste+4Ivotg4lf+skvWXGQCt6wErJ6Jq0g6Ap0Mhe8E5yWjtQbKz+T5ItWGDz/5Bq7GOG4S+yZu/PnSw2V1LGFAjmxWNO1/hB27Z6EOml53rbJ+IJLwHBf8BwCz09YsrP4ytk0g+hvCWzClXjEf2jxNoQ0epfgaPiddCaZnwgQrR9JnPfGvzwpXl+E6JD
+SpamDiagnosticOutput: 1:99
+x-ms-exchange-transport-crosstenantheadersstamped: CWXP265MB0472
+x-organizationheaderspreserved: CWXP265MB0472.GBRP265.PROD.OUTLOOK.COM
+x-crosspremisesheaderspromoted: HUB03.ad.oak.ox.ac.uk
+x-crosspremisesheadersfiltered: HUB03.ad.oak.ox.ac.uk
+Content-Type: multipart/related;
+	boundary="_007_CWXP265MB1061B8512A6BC5C8AB65C976B6990CWXP265MB1061GBRP_";
+	type="multipart/alternative"
+X-Oxmail-Spam-Status: score=0.0 tests=HTML_MESSAGE
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Oxmail-Spam-Level: /
+Reply-To: "Tom Noakes (LMH Catering Manager)" <headofcatering@lmh.ox.ac.uk>
+X-Loop: lmh-scr@maillist.ox.ac.uk
+X-Sequence: 36
+Errors-to: lmh-scr-return@maillist.ox.ac.uk
+Precedence: bulk
+List-Id: <lmh-scr.maillist.ox.ac.uk>
+List-Archive: <https://web.maillist.ox.ac.uk/ox/arc/lmh-scr>
+List-Help: <mailto:sympa@maillist.ox.ac.uk?subject=help>
+List-Owner: <mailto:lmh-scr-request@maillist.ox.ac.uk>
+List-Post: <mailto:lmh-scr@maillist.ox.ac.uk>
+List-Subscribe: <mailto:sympa@maillist.ox.ac.uk?subject=subscribe%20lmh-scr>
+List-Unsubscribe: <mailto:sympa@maillist.ox.ac.uk?subject=unsubscribe%20lmh-scr>
+X-Oxmail-Spam-Status: score=-1.0 tests=HTML_MESSAGE,MAILING_LIST_MULTI
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.0 MAILING_LIST_MULTI     Multiple indicators imply a widely-seen list
+                             manager
+X-Oxmail-Spam-Level:
+Return-Path: bounce+antonio.fortin==a==lmh.ox.ac.uk==lmh-scr@maillist.ox.ac.uk
+X-OrganizationHeadersPreserved: HUB04.ad.oak.ox.ac.uk
+X-MS-Exchange-Organization-ExpirationStartTime: 23 Jan 2019 14:03:36.3517
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 2bd8ea87-f3c2-4555-18c9-08d6813b917e
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-CrossPremisesHeadersPromoted:
+ HE1EUR02FT026.eop-EUR02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ HE1EUR02FT026.eop-EUR02.prod.protection.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ HE1EUR02FT026.eop-EUR02.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:163.1.154.215;IPV:NLI;CTRY:GB;EFV:NLI;SFV:NSPM;SFS:(2980300002)(3190300001)(199004)(189003)(76806002)(6306002)(74316002)(236005)(6636002)(54896002)(55016002)(54556002)(14454004)(966005)(19810500001)(2351001)(336012)(606006)(4006038)(486006)(74482002)(476003)(33656002)(116002)(126002)(42882007)(9686003)(9036002)(106466001)(26005)(246002)(84326002)(66926002)(102836004)(95636005)(156004)(7696005)(99286004)(260700001)(733005)(6116002)(790700001)(3846002)(76786011)(61614004)(106002)(7736002)(67866002)(66066001)(46656002)(1096003)(8936002)(1730700003)(43066004)(146002)(5640700003)(16586007)(8676002)(3450700001)(71190400001)(6506007)(25786009)(2501003)(6862004)(3480700005)(55176004)(356004)(99936001);DIR:INB;SFP:;SCL:1;SRVR:LNXP265MB0410;H:smtp.nexus.ox.ac.uk;FPR:;SPF:Pass;LANG:en;PTR:hub04.nexus.ox.ac.uk;A:1;MX:1;
+X-Microsoft-Exchange-Diagnostics:
+ 1;HE1EUR02FT026;1:sL5dSW5489fcnk54UR1+AmeiZFUptFARPeRYUeS1JPdJDQWKziaK2USMKzLuGA384/fpcxrwLKWEqFNTDORJkrUKpvcXhgHPbDWf8Zl5Yy9SsWYGJv9YxVHTgz02+NcRyWUgIYq8LyPU274ffK4qZpPHM8dOe2Z6ACfyRLTclI8=
+X-MS-Exchange-Organization-AuthSource: HUB04.ad.oak.ox.ac.uk
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-OriginatorOrg: nexus.ox.ac.uk
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ 9ff840f7-a5b3-4fad-adab-08d6813b7c4b
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(8989299)(5600110)(710020)(711020)(4605077)(4608076)(4709027)(4534185)(4627221)(201703031133081)(8559020)(8990200)(2017052603328)(7153060)(49563074)(7193020);SRVR:LNXP265MB0410;
+X-Microsoft-Exchange-Diagnostics:
+ 1;LNXP265MB0410;3:NtSUfuXS8P3xpfwutrQe5O6D+YIJzrVx4raNyIJe5UuqLfRhfrNpmc3JTrfMzpswXb9Zf/Ap+M/2OOeUMZA1L0LPpJ0gJVJ3/AH2X2TgGmCsb65BxL/1QfeeealTsyZ+adhO5x8AiJViEdcbPc1YTmXp9gJeGY51KatR8XrUEeC4AzME7vtKsLm3JgW2wdlngmGsV3nUcjDX38l7yVdewy3dseizLE3W3hFW/yINIZUTh+SCPdJzJtRaajS4U8ibZIfOxmNRwd/zovmbsZOdRQPM0ftBE9z61QbOneurp+rRKz0aWV6kGCPvEdRozwSnOLolYpAxSHdA243DPImZ83MnNPay2dLYRfbd0dOky7/eJz2SsMAZzbG/YANES7MD;25:iHdgk3uaQRUv0hpl+9B1TrURgCzYqLJprhe2AyR+7giv32ZVqn7Og5YTDCZdhGyDMFL/nH1LBl1CHI4VclsqHWgDGgMfGWDh37+HZXj2wqDrYNHj7R0cJE256Nv76rtR64uagzqceMKq+fMebDbjSfFsh/KU8/Dg9BY3jBHE0Kit8xFY1LWGMuT2ZaQOtSCyEFcw1xoLTwAuKTXw4sHfYTkW9t/MnzCNOMZXRpOhn9DGWAWBO0DWtY3FHMuErfS9jGl1ZyQec5kkpjuRb97NcMdrOFDanhFnIU+qMcSGgT2XYFp7H7e2kSieoUR6KnaNyOZanglVRgvZM+Gvz2Uh3A==
+X-Microsoft-Exchange-Diagnostics:
+ 1;LNXP265MB0410;31:h5i41EbAVAn4nrzuULpW4ikLqCup/UnxwAeuCJEGJHV5wEQvCEg64LEP0Q7Pc9mKpeRe7VGeEL7J2nTJDLu0tK/mLvucagNEuIS6sPrUhFR/CwthQUtSVRcgzQsyEPlpPZbttNjlKzCEBEnJf2JqyG/poWdQFbFpLfX50W44lCB08sluotqitvTHi/cKMqYfGYZqVoaIblVDBr/m/mu86dXS7ydmU5p4KBztF5rr7ms=;20:mPDK24cym3nqgEXGm7jmIv+7dzV5HlHsAlaOB0E3bS3VfiGYd20C9YZeMBvxa78kRCnYLW2wZTdoziv9SHj6+q8i3gQSYSorBu/Yge+99AtawT75G7A8Vf1L+o2/wp1Qxdam9hmQbEdr/0Ec6tdF0CBwhEEai0flEERN0UdFNje05GqoWfZkCWOLJ8YstnVK8C9IrgtCRia0HucWNFjWepWRrqpsRzcwte8kAow2syD1DGvDOIaR/AThz5tyEWixJijsfJH2My6n/QhLlHPZZ86eF6QuJ5JuUtZIc64E/H7hsz5Q6YPRSM8rJ4MjihCeBYq4c5O8uwa/iYfK2+Fi0lkb3jD1kB5+wtBwt7MrvwsRVpsWvcAN+mueWnJzozY5tS/nSY/19RQ7d4Qu7uddXcy0x5imYal0qli9JHybBClMmInv166VIE7F5s1BgY3+q5yU9Km4/BArtLWTpco2ax0SGYiuSHy3IAx4rLj//Hvkw/ROlPxqIjQN5+qTEOlD
+X-Microsoft-Exchange-Diagnostics:
+ 1;LNXP265MB0410;4:IIZPehs810FSPF4rZXHV6hW/qx/WpRxjL8ecBegYl6DgWnF6SRFaKqcsIHgpny2wJ4Dpvv+FwrCBGum9kQeIEEgi/dgmLE4UEtnZ7cwf3veTUJCtUznq14zKlJBJK3loarJxDeaIvJTmWy6biuzlflFXYs6QeR12bP2EB732gwmFXD8Lm7kNjKXpZnkcjkL35GjCjThoseiKWJUCDCjRAoff0oOkTrPI2+JfoS9vmWAJc8wqBb029zvx1iBCorxE5E0+qONc9s20++c4ZVJlrW/zTSJB0l1ZJNAxWb+fpVhChbhtyTe0llxhC2cvgTOv
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Exchange-Diagnostics:
+ =?us-ascii?Q?1;LNXP265MB0410;23:iZ94LVXVa4r1i8XQ85O6IFpITcQayRINhK/Wdp5u6?=
+ =?us-ascii?Q?KfsWqmVrr7+D8wtde/gHUr//HvkTYPZdxai5RX1WoBrjreyfiT9lvR0wzVDc?=
+ =?us-ascii?Q?HQUBobYKDViuhYo6nwxhNgl/AIXcpTTlSq4H+D8UO9wB9UqJ47NFiMVagsCA?=
+ =?us-ascii?Q?yfMQI+N6vltovdJrPga9Rc+Gjp6GFXPVW+fW029YX3JOcDKqEithq377jioc?=
+ =?us-ascii?Q?nQqDZubX9UGLko+bTZZuraXhWdLSuTPK4BFkcjgh8L9yKAmptw0Y5vlJNmdG?=
+ =?us-ascii?Q?hrHXzVEWCpX12s6OZ7kE5hBsPE6UInM8DXXES8XbzUm70gsgPeZLugMGUkAm?=
+ =?us-ascii?Q?rpvquT8nDsAF4Xx9RcSjeOpYcmXVpGIFQnG61GXKPF7XVTeNiMZV8z6OqvyI?=
+ =?us-ascii?Q?+FVbtvhUvehBqxD65tOY07vZPxrZCHkaNvLYSP0fiSscCL27KVrLtbjYky9X?=
+ =?us-ascii?Q?H06a9O0Zu6YTgzP5rFv3foz1a4JHqHMti7y5l0EVtVgYJI86g92cVTZFOS75?=
+ =?us-ascii?Q?04hjRDxp0L6swfItXtTXYrvLuLapcW9t5cXlKeajQZlPjiHHzasmW33qxwYt?=
+ =?us-ascii?Q?BBy2zBmB6at7EaZPtthWmiuOfCq5oNht6P3n7JeadwG4ifwXTJJ9BjRJeUfw?=
+ =?us-ascii?Q?SKF5ox3YcaWVvZqUlOs5e9R0TdVlyh7LzBMSMotjXyDQfWTyRyBOUGmVW43s?=
+ =?us-ascii?Q?OKGbCa+9uOYgyrRNEy2XNbSDxuEKaKlXgPBFyaD2WWQbQqHQkw8lFOhgkWeo?=
+ =?us-ascii?Q?qpSIZJGcfdXrSsvWT6LvXXTpdIntSc+7s64P76hFgybG5u8QZdYwnqnNiYhd?=
+ =?us-ascii?Q?Cs5E0BpO3D2Kmdk1l/1d3/ON5t7vy87eNmGX0QShOjVS6r1jvi+ChB6rg1LL?=
+ =?us-ascii?Q?2B9oJ+LqbjZl7zQi68QgneK8GSJOjbVqyz/0zjKLT67w8ygZb2ZlbfoSNCws?=
+ =?us-ascii?Q?r+aK6cwn3y0j3Rm5pLzEGAnWuDzwO4JpT6eeuVyxC8a24+8U7cokPfck4DbY?=
+ =?us-ascii?Q?NbYQJGoUiC/OIH+BpKHZEre0TeBRMorNI7k9P00vDfbz2bZ6DyIp9WOMwihl?=
+ =?us-ascii?Q?7QdtjevK+Sn105jRaagKvbO9R7mumy56R6e1UBR1GtkoLvnCGBvW2HyOn4pN?=
+ =?us-ascii?Q?E9l9GBaUoYqDkweEZbACBVaYZzwNebebipyrVDyiGfV4YjpDj2QhF5yHR45m?=
+ =?us-ascii?Q?GkvwwXqvAGtAL4fV3cR9nF0QxAQLIGJJ/e8wUyZg+iFsVvE472BA3+zPE8Kp?=
+ =?us-ascii?Q?dqdXQQBCdFZzG89eduHq+HQNebdxUbftTfU+oXfDZV9jfJ+lWnDe+l4belb5?=
+ =?us-ascii?Q?zMAiR1jcciMHXQ4+bCdjd/9VVqLR7iHlwogcmSWTFINnCoGUhe1fV+1S9Gog?=
+ =?us-ascii?Q?kuvQSfzXNq5igMalHiyhB6rcl5lMIpDsTKh72gHrpqyjqnmMwqSgrUxY6dfB?=
+ =?us-ascii?Q?wYm5J/VfMrCWMWW4jseLAyx/+UDkBN8tE+fro9VG9s/4M7r7HMhVDYfN29p3?=
+ =?us-ascii?Q?n0hrbWJLvCNPwUIu47XDZ2hk17FrXBUzqc=3D?=
+X-Microsoft-Exchange-Diagnostics:
+ 1;LNXP265MB0410;6:gbgoy1oVTCYby2k5moeacb9u5KhF4WHafxHThuhPLEcGrhItoIV9+NskZ7P/ySUqiMslGKgEV1/qfis0BFQne5FrGrCVlyfpDtuQpV3sPHwXKmJG1IBuxFWy8oIYoFaigdka+lezXdrkHoNNgz1ZP2R6H6HkdNS81fDkK9+FpShz4E2zOKBG/p/3Si1Sz+mwjlEeSG+SnBIT/8UlkOOJlkQSdweugtpcfSouIYfmETg17hQplK5mRQbmArg3Q8uwMtFASA3Ue2f/Er/h2pA8LYpfX2EjgEdZ/kY8GkihRNM/tUPXSAGx3v53PLHWpNxzkInHS3TUY1jIO90CVPZyGzxKA/KfdFCIEidKHdGd2MuKVeA+TujyV8hmAb2X29oXYoii++El3JvVv5vBNbsdRcBz7U6lT0xSN8lHgdPtSpiCKnjNrrHYBi4L5EBnhwz1vp7ubXfX325+lYPWuIuOXA==;5:XgHABL/hCnwtlNYIIbQWVLU68NFUoe4iQ42OJ5esdCB2Miwm/zYnD1MRsxfVs2SE4qlV/Qj7NIQ0go/TbLcSg3Y1eHVfhIlhMPwVCkqEfTQYJt6V1uegjEorPkAZMObyXdlpynK9PHTrtpRjMHF7EfOC+HjvNAZCPndU2PO4qGqKVtBvqTZEAzkzpphTOYY7Yv5GUPZQO9TeYmECSXthuw==;7:RaLPsvnoTn8ApIroSCdojATn7c6q4Y/+DRBIb/I0giaF5j6X/Be0or3auCJmGWjyW+hwzEJM4XoZtxZ1YAhbhXwgoGznEAMLwqJ4X5+EIKQYx5QlY9m9kmqOWqa1lDlsjURGvWTzNxS4yQpPVKsT0Q==
+SpamDiagnosticMetadata: NSPM
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 23 Jan 2019 14:03:36.0705
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 2bd8ea87-f3c2-4555-18c9-08d6813b917e
+X-MS-Exchange-CrossTenant-Id: cc95de1b-97f5-4f93-b4ba-fe68b852cf91
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=cc95de1b-97f5-4f93-b4ba-fe68b852cf91;Ip=[163.1.154.215];Helo=[smtp.nexus.ox.ac.uk]
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LNXP265MB0410
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.4025359
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1537.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	EOisgmm6BUmtB0bdlH1J/7M3IWdVAeE1pMM+40U/Ag8lW5wAlQRE1T8CRTFttQuP59a1fIq6+r9Lt3GjyGI3BR1PQtIHv3O6iykjayAXguNKqZQl8KpOtACnlEhsapYmV4ynrMEbP4ZlL61oQ/yEktD9At3zJrNLzkJKAXOKPeCRnXgNDLtvkLnRG9ljJUtW5HOY5IyJeYW4YJZg8ZMuYFhh7lV2wOSiHOrgPjpe3AzG6wKWcZw6Op9NFJ3KDtZ2NhuE1P6BL3v3v/3lubFN6vk0nTaGUsaNWArGFzaDmCmzHmlf8kJAZlCQV0c+yc8JdJVPPcts6dsvvVOXWZ923M7qp9yaqAMY8GET5cozRmFu+mV6M+UyHyNVUjgwvo7p+vRtw4i9agueDQDYugYfOASl82jvv8iUzrxM6gmP+etN2xLWXciScWUYrcH8iKNuWmeBi+MlJ+ZvT4c8LJUrSFer4OCzX+qlECdmszLEOjXbg+ImIVx7bzElFE4+eQAZKgTPXbV01SYMRmojIV9fJLXJXx3OC7QE/J847CJInNZN8kXMUSXfDojA8F3xjsKzUzIw7P/sTBPCvJBFsbFlDfQnNUBA8JOzTmIeXEcTpggSZmhF1Kav1oMTr10P2xFgEI1Xqbu7Cu2Iau4Wfx5kyDl22/o0UoOMbbTqLahA0JOlthPO3IrTDMn7pnWn+b11GmiegjhEekBB1vTuv4JJrK+swWaPIwa4nTIXg9NIcXXlR9WDPSHbLFOxIzmSGl2E/4QSesXZxJ7d2FaCTGkcYAoRIacfTXvHbnfCqrbVwzeXFFgi/0CuT6o9hHQqp6gv
+MIME-Version: 1.0
+
+--_007_CWXP265MB1061B8512A6BC5C8AB65C976B6990CWXP265MB1061GBRP_
+Content-Type: multipart/alternative;
+	boundary="_000_CWXP265MB1061B8512A6BC5C8AB65C976B6990CWXP265MB1061GBRP_"
+
+--_000_CWXP265MB1061B8512A6BC5C8AB65C976B6990CWXP265MB1061GBRP_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hi SCR Members
+
+The Catering Department has a brand new Twitter page.
+
+Follow us on @LMHFeasting for the latest foodie goss and goings on in the C=
+atering Department.
+
+Regards
+
+Tom
+
+
+[LMH Logo_blue_transparent]
+
+Tom Noakes
+Catering Manager
+Lady Margaret Hall, University of Oxford
+Norham Gardens, Oxford, OX2 6QA
++44 (0) 1865 274305
+headofcatering@lmh.ox.ac.uk<mailto:headofcatering@lmh.ox.ac.uk> | http://ww=
+w.lmh.ox.ac.uk/
+
+[Twitter]@LMHFeasting<https://twitter.com/lmhoxford>  [Facebook]  /lmhoxfor=
+d<https://www.facebook.com/lmhoxford/>  [instagram email]  lmhoxford<https:=
+//www.instagram.com/lmhoxford/>
+Registered Charity No. 1142759
+
+
+
+
+--_000_CWXP265MB1061B8512A6BC5C8AB65C976B6990CWXP265MB1061GBRP_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:fira_sansregular;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-GB" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Hi SCR Members<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">The Catering Department has a brand new Twitter page=
+.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Follow us on @LMHFeasting for the latest foodie goss=
+ and goings on in the Catering Department.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Regards<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Tom<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"0" style=3D"width:352.5pt;background:white">
+<tbody>
+<tr style=3D"height:24.25pt">
+<td width=3D"103" valign=3D"top" style=3D"width:77.5pt;border:none;border-r=
+ight:solid #3B5998 1.0pt;padding:0cm 7.5pt 0cm 0cm;height:24.25pt">
+<p class=3D"MsoNormal"><span style=3D"font-size:13.5pt;font-family:fira_san=
+sregular;color:black;mso-fareast-language:EN-GB"><img width=3D"92" height=
+=3D"106" style=3D"width:.9583in;height:1.1041in" id=3D"Picture_x0020_1" src=
+=3D"cid:image001.jpg@01D4B324.591526E0" alt=3D"LMH Logo_blue_transparent"><=
+o:p></o:p></span></p>
+</td>
+<td valign=3D"top" style=3D"padding:0cm 0cm 0cm 7.5pt;height:24.25pt">
+<p class=3D"MsoNormal"><b><i><span style=3D"color:#1F497D;mso-fareast-langu=
+age:EN-GB">Tom Noakes</span></i></b><span style=3D"font-size:10.0pt;color:#=
+1F497D;mso-fareast-language:EN-GB"><br>
+</span><span style=3D"color:#1F497D;mso-fareast-language:EN-GB">Catering Ma=
+nager</span><span style=3D"font-size:10.0pt;color:#1F497D;mso-fareast-langu=
+age:EN-GB"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;mso-fa=
+reast-language:EN-GB">Lady Margaret Hall, University of Oxford<o:p></o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;mso-fa=
+reast-language:EN-GB">Norham Gardens, Oxford, OX2 6QA<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;mso-fa=
+reast-language:EN-GB">&#43;44 (0) 1865 274305<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#1F497D;mso-fa=
+reast-language:EN-GB"><a href=3D"mailto:headofcatering@lmh.ox.ac.uk"><span =
+style=3D"color:#0563C1">headofcatering@lmh.ox.ac.uk</span></a>&nbsp;|&nbsp;=
+</span><span style=3D"color:#1F497D;mso-fareast-language:EN-GB"><a href=3D"=
+http://www.lmh.ox.ac.uk/"><span style=3D"font-size:10.0pt;color:blue">http:=
+//www.lmh.ox.ac.uk/</span></a></span><span style=3D"font-size:10.0pt;color:=
+#1F497D;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:1.0pt;color:#1F497D;mso-far=
+east-language:EN-GB"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;color:#24A939;backgr=
+ound:white;mso-fareast-language:EN-GB"><img border=3D"0" width=3D"16" heigh=
+t=3D"16" style=3D"width:.1666in;height:.1666in" id=3D"Picture_x0020_2" src=
+=3D"cid:image002.png@01D4B324.591526E0" alt=3D"Twitter"></span><span style=
+=3D"color:#1F497D;mso-fareast-language:EN-GB"><a href=3D"https://twitter.co=
+m/lmhoxford"><span style=3D"font-size:10.0pt;color:blue;background:white">@=
+LMHFeasting</span></a></span><span style=3D"font-size:10.0pt;color:#1D375F;=
+background:white;mso-fareast-language:EN-GB">
+</span><span style=3D"font-size:10.0pt;color:#1F497D;mso-fareast-language:E=
+N-GB">&nbsp;</span><span style=3D"font-size:10.0pt;color:#1D375F;background=
+:white;mso-fareast-language:EN-GB"><img border=3D"0" width=3D"16" height=3D=
+"16" style=3D"width:.1666in;height:.1666in" id=3D"Picture_x0020_3" src=3D"c=
+id:image003.png@01D4B324.591526E0" alt=3D"Facebook"></span><span style=3D"f=
+ont-size:10.0pt;color:#1F497D;background:white;mso-fareast-language:EN-GB">=
+&nbsp;</span><span style=3D"color:#1F497D;mso-fareast-language:EN-GB"><a hr=
+ef=3D"https://www.facebook.com/lmhoxford/"><span style=3D"font-size:10.0pt;=
+color:blue;background:white">/lmhoxford</span></a></span><span style=3D"fon=
+t-size:10.0pt;color:#1D375F;background:white;mso-fareast-language:EN-GB">&n=
+bsp;
+</span><span style=3D"font-size:10.0pt;color:blue;background:white;mso-fare=
+ast-language:EN-GB"><img border=3D"0" width=3D"16" height=3D"16" style=3D"w=
+idth:.1666in;height:.1666in" id=3D"Picture_x0020_4" src=3D"cid:image004.png=
+@01D4B324.591526E0" alt=3D"instagram email"></span><span style=3D"font-size=
+:10.0pt;color:#1D375F;background:white;mso-fareast-language:EN-GB">&nbsp;</=
+span><span style=3D"color:#1F497D;mso-fareast-language:EN-GB"><a href=3D"ht=
+tps://www.instagram.com/lmhoxford/"><span style=3D"font-size:10.0pt;color:b=
+lue;background:white">lmhoxford</span></a></span><span style=3D"font-size:1=
+0.0pt;color:#1D375F;background:white;mso-fareast-language:EN-GB"><o:p></o:p=
+></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:9.5pt;color:#1F497D;mso-far=
+east-language:EN-GB">Registered Charity No. 1142759<o:p></o:p></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_CWXP265MB1061B8512A6BC5C8AB65C976B6990CWXP265MB1061GBRP_--
+
+--_007_CWXP265MB1061B8512A6BC5C8AB65C976B6990CWXP265MB1061GBRP_
+Content-Type: image/jpeg; name="image001.jpg"
+Content-Description: image001.jpg
+Content-Disposition: inline; filename="image001.jpg"; size=3539;
+	creation-date="Wed, 23 Jan 2019 14:03:00 GMT";
+	modification-date="Wed, 23 Jan 2019 14:03:00 GMT"
+Content-ID: <image001.jpg@01D4B324.591526E0>
+Content-Transfer-Encoding: base64
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMg
+IyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wAARCABqAFwDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDiKs2O
+m3upsy2FpNclfveUhbFVsA8HOO+K9r8EeKrDV4otOsraaOaC3DSsyKF4O0ZI4JNenVqOEbpHHCKk
+7M8YuLea0neG5ieGVDhkdcEVGOvqfQV3XxQ0u8k8WrPDZzyRywIA8cZYEjORx+FYNl4e8S2si3dn
+pd6kiAlXEfI9xnvTjUTjdg4WdjOm0nULa3FxcWN1FCf+WjxEL+dVK7vwXbeJG17dfm9XTwGN79t3
+eWyY5BDdT9K4q+EH2+5+y/8AHv5reV/u54/SnCd20KUbK5DVy00fUtQhM1np9zPEOrxxkj86Zptx
+Haalb3Eqs6RSByq4ycdueK948M+IrLxFZSTadFJHBC/l/Om0E4ycD8aitVdNaIqnBSPn4ggkEEEc
+YPanRxvK6xxRvI7HARBkn8BW74j0XUB4q1KOLT7pt1w7IEiZgQTkEED3ottF8U6ZFI9rp+oW6yjD
+tGmGI9MjkVpz3VyeXXYyLvTr2wK/bbO4t933fNjK5p1oR5bc/wAVdpoltqaeE9afxL5y6Z5H7hbv
+O7zuxTPI7Vwcbsi4yaUZc90+gSjaw3Hbkk9ABkmvZ/hr4cn0PSJbi8TZcXhD7CPmjUdAf5149Z3T
+2N9b3UYBeCRZFBHBINekRapqMnjvR9Qs9RmudM1VjshL4CYHzoV/2TzWWJu0kti6Vkz000iuGztI
+ODg4PQ15H468caouuXem6deeRawkRlogNzNjn5uvftT/AAP4jk0vwhrjTs4jtmDxyA7n8x+AOfcA
+/nXK6EuXmNvaK9i58XL+7t5bG1hupUtp42MsSHAcg8Z/wrzKu58c6pHr/hjQNWkj8q8lLoUH3cD7
+xH49K5zRfC+ra/BNNp1qZI4Ry7HaGP8AdU9zXZRtGnqYVLuWhm21rNe3MdtaxNNNIdqIgySa9+8K
+aIfD/h22sGZWlTLSMowCxOTXjHhTVf8AhHPFEM90GiRd0M2V+aMHjOPUHFd74NuNV0/xhqthqd+9
+5brbi4EzyZG0nKsB2yD+lZYm8tOhdKyPQunehWVgGUgg9weteC69421jXXmhkvWSzZiFih+QFc8A
+kcmuusfGU+k+AdGnKj7QZzDEuflkjQ4Yse3H64rGVCUUn3LjUTOf+JV9eS+LLq0luZXtoSjRRE/K
+hKjoP89a5Guu+JqQjxe0kRbfLbxvKD/CTwB+QFcjXZS/hqxhL4groPCWu2Xh+8lv7qOee5iQi0iX
+7gY/eJPauforSUVJWZKdth0kjTSySt992LnHqTn+ta174iNxoNrpEFtHaWkRDTmM5M7D+In86xwC
+xAAJJOAAMkn0r0Pw94Gj0rTzrniWIssYDR2fpk4Bft36dB3qKrjFLmKinLYrTra6xa6a+o28mn6H
+aKI7SzUF7i5Y9Tx0Bx1784rtbHxlodnaRW9vaXlskZ8pYls3wrf3eB1rL1TT5n8P/wBp3is15czw
+bFikwVXeMBTwFPoe2etYYiuftKjytV/5CjAf8TBc7tvTOfv/AO1XG0po21iWvFD6B4smVkjubC9b
+KRXctuypMw/gYfnz2xWCuop4a8P6jpdxb3J1e+URySOfkSL+Eo38QIroPD1n9r1XTYbyC8MLyXYx
+PdCRSec4Ucg+p7mtW40KDVHfw7q6b5I1L2V0nLxpgdcjpnj04xVcyj7r2FZvVbnkMZVJULoHRWBK
+dAw9Paty+8SRaxq1lJf2WzS7QARWNuwAUfX3IFV/EXhq/wDDN75F6mY2P7qdR8sg/ofasmuy0ZpM
+w1TNHX9al8QaxNfyose8BURR91B0Ge5rOoop2tFJBuFTWlncX91Ha2kTyzynCIo5NW9E0K+8QagL
+Swi3N/G7cLGPUmva/CvhCx8MWu2ECW6cfvbhhy3sPQVlVrKnoty4U3LUyfBnw/g0EJe34S41EjI7
+rD7L6n3rq9Ss/t+nXFrv2GaMpuxnGR6VbAxUF60yWsjWyB5QvyKehNefKTk7s6lFJWRxH+l6t4M/
+s42wnurW6igkRgSrYcE5HULjr7d6yF8L35uVH9jWGDqTKSYX27dvXr/q/wBc11Ed5b+EtKn1PXJ/
+9KuWY+XgBm5JChc9cH8K8w8QeM9U17UUuTM9rHA26CKJiBH6Enua3pRlL4TGbUVqdt4W0O9s9W06
+5k02C3QSXKs8cbK4643ZP3fSt/w15upa1qOsSYWJz9nhQAnKrjJ3HryD0GOvWsXwh8QoNaiGl62V
+iu3XYsnRJsjGPZv8iuk0GxvtMu7q2kIey3F4WIAIBxgcfj2/PNZ1OZP3jSNmro0tS0y11eye0voV
+mgccq3r6j0PvXi/jDwLd+GZDPDuudOY/LLjLR+zf417nUcsKzI8ciq8bjDKwyCPelTqum9AlBSPm
+eivQfGnw3ewMl/oSF7brJbDlo/dfUe1cDHDJKuY0ZgDjIFejGpGcbo5pRcWe6+EYIbD+1NPSJI5b
+e8cttGC6P8yE/gcfhXSY5rndXP8AY2v2usdLacC0vD2XJ/dufocg/UV0Oc15ctdTrXYXNc14t8aW
+XhiDacT3zj93bqf1b0FZHjT4iRaTvsdHdJr/AKPJ1SL/ABb2ryO4nluriS4uJWlmkOXdzksfeuij
+QcvelsZzqW0RZ1bV7zXL9rzUJjLK3AA+6g9FHYCvQPAvgbRtZ8MpfahE081wzAEMV8sA44x9OtcP
+4Y0oa34jsrBwTHJJmTH90cn+X619BQW8NrAkNvGscSDCoowAK0xE1BckNCKUeb3mfOWq2aWGr3ln
+G+9LeZo1Y9wDx/Su38F/EiSwMdhrjtLbfdjuTy0foG9R71c+LWhwxxW2sQxBZGfyZ2UfeyMgn8jX
+mXTitYqNanqQ7wlofTMM0c8SyROrxuMqynII+tPrwrwj44vPDEohfdcaex+aEnlPdPT6V7TpWrWe
+s2KXdhMs0L9x1B9COxrhqUpU35HRCaki2a5Hw/olnqsV9qJhRIrq8keEKMAoMKD+O0n8a0/E97LH
+ZJYWbYvtQbyIf9gH7zn2AyfyrTs7SHT7KC0gG2KFAiD2AxUp2Q2rsfeWkN9Zy21zGJIZVKOh7g15
+d4w8Qa94eso9D3MsZBEd+D880XZfZgOCa9XrN1zQrPxBpr2d9HuRuVYfeRvUGnTkoy97YJptaHzr
+3/nmitzxP4Sv/DFyRcKZbVjiO5UfKw7A+h9qw69WMlJaHG047nf/AAisPO1y8vWA2wQ7Ez/eY8/o
+K9akcxoWCM59F61558P9e0i28OW9j/aENndAsZlkAVnYnqGPGMV0ep67Z2K2Rgu2uBc3SRM0cnmb
+Qc9cHjp1rza15TZ1U7KJD4wtzr/hTUbWGCdZ4QJFSRCMkc4HrkZHFeGEEHDAgjg56ivfr/xDo2no
+Xk1qGNh0HmiT9OTXi/irULTVfEt5e2AIt5iCMrt3EDBOPc1vhm1eNjOtbcya1PD/AIiv/Dl8Liwk
+OCf3kJyUlHoR6+9ZscUk8qRQo0kjnCogyWPsK9X8EfDr+z2j1LWkV7ofNFB1WI+p9W/lW1acYx94
+zhFt6HR6DZ3V3cNrmqxeVdzoEggJz9mi64/3ieT+A7V0FA6Utea3dnYtApDS0UgIbi2iu4HhuI0l
+icYZHXII+led+IPhNFIzz6DOIWPP2eUkr9FbqPxzXpVJ3qozlDZkuKe5856roOpaNIV1KxlhHZyu
+VP0YcVTtrqa13G1laMuNrFD1HvX0q8aSqySKrKeqsMg14/8AESxtLXWoBbW0EIc/MI4wu764ruo1
+nU0kjnnDl2OGhi82QRwxl3PRUXJP4Cuu0P4a61qzK90n2C3PVphlyPZf8a9S8L6fZ22lQPb2sETs
+oJZIwpP5VspygPes6mIkrqJUKaerMTw74N0vw0mbSLzLgjDXEvLn/D8K3hwKKBXG5OTuzdJLYWik
+paBn/9k=
+
+--_007_CWXP265MB1061B8512A6BC5C8AB65C976B6990CWXP265MB1061GBRP_
+Content-Type: image/png; name="image002.png"
+Content-Description: image002.png
+Content-Disposition: inline; filename="image002.png"; size=870;
+	creation-date="Wed, 23 Jan 2019 14:03:00 GMT";
+	modification-date="Wed, 23 Jan 2019 14:03:00 GMT"
+Content-ID: <image002.png@01D4B324.591526E0>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAO
+xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAALmSURBVDhP
+ZVNdSBRRFP7mzp3ZdXd1ddUwKaUiSFIp8KmC6M0khCiQUhOFiILUnnvyuacISgwsTUkhifIlggh6
+sMggoR8rtFIU13S0cdf9md/OvdVidGBg5575zvl+7vKenh5srbGa9joF+lkffiM8Z4/sMT4L3x+H
+4gyfenfnzdbv+d+XgaqWSETNu6logVam6XBTSfieJ9sK8/eoofxuz7G6x2rP30va6Utt00NJ0ZMD
+BqouEzj9RC0oOuyYq/DSsifLpyebtaBkDeiaCjVa2hrZMHYNHLrc0DZxIyEHhL2fvVqs/LD5YwlM
+URBUFQkUT9rxURHhcDwfc0kH+W4cgeKyI+HVeC+1mzlprmV6pDlh/EBDRRhfN2y8NbKI6ios10dn
+dRQd+wpgk5pniynMmDYGZ1aghQvOjla1XOOe43fwkIaU5aCeBtSVBHD1tYGnCynsoM2dNYU5Oad3
+R9D70YTtOAhwDaqvdnAie9JLJcCZgpfxNI7vDKHv6Da8X7OwknH/SShJNAa/JKRM4ZPClEauMF7h
+OxZIIoqDag5QHdP/AYsXI+Nhk4aIZQIDxipzMYaIy8hsUvqwN6r9BxYHL4jhetZDYYDl+pyynle4
+XqE5NhbI5fG5JC7tL5RJbK0Ebe7/tIEgLRKlkAfEYp7TjXtIl6TL3ViTpj3+nsLBkiCOlefl8EL7
+lYlVfKOEojqT8RIGTmLtEffg3PVtu8sBw4FiXUZWHQsgQxGalodXyxn0TZv4QKYW/AGTdrrlNlxf
+6+dN00NTD/adux+MbT/zfDGOyZUsiuhD4bRpuVhOu+D0++9mQUuLlsIylkaaPg9OSRM3Y9ELYdOo
+DJWUHcqsr2CevBBFZiOiMQjVgrbYzAlsm6sTKeZdEEdygLjTA2Ut9fls7RbPCzfrZJCbTpBJds4w
+NS9f0ibdw5tG9mJbfCiRGyCHiIM4WkZr2q9zmzeTzycUxn7/nYGvNHCceA03vbs9uTWdXwagRrLH
+6VtLAAAAAElFTkSuQmCC
+
+--_007_CWXP265MB1061B8512A6BC5C8AB65C976B6990CWXP265MB1061GBRP_
+Content-Type: image/png; name="image003.png"
+Content-Description: image003.png
+Content-Disposition: inline; filename="image003.png"; size=837;
+	creation-date="Wed, 23 Jan 2019 14:03:00 GMT";
+	modification-date="Wed, 23 Jan 2019 14:03:00 GMT"
+Content-ID: <image003.png@01D4B324.591526E0>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAO
+xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAALFSURBVDhP
+XVNLSFRRGP7uvec+ZubaaBZNJIqpZBBBES0ajSBQiRCilZobN9IDdBPtCtdBiwSxTQQhRS0kbVFS
+lggttEWIkZW9fNAghKPzuu/bf07MjPTDPXDOPd/3///3f4cNDQ1hZ7xZrjkRQuoOIHUiDBrEP0n+
+RutkgGCsrXHt/c77rLiZXUyYtqGNyArrlWWG0LXgBz48n6hk1qAbsUEZ3uCr5dqHuuVcaT2SynKs
+IJhdPGzaeuaFqptJ19qGHxKYgJ4foroyAkmSULDyYq9F4r02MvUT64lznQdSGUFQUNOjulGVdApp
+UVAQhGCKjFvXziB5rBZRQ8XN4dd4/vYzKsBJKlsiufQoXe1h00uJo0yP9vDMxcgVHLS3NKE92Uht
+hFhc3kA6Y0EhUh6utQVFjXRPLSVuM1+S+lRZobKDEoFPpVZWGGK/sJRC9/WniNM+FlERhqAvBNeJ
+lj5GDV7wSbBS9ryDjtNN6Lt4XBwdqt+D8eEu3Hsyj5n5n0SiiXPfLUCiSTFJkmuDwCtnp5J3x6PY
+V22KsyhlbT64V7TCsxeDY0jcutIYiz/MmIaJ6U/YZeq42nUSH79u4MadKWRzTil7mYbGGIbBCvVT
+qkKhkW1lLfzZzIt7lu3h1/omKkwDiiyVsFwDqmKFazCuqMZAYAtf0JAg1Gbsn+IygXSNQSbinUEY
++Hb2GQt9/0EQ+AOkBfVYngQH8uB++D+4sQjDDXOftTWnPrz8sv+REanqKhqJJ7MdH5mcjW36/ksO
+1YjDyW8+5lghoh0L+5V8po5seoobyoxqmJn7gbmFVfEWdE0VJDwzB7v29ruCG/aLCvnCPT0xq3dE
+ExiRmXGJkbFcp4A8CSlRK5qqkfMMLho8OzuW/+1d7mxNZUoEgqTVpoPV3umlmru+KvVQtvOaporn
+TA747nvWpOQGY2eb1+bRWFblL06wL4+XXhreAAAAAElFTkSuQmCC
+
+--_007_CWXP265MB1061B8512A6BC5C8AB65C976B6990CWXP265MB1061GBRP_
+Content-Type: image/png; name="image004.png"
+Content-Description: image004.png
+Content-Disposition: inline; filename="image004.png"; size=518;
+	creation-date="Wed, 23 Jan 2019 14:03:00 GMT";
+	modification-date="Wed, 23 Jan 2019 14:03:00 GMT"
+Content-ID: <image004.png@01D4B324.591526E0>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVh
+ZHlxyWU8AAABdklEQVQ4T6WTsYrCQBCG/0QsIilEkDRJaR1bMYWPkwcQXyIvkJdInkFBCWilraV2
+AbEQU4js7T9kYzyu8O4+mLA7M//szmYXqiZNUzUej5VlWQrAj8YYc5hrsPgJggDn8xnT6RSTyQSD
+wQDdbhedTkfrgOfzicfjgev1iu12i+VyCd/3cTqdAFZj9dVqJRU/YbfbiUa0YRgqvXIdeud+v4sZ
+mEchmc1milqwr/l8Lk7Dfr9XvV6v6Z3j4/Go1ut1s9hisZAzsfVYejYcDgfuClqELMvEOB6NRvA8
+D7qI5PX7fW5FxipJEqlKuNpwOKxnL+hjzEANtTYrmNOuqgq6Zx6szNvQxxhziNFIgf8gBfifieM4
+0m8cxzJvQx9jzCFGIwV4SQxFUaAsS+iekee5GMf0MWZoNJ/+RvraUEOtxcvgum7ze9qYAzPbbhNF
+EW6329+uMnOpofZXj+lyucg5bDab12OSkhpW41O1bbvp/bsx9v6clfoCl1HUZUt2Ew4AAAAASUVO
+RK5CYII=
+
+--_007_CWXP265MB1061B8512A6BC5C8AB65C976B6990CWXP265MB1061GBRP_--

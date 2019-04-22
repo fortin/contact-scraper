@@ -1,0 +1,676 @@
+Received: from CWXP265MB0406.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:c::28) by
+ LNXP265MB0410.GBRP265.PROD.OUTLOOK.COM with HTTPS via
+ LO2P265CA0112.GBRP265.PROD.OUTLOOK.COM; Thu, 17 Jan 2019 18:39:08 +0000
+Received: from CWLP265CA0101.GBRP265.PROD.OUTLOOK.COM (2603:10a6:401:51::17)
+ by CWXP265MB0406.GBRP265.PROD.OUTLOOK.COM (2603:10a6:401:5::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1537.26; Thu, 17 Jan
+ 2019 18:39:07 +0000
+Received: from AM5EUR02FT024.eop-EUR02.prod.protection.outlook.com
+ (2a01:111:f400:7e1e::205) by CWLP265CA0101.outlook.office365.com
+ (2603:10a6:401:51::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1537.25 via Frontend
+ Transport; Thu, 17 Jan 2019 18:39:07 +0000
+Authentication-Results: spf=temperror (sender IP is 163.1.154.231)
+ smtp.mailfrom=mail-scalarlight.com; UniOxfordNexus.mail.onmicrosoft.com;
+ dkim=fail (signature did not verify)
+ header.d=mail-scalarlight.com;UniOxfordNexus.mail.onmicrosoft.com;
+ dmarc=temperror action=none header.from=mail-scalarlight.com;
+Received-SPF: TempError (protection.outlook.com: error in processing during
+ lookup of mail-scalarlight.com: DNS Timeout)
+Received: from smtp.nexus.ox.ac.uk (163.1.154.231) by
+ AM5EUR02FT024.mail.protection.outlook.com (10.152.8.126) with Microsoft SMTP
+ Server (version=TLS1_0, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA) id
+ 15.20.1471.13 via Frontend Transport; Thu, 17 Jan 2019 18:39:04 +0000
+Received: from relay13.mail.ox.ac.uk (129.67.1.166) by HUB05.ad.oak.ox.ac.uk
+ (163.1.154.231) with Microsoft SMTP Server (TLS) id 14.3.382.0; Thu, 17 Jan
+ 2019 18:38:53 +0000
+Received: from ioutemea5.hes.trendmicro.eu ([52.58.62.221])	by
+ relay13.mail.ox.ac.uk with esmtps (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256)
+	(Exim 4.89)	(envelope-from <admin2@mail-scalarlight.com>)	id 1gkCZ3-0008x6-h9
+	for antonio.fortin@lmh.ox.ac.uk; Thu, 17 Jan 2019 18:38:53 +0000
+Received: from 75.103.80.244_hes.trendmicro.com (unknown [192.168.14.67])	by
+ ioutemea5.hes.trendmicro.eu (Postfix) with SMTP id 2B28C11205F	for
+ <antonio.fortin@lmh.ox.ac.uk>; Thu, 17 Jan 2019 18:38:53 +0000 (UTC)
+Received: from mail-scalarlight.com (unknown [75.103.80.244])	by
+ inpreemea5.hes.trendmicro.eu (TrendMicro Hosted Email Security) with ESMTPS
+ id 9540F2EE05B	for <antonio.fortin@lmh.ox.ac.uk>; Thu, 17 Jan 2019 18:38:42
+ +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=mail-scalarlight.com; s=mach1ngun;
+        h=x-msg-email:x-msg-messageid:list-unsubscribe:x-mailer
+          :content-transfer-encoding:content-type:mime-version:subject
+          :message-id:to:reply-to:from:date;
+        bh=mEIYVdY0A4kGSc5Yjs4OJ3YBuYpn90NaLNYIN0EHlk4=;
+        b=bl+lqoJVjQbZIqu4UArKRTuxxMocmZrtw5PhgtVSL4s1bJvxXHOyceMO+lpoYVHst
+          N5wdOVvZMgz/sZmvjN67vio3uL6YS+mJOXXmKFsu36WE3HClMuw4Z85YUswI7Vmsr
+          2030qW999rV9yP1bbabte6P6g+k3nDJx+kLPF/R8w=
+Received: from PL-WEB1.PORTLINE.LOCAL (mail-scalarlight.com [75.103.80.232])
+ by mail-scalarlight.com with SMTP;   Thu, 17 Jan 2019 10:38:32 -0800
+Date: Thu, 17 Jan 2019 10:38:32 -0800
+From: <admin2@mail-scalarlight.com>
+Reply-To: <noreply@mail-scalarlight.com>
+To: <antonio.fortin@lmh.ox.ac.uk>
+Message-ID: <1127640972.29721.1547750312159.JavaMail.ColdFusion@75.103.80.244>
+Subject: Compliance data policies from Tom Paladino, Scalar Energy Research
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+X-Mailer: ColdFusion 11 Application Server
+List-Unsubscribe: <mailto:admin2@mail-scalarlight.com>, <https://www.scalarlight.com/unsubscribe.html>
+X-Msg-MessageId: 7946B5C8-D565-1157-26575F8640E23D4A
+X-Msg-Email: antonio.fortin@lmh.ox.ac.uk
+X-Exim-Id: 1127640972.29721.1547750312159.JavaMail.ColdFusion
+X-TM-Authentication-Results: spf=pass (sender IP address: 75.103.80.244) 
+	smtp.mailfrom=mail-scalarlight.com; dkim=pass (signatures verified) 
+	header.d=mail-scalarlight.com; dmarc=pass action=quarantine 
+	header.from=mail-scalarlight.com;
+X-TMASE-Version: StarCloud-1.3-8.2.1013-24372.000
+X-TMASE-Result: 10--12.280600-10.000000
+X-TMASE-MatchedRID: OoEa6u7Uk59VFRKXzcFgpZYJ7YFlh9pXB4sIhfTjqIFKslM7VUaEwZfr
+	3281qUXd1GSB9fBBdJES887lpka723pruoeiWYa52+EpBnZEzfUZYy508m4I8B/Keob0yNCofIm
+	hfXyb0RASBldQFAYHLrjxJMcFZasFHT2MlaqyxppeCrB32KOS0F7zF1i7scLKB+hHBMtDxUhLhZ
+	Rs9Ieg9jljyzkQl3i5XTq+VTqJsCmzLD5kmcW6ZIfsPVs/8Vw6uGtlO4mJjG4nCidQrQeZxU9zg
+	+KS/RpCubR0pfce8E2LI5pTMqjeb3uTVkeYosXtkTzAgHG5eNIVGU3zNNLOPqnK6Yiaj8aw+B40
+	/QXrXVxDe7JiJBQl179k9nr+oERyQesjq8XPMbuGZJYUGcmFR6MLUT/MIQivT+gB47vlxshLXhz
+	xIJVbjqYRbFPqdx3gR/S96aj2eifQfDWILG9BqdJ178I1tpklqpNaTZ0S3Foc5Zb9Gn+KyjPWW5
+	lVm8xCjgyBo4dBZ7YFQuCTSQMyxEhEDfw/93BuJ4Io1dtdUgIYhDE1dKvj6g3TCcHYrV80OF2nv
+	Dsn5sBZwRHTaBrA7iHUuYhvS7fo9w9UkjRqocKBs03RHrzjMxfNf+Ffyt+SPRi9pFBz/VZGmzZO
+	6TMgxRe0psehJcyGsKrmNJBIHWdTGHnBkU5F768L2QBUOjnD8phhDaDc0AkCJxOqMUHgesAMGJ5
+	PNr115OkvwAeU0GMuFFKvYbSd9qMeXAXVN6QHEriYLlTYT3PloWjcIeMYgCIMTTII/pRAGlIk2J
+	n88iniXQqwBc3Jc4Ng3y0F8kRCBxsweNg3EaGLExf24z1mzpsoi2XrUn/JyeMtMD9QOgDpHHLrs
+	jjRk6a2dCXTNxwub7DHElGeXjnW7uFpvkaqKfKUPmYa6wZcULreq5AW5SkvtbsVRx1t8Dy8AfSL
+	dS2KVQb5DOBWp0NrLD/q2HBZew==
+X-TM-AS-ERS: 75.103.80.244-127.5.250.14
+X-TM-AS-SMTP: 1.0 bWFpbC1zY2FsYXJsaWdodC5jb20= YWRtaW4yQG1haWwtc2NhbGFybGlnaHQuY29t
+X-TM-AS-URLRatingInfo: 71-93-=?us-ascii?B?aHR0cDovL3d3dy5mcmVlc2NhbGFyLnVz?=
+X-TMASE-SNAP-Result: 1.821001.0001-0-2-1:1,12:0,15:0,22:0,33:0,34:0-0
+X-TM-AS-URLRatingAct: 80-
+X-OxES-GW-WRU: ******
+X-TM-Deliver-Signature: B9969FE33753A8F741749E16738A8A36
+Return-Path: admin2@mail-scalarlight.com
+X-OrganizationHeadersPreserved: HUB05.ad.oak.ox.ac.uk
+X-MS-Exchange-Organization-ExpirationStartTime: 17 Jan 2019 18:39:05.0450
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 39a890ee-ab94-4719-08ea-08d67cab0ee2
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-CrossPremisesHeadersPromoted:
+ AM5EUR02FT024.eop-EUR02.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ AM5EUR02FT024.eop-EUR02.prod.protection.outlook.com
+X-Forefront-Antispam-Report:
+ CIP:163.1.154.231;IPV:NLI;CTRY:GB;EFV:NLI;SFV:NSPM;SFS:(2980300002)(3190300001)(199004)(189003)(733005)(606006)(86362001)(14444005)(486006)(19627405001)(6916009)(21615005)(5660300001)(2351001)(19623405002)(476003)(8936002)(426003)(956004)(8676002)(43066004)(146002)(50226002)(14286002)(120456001)(1096003)(126002)(63370400001)(246002)(63350400001)(26005)(86816001)(58800400003)(106466001)(22186003)(156004)(336012)(413944005)(9686003)(86152003)(23676004)(23846002)(116002)(6306002)(236005)(4006038)(2876002)(53386004)(5820100001)(66010400004)(1340700001)(50466002)(356004)(76236002)(230700001);DIR:INB;SFP:;SCL:1;SRVR:CWXP265MB0406;H:smtp.nexus.ox.ac.uk;FPR:;SPF:TempError;LANG:en;PTR:hub05.nexus.ox.ac.uk;A:1;MX:1;
+X-Microsoft-Exchange-Diagnostics:
+ 1;AM5EUR02FT024;1:IodNJX2/rYuP4XBzCTSOFsK/nEaUp/DVLvrqayjnOHLRQLpp2QZDrZCv2Tbb4eEAR4upfTGTPDJgqhMj50jCuDzfg5zv6kKzBJvBy6PdzvoJKeooyC+UjskffRg78ikn
+X-MS-Exchange-Organization-AuthSource: HUB05.ad.oak.ox.ac.uk
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-OriginatorOrg: nexus.ox.ac.uk
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 39a890ee-ab94-4719-08ea-08d67cab0ee2
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(8559020)(8990200)(5600109)(711020)(2017052603328)(7153060);SRVR:CWXP265MB0406;
+X-Microsoft-Exchange-Diagnostics:
+ 1;CWXP265MB0406;3:nBBw+OSHdYLudoIu3OsR+jmyykyypnzOZzgBoZgGC+tnUqj2lCQoH2l8r9aITckzAoj4R4MtqBLvHP+1sRqFrTo1ucXFZaVR3cIGpvw3aCWp1Alr8TckuLLEnpvc5xYO4XaoFKHsL+1HXflIixtiCbOYXDgycqxbUn1fz0tFgqZ2BgKlqxcKS/fXTm/cgoRVhoFGJNUHRXggAfCzOI7Tp1ixmqiqGeb+AlVFFjzAFgcCFSHcG/AodFpxOkaqGztOi/D+RWEqS2tn9aDVwOmAal89jEnWTq7kMIMDEzTKglx3hMiZBdWNAjYzBhvyJr3sSUStTWmkeTze6Ye5AuOtsNVSt3Zy3L0ovNNJcaoqJxPsU4GIstjL3B4ZR/iqAQ+F;25:DtrYBoxMzmVjxgKwGsQeLJMVlmVSAJOW2AnqaQ9IDIeOJcuR2XqkwZPqkxz8WlcVxecQ4G6NfncOYv25YcFJN7NjkEZxYx3bvw/wkXvYgXvarrxKoWQf+MxpswoT5+BdTB5mWbVgSEDhSZwmCAke5IlL16NSHnQRHr885oKP53dqKKTMICp//IMWUxRcnrv6h+0gOZiFdY1Q8Z2zCaj433OTXsO77CXjAzyUc8q0ksGHiRmA8a071k71Rr+YDK31awRNuQNYjW0FJgeGcpMQAuC7QZr7Wu84R/ObDhpnDfK8w70z7lY90h4NQja0hiTWi+BMcjNJFvKFaEqyj41sug==
+X-MS-TrafficTypeDiagnostic: CWXP265MB0406:
+X-Microsoft-Exchange-Diagnostics:
+ 1;CWXP265MB0406;31:lqvBOHVY1LD0DC1npvmh/RArO1bcChhBX/oM71S2stiFsVENV85CdpGUVHt1bOaSbvwCo7e2alWIDkojMYfMJcfSyIgishpeZXPgJpuxjl8zWd0FoPklPbsV42qpEiBaztxdvi1cXS/aXlSb2SIiBEh0w+qKgp0c6W9BxNlqGnd/4qvUxTtDg+zctD9yLcv8nuAfs1eBoSKfL0wkqxUz4kchUrWK1tjjR1+BWBrsra8=;20:llDBA+8AmEV6Wy5RWvxbeFG91DcpMsDofcsi/JOI7orHDOs2g/97TS+NteUJNlkklu6YnTpe0I3zBY5Z1NPLpXWMCoKiaoCGtGO8qJMb4t2m6q0B2zuItpm1pYxNSIhhj39wM+YWqLqJV/NMmv6WCN1eTjZRVZu8KZuqFU7fUdnYUZNSmy9keH5UjDFDl6bQkgTGpffOQrXEL9zpLyHnrKFwxGGPFKlw2tSEsSfXOUIdsNy8FtVJg3pxFIY5FWv3mEbVb3dwylbyJw5nCLcW+p048/aoRJIVAJFCpCYNygIZzIYGUAB1zAB9g9dKO1xHI3Ql62AQihzmruhUBOniZ73M8+7cFekkViDKA1HQaXxHckTgjfxYmWQugfOhWUX+dsaOlC41Y6EhjIndIEMsgGsaVSk4UfxtVttc5Y7U8m5EzwtVXt7Bd8Kw1GvhcAfywJg6stmA3GayPVZN/Jl5zJRZXP/Uafq1dnNfjXbmJRrARBPJdIc46ZRlygkFmZJd
+X-Microsoft-Exchange-Diagnostics:
+ 1;CWXP265MB0406;4:7ZoYG1+YlW8EqIC3TZ0lrqIwMpbw35CYeFVQENGP4yD2Id6CMtqCSeE+xEubBqBi+spihuE28z7rwWEv+pwGaT6Ku4Y9YsAE5CpTt1woW96OgucFdvywzSOGdWAbEW1Dch2e1lP5d5x/1fc7wAzk+YB/N/gTiUPYa+qcuXXlsj6vZXku9v+z8pnGqxOPQiazfVCa7LlKDXa98+BWyrOh9EKmt10YqVCJenHLzWmqSiBPkTUqU8D3kBB0hjJ0NEa9/LoY2XoXq+Q1WHXAyzaAkFcexGlMapQpVnK83/wfJnVkVkvgU7ouvzmdt+utCFIO
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Exchange-Diagnostics:
+ =?utf-8?B?MTtDV1hQMjY1TUIwNDA2OzIzOkw0RXVWOHFneERzMklxQVExRndHSTcrK285?=
+ =?utf-8?B?SXc3YVk2MUszWFJSdVZOb24rUzA3RERLbU5iKzU4TXo0UjhUS1lRbTA2Si9u?=
+ =?utf-8?B?VHBsNVllNXQxejZJTEZZMWNXSlNDZ0JMWmg4aGd4QVZXM3pKblpFeldRSnV3?=
+ =?utf-8?B?c0hRYVJRVS9YbmRUY2JqU1BpUm5wcXBadXZJclRnL1oxaDVSYkltMlJJVkxT?=
+ =?utf-8?B?a296cmJ0U0pFRzlrM3dpcXY5dW0xR3hLa21GZU5VVlVHRnlGUkEzMkFqMEpO?=
+ =?utf-8?B?SVlQQ2h3Y1FyZnZkaE5EU2RSNGxWZUZtb25TWXQ0K1lhR1NvRlNXcTFZUGtO?=
+ =?utf-8?B?QllJWGNVekwyVjZYN0lkOXZWUU4zWmZsVzZ6TjlsMkVyU0QzM2hOYmdDOVRD?=
+ =?utf-8?B?ZllRaTV5THNVS1JXeFp6d2hlM3VaeW81VWFBQzM4Q3Q3WTJlMGJnSnFVRjF2?=
+ =?utf-8?B?ZkZTcHZMbHBveGRrQitrUWR5Z3JOTXpkcXpLcU0wVnQ0VU9qWWZyWWlzVU5n?=
+ =?utf-8?B?ekFiRTZpOW9MbTIxMHBLRkwzT0pCaDJUU29Sa2MxeDRrTjZPcmdlcXFlMDFK?=
+ =?utf-8?B?N2N5ZDJjMXpobjJZVFpmOGRpV3ovTXNoNkdhYlZnQkNlZ3VBVyt0R1pEVWdV?=
+ =?utf-8?B?ZjB5SThWRUtZaW5qN3EzTXFPczF3cjNlUWNMaFNCQUpFN1ZDdWlqSm9XOUhM?=
+ =?utf-8?B?Qi9lb3F3WGNOYklzUlJyR2pIemZSYVhqNWhMMWprelJqcDJteHkxRml2WjRz?=
+ =?utf-8?B?clJFeUo0bU1ablZXaVZkbGo1ckpWUFo4NlJENSt1SERRc2J3OXp0YzZUWm5I?=
+ =?utf-8?B?bkNNdUtkM2pVYmthYjU1UzJORDFrV29IdlJCWmpZMnhsYS9jcmZOUFRlWWc5?=
+ =?utf-8?B?elVWd1lPWFNqUDNKV1FkMjArYnNzc04yY2t0alZ1U1NJWmV3bCt2RGxmcG13?=
+ =?utf-8?B?VVhoeGE1dXZ4M0I5NmxWanB5N2FaeU1xL0JndC9GMjZDUDQ3U2Riajk0Sm5F?=
+ =?utf-8?B?aUZZYzljR0dQNWRoTE5lNzMwZUtUT241djg3a2M3L2xHbDF5MVFSVVpFZTZt?=
+ =?utf-8?B?aXQwNm1aL3piRzlaN1BYR29XZGk3VnlwbHQ1dS8wRVdlNVVnMFI0RldwbUVa?=
+ =?utf-8?B?VDlkRmUxN0JwZlgxVG5rNEcrSVN6R25XQmpTcWJsUWtqODYwYzdqYksvODBC?=
+ =?utf-8?B?QXkvWDJBZWJxR1JkakxuK2ppV0lyVUtCSmt4MUtKb0REY1lZd2dKR3FTRzhZ?=
+ =?utf-8?B?UGt5MEZWUGozUXpKMTdnL1dGSFVvdG5ld1RQaWx3QkZZRlF4RUI3Yjd4b1Er?=
+ =?utf-8?B?Z3N0cnliaklkY05hbXZ1NS9CZDdMSlJOY21yUUVWNkM2N2hQN1FscWFWOUll?=
+ =?utf-8?B?REh0eXdGWTdnWmhFQS9KekVRN1krS0UvVElkR012NG9aamVuTWhEVUM5cUFS?=
+ =?utf-8?B?Q2ViS2NTbVk0MkE3R21raVZXL2FqZXlVSFJSdlNjVmlYdG1neUVSbkloZ1FL?=
+ =?utf-8?B?NTRSQmU4VFRSbTludGZBQTlVQ1JOMmJwTm1ua0FrZS9qZTdKa3NGcGV1MUhm?=
+ =?utf-8?B?dmdQZDIzZ2hyalIvL0pjbVB1bE5ZV0FPTTBCM0Nvd2NXZWVIdHBwU1VDcFE2?=
+ =?utf-8?B?YSt0L0FqY0JsOXY4VzlubDdRNTMwYmMvUUo1YmpvVVljdi9FcUVpb2JlZFZ6?=
+ =?utf-8?Q?3BbAzjHb3SN8kB8WeCx7VAvoGSWTmMCH/wWd/Ji?=
+X-Microsoft-Exchange-Diagnostics:
+ 1;CWXP265MB0406;6:lAE61AFRGaDcs8sCWcN9Fnh3dW04+cWWqcvXlAusXcsVZUhjblgS8/Y2NTrlRGy8FkcjBeB47XslLpOm5r2O2JEBWEj2dSa5N0o46EpMCHaxEv0U1VnPNF4A70OBmxIWwxBrhnAQ4ZHxr5J+BRTyuoLPj0rNXpWUoIJ5CODHyO0kkYWXi+Yx0l03bxJOoflulCEj9neiU13JN8BA8Wd+vzpQThIyz/KYM7VFDP9TbA6OEsYNy5ahdtABahjBrECqdSpD91ezilveY/vjxy5wEgU78Wvj71Cu2FXbNCVDSXgYeJ47iSocVkPfbOMWJL5/EOVJsZ6eXlqfZKvCxq9OEqY19vs5ynFBNqp5P0gyhOYrE0G+lzyoie4EoY5qDomn7p0fJ6bdiBrpjMbV0E2i4COE3dmBP1+YSqv1GMHasXR6yBLJnLXa5jDCQXOt3IDJG7ENv2pYa8GmwTn0Kzgp8A==;5:VsohOlRv0MYVsHmOkSY5rNyTA1W+6x4Te+M0A+wb8AyHMFLnsaf9kR57DwZW2i4WzNsa9LeSz8o2vY1ELjSlVWnM3xiiil6U5BxCbN8AhpPOJX3sIC+BPqAjY9wZ/W5v1XlZ7+rW0WhBVer5T9eC/rM6S/HVkBbmG0mtVQJO3EJNykgZKtIz29t5HxnPpnVVchCrPF/13LWVHlnn+Sep4w==;7:qNYYhDGE3L0K0GaeeNMZ9kz4UbsdZB3w8Z5DIGKXVCDbQMwGW2HnrGt4vysnGN1pprUkzOauoxbHp5GszMahwn5FKJ2jurrKI5wIrFEDP4aN/YVZM05KYY4uaCxeMQYBsH3bhD9pQ/RgdR4B7AswfQ==
+SpamDiagnosticOutput: 1:99
+SpamDiagnosticMetadata: NSPM
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Jan 2019 18:39:04.7481
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 39a890ee-ab94-4719-08ea-08d67cab0ee2
+X-MS-Exchange-CrossTenant-Id: cc95de1b-97f5-4f93-b4ba-fe68b852cf91
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=cc95de1b-97f5-4f93-b4ba-fe68b852cf91;Ip=[163.1.154.231];Helo=[smtp.nexus.ox.ac.uk]
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CWXP265MB0406
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.8436775
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1516.000
+X-Microsoft-Exchange-Diagnostics:
+	1;LNXP265MB0410;27:vsnZJGFCR1ddwQN2C+/1T0MZky3Wub3xq18QqraIDQfFADbG5RmZ4FHS+2y0p/IHgm720ozxmtu4lXFxA/8/NOCUgionLzlkwTABqsiQIrjgUjrlYPooDwPNNHH76jXBMybLzX24fUY0/CwsVzxpMu/WD/sSN96AzU1oFPkTytm/nbdudP+BXQBIPHrlgKlQITScFMsFkpN+IHRMxwTO5HlzZE9xJ+RAVLNDzK5SxrJcW+7LMmt2NTIZEkvsw1QzCH5vnw1r8V9kZm1a/I9wHcOnVa+X0JxfLVVZ1dp3w3qxPPj8fJHi/3GhrdzAXrhe/xQagZfaRsxg8hJUUH0yxOku+7lVPz3P9o7z/Tg6XM/bHlA3BV2npI0SZdvGv85OrkR85QNvAXGvf9sIXHljbiCX+IZImM6rAk+tH8DPLYNhE+Df13udPna5/wVZcGZ2
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(20160514016)(750119)(520011016)(944506303)(944626516);
+X-Microsoft-Antispam-Message-Info:
+	BSVAXXnqU3PwAcd/63LNMxtbCryy570L4A0xTWm36M3Zcr4bBB9en/qaubsFilV0i8zM+JkegyuMeQbPY9Rgj31qrrrEQTTBHETTTeQG12VgB90c926hNQ0NnfLgSi7Np6CueAwye9BkrNIWRTSQqRJhbneRgR8YYsDtUzQ2RBTgyVlMqglL3hTisMIldyCAP7SzTyuCvzNQMN5cTAuvxsUtTCDE/uWji/rvIdSq05jMFgrkKwQw/HCLMhypchiY0s6jHPCG3HPtT0VI+PWFlPGEpBUhTY7y4MwGV3K80AZUeW7yDm1DlGHSUo93yGb3K3GmcIo9OUZ9tiRQyUQrq1t0ZXXdflJbrYl46xLI7wW5m+PMtuqME+6XQTRRSh2urWaTbfI827N+rhPmA8NgUuy03/Z9WjciDXnUC4tmo2SfhTwlBIkGLnx+zqDztXh3cxWjeL+pJjycE6Lu0Y34nXH5dWqI6MB2VCJBNosViPULTf5fL+34OpHgdWJGAN/LFfnjQNKOsEUaQ8Nnpj5W3azPue16ZzmFgYwaL4g9bR1to4YIIl9Xkz6o/ZuYAw4s99uo1GQSJ5OR7Pd9+qHbjDIgyUJHPM5YqqEiYsm/IWnTPk2WwvLren+MLOrJI8ct3ADw2CEvDUtjHGwZg0DQS2P2Ki3D8SXzkZA5WbL6GQZ14YVZphstU7yhESbPIbk8Wa7hsCpXv5pa55Lq/IG01BY6RpPSbrsleDpfxh4bigEgwtV+1PiQUb+jPme1qDaPmdCIS8k9qIfxkKkfHifn21iiV+MrugjhEW4LOSEAtQXLy10dTRFMiXJhShe4nah/
+MIME-Version: 1.0
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body><!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+    <head>
+        <!-- NAME: 1 COLUMN -->
+        <!--[if gte mso 15]>
+        <xml>
+            <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>*|MC:MC_SUBJECT|*</title>
+        
+    <style type="text/css">
+		p{
+			margin:10px 0;
+			padding:0;
+		}
+		table{
+			border-collapse:collapse;
+		}
+		h1,h2,h3,h4,h5,h6{
+			display:block;
+			margin:0;
+			padding:0;
+		}
+		img,a img{
+			border:0;
+			height:auto;
+			outline:none;
+			text-decoration:none;
+		}
+		body,#bodyTable,#bodyCell{
+			height:100%;
+			margin:0;
+			padding:0;
+			width:100%;
+		}
+		.mcnPreviewText{
+			display:none !important;
+		}
+		#outlook a{
+			padding:0;
+		}
+		img{
+			-ms-interpolation-mode:bicubic;
+		}
+		table{
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+		}
+		.ReadMsgBody{
+			width:100%;
+		}
+		.ExternalClass{
+			width:100%;
+		}
+		p,a,li,td,blockquote{
+			mso-line-height-rule:exactly;
+		}
+		a[href^=tel],a[href^=sms]{
+			color:inherit;
+			cursor:default;
+			text-decoration:none;
+		}
+		p,a,li,td,body,table,blockquote{
+			-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+		.ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div,.ExternalClass span,.ExternalClass font{
+			line-height:100%;
+		}
+		a[x-apple-data-detectors]{
+			color:inherit !important;
+			text-decoration:none !important;
+			font-size:inherit !important;
+			font-family:inherit !important;
+			font-weight:inherit !important;
+			line-height:inherit !important;
+		}
+		#bodyCell{
+			padding:10px;
+		}
+		.templateContainer{
+			max-width:600px !important;
+		}
+		a.mcnButton{
+			display:block;
+		}
+		.mcnImage,.mcnRetinaImage{
+			vertical-align:bottom;
+		}
+		.mcnTextContent{
+			word-break:break-word;
+		}
+		.mcnTextContent img{
+			height:auto !important;
+		}
+		.mcnDividerBlock{
+			table-layout:fixed !important;
+		}
+		body,#bodyTable{
+			background-color:#FAFAFA;
+		}
+		#bodyCell{
+			border-top:0;
+		}
+		.templateContainer{
+			border:0;
+		}
+		h1{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:26px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		h2{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:22px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		h3{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:20px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		h4{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:18px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:125%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		#templatePreheader{
+			background-color:#FAFAFA;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			border-top:0;
+			border-bottom:0;
+			padding-top:9px;
+			padding-bottom:9px;
+		}
+		#templatePreheader .mcnTextContent,#templatePreheader .mcnTextContent p{
+			color:#656565;
+			font-family:Helvetica;
+			font-size:12px;
+			line-height:150%;
+			text-align:left;
+		}
+		#templatePreheader .mcnTextContent a,#templatePreheader .mcnTextContent p a{
+			color:#656565;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		#templateHeader{
+			background-color:#FFFFFF;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			border-top:0;
+			border-bottom:0;
+			padding-top:9px;
+			padding-bottom:0;
+		}
+		#templateHeader .mcnTextContent,#templateHeader .mcnTextContent p{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:16px;
+			line-height:150%;
+			text-align:left;
+		}
+		#templateHeader .mcnTextContent a,#templateHeader .mcnTextContent p a{
+			color:#2BAADF;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		#templateBody{
+			background-color:#FFFFFF;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			border-top:0;
+			border-bottom:2px solid #EAEAEA;
+			padding-top:0;
+			padding-bottom:9px;
+		}
+		#templateBody .mcnTextContent,#templateBody .mcnTextContent p{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:16px;
+			line-height:150%;
+			text-align:left;
+		}
+		#templateBody .mcnTextContent a,#templateBody .mcnTextContent p a{
+			color:#2BAADF;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		#templateFooter{
+			background-color:#FAFAFA;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			border-top:0;
+			border-bottom:0;
+			padding-top:9px;
+			padding-bottom:9px;
+		}
+		#templateFooter .mcnTextContent,#templateFooter .mcnTextContent p{
+			color:#656565;
+			font-family:Helvetica;
+			font-size:12px;
+			line-height:150%;
+			text-align:center;
+		}
+		#templateFooter .mcnTextContent a,#templateFooter .mcnTextContent p a{
+			color:#656565;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+	@media only screen and (min-width:768px){
+		.templateContainer{
+			width:600px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		body,table,td,p,a,li,blockquote{
+			-webkit-text-size-adjust:none !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		body{
+			width:100% !important;
+			min-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		#bodyCell{
+			padding-top:10px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnRetinaImage{
+			max-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImage{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnCartContainer,.mcnCaptionTopContent,.mcnRecContentContainer,.mcnCaptionBottomContent,.mcnTextContentContainer,.mcnBoxedTextContentContainer,.mcnImageGroupContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionLeftImageContentContainer,.mcnCaptionRightImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardRightImageContentContainer{
+			max-width:100% !important;
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnBoxedTextContentContainer{
+			min-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageGroupContent{
+			padding:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{
+			padding-top:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageCardTopImageContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent{
+			padding-top:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageCardBottomImageContent{
+			padding-bottom:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageGroupBlockInner{
+			padding-top:0 !important;
+			padding-bottom:0 !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageGroupBlockOuter{
+			padding-top:9px !important;
+			padding-bottom:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnTextContent,.mcnBoxedTextContentColumn{
+			padding-right:18px !important;
+			padding-left:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{
+			padding-right:18px !important;
+			padding-bottom:0 !important;
+			padding-left:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcpreview-image-uploader{
+			display:none !important;
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h1{
+			font-size:22px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h2{
+			font-size:20px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h3{
+			font-size:18px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h4{
+			font-size:16px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p{
+			font-size:14px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		#templatePreheader{
+			display:block !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		#templatePreheader .mcnTextContent,#templatePreheader .mcnTextContent p{
+			font-size:14px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		#templateHeader .mcnTextContent,#templateHeader .mcnTextContent p{
+			font-size:16px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		#templateBody .mcnTextContent,#templateBody .mcnTextContent p{
+			font-size:16px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		#templateFooter .mcnTextContent,#templateFooter .mcnTextContent p{
+			font-size:14px !important;
+			line-height:150% !important;
+		}
+
+}</style><!--[if !mso]><!--><!--<![endif]--></head>
+    <body style="height: 100%;margin: 0;padding: 0;width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FAFAFA;">
+        <!---->
+        <center>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;background-color: #FAFAFA;">
+                <tr>
+                    <td align="center" valign="top" id="bodyCell" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 10px;width: 100%;border-top: 0;">
+                        <!-- BEGIN TEMPLATE // -->
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+                        <tr>
+                        <td align="center" valign="top" width="600" style="width:600px;">
+                        <![endif]-->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border: 0;max-width: 600px !important;">
+                            <tr>
+                                <td valign="top" id="templatePreheader" style="background:#FAFAFA none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FAFAFA;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 9px;padding-bottom: 9px;"></td>
+                            </tr>
+                            <tr>
+                                <td valign="top" id="templateHeader" style="background:#FFFFFF none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 9px;padding-bottom: 0;"></td>
+                            </tr>
+                            <tr>
+                                <td valign="top" id="templateBody" style="background:#FFFFFF none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 2px solid #EAEAEA;padding-top: 0;padding-bottom: 9px;"><table class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top">
+              	<!--[if mso]>
+				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+				<tr>
+				<![endif]-->
+			    
+				<!--[if mso]>
+				<td valign="top" width="600" style="width:600px;">
+				<![endif]-->
+                <table style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+                    <tbody><tr>
+                        
+                        <td class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;" valign="top">
+                        
+                            <br>
+<span style="font-size:16px"><span style="font-family:open sans,helvetica neue,helvetica,arial,sans-serif">Dear Subscriber,<br>
+<br>
+<strong><span style="color:#800080">Tom Paladino, a scalar energy researcher</span></strong>, is committed to ensure that the best data protection and compliance data policies are in place. Our privacy policy explains how we collect and use personal data. The purpose of this communication is to offer you and your family complimentary scalar light healing sessions. There is no obligation to participate in these complimentary scalar light healing sessions.<br>
+<br>
+<span style="color:#800080"><strong>Why we are contacting you?</strong></span> We are contacting you today as part of our compliance with the General Data Protection Regulations (GDPR) which came into force on 25th May 2018.<br>
+<br>
+The data that we possess includes your name and email address. The GDPR classifies information such as your name and email address as personal data.<br>
+<br>
+<strong><span style="color:#800080">What do we do with the data?</span></strong> We use the data to contact you from time to time to provide you with complimentary scalar light healing sessions. These complimentary scalar light healing sessions carry no obligation.<br>
+<br>
+The lawful basis we use for this processing is <strong><span style="color:#800080">&quot;Legitimate Interest&quot;</span></strong> for &quot;direct marketing&quot;. It is recommended that companies using this basis conduct a &quot;Legitimate Interests Assessment&quot; (LIA), which we have done. You subscribed to our offer for a complimentary scalar light session or heard about us and subsequently subscribed to our newsletter.<br>
+<br>
+<strong><span style="color:#800080">To register for the complimentary 15 day session please visit:&nbsp; <a href="http://www.freescalar.us/" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">WWW.FREESCALAR.US</a></span></strong><br>
+<br>
+<strong><span style="color:#800080">To confirm your acceptance to receive emails as well as the complimentary scalar light sessions, please <a href="https://www.scalarlight.com/optin.html?576779B3FA9145695397819178CAA52B0D424E8C13EB57B66D23A3B76622E807" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">confirm</a>.</span></strong><br>
+<br>
+You can <a href="https://www.scalarlight.com/unsubscribe.html" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">unsubscribe</a> at any time.<br>
+<br>
+You have the right to opt out of future communications and the quickest way to do this is to use the <a href="https://www.scalarlight.com/unsubscribe.html" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">unsubscribe</a> link at the bottom of this email.<br>
+<br>
+Thank you.<br>
+<br>
+Tom Paladino<br>
+1767 Lakewood Ranch Blvd #231<br>
+Lakewood Ranch, Florida 34211<br>
+805-364-3051 or 800-345-9851<br>
+<a href="mailto:support@scalarlight.com" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">support@scalarlight.com</a><br>
+<a href="http://www.selfhealgo.com" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">SelfHealGo.com</a> / <a href="http://www.scalarlight.com" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">ScalarLight.com</a><br>
+<br>
+If you do not wish to receive further emails from us, click here to <a href="https://www.scalarlight.com/unsubscribe.html" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">unsubscribe</a>.&nbsp; You can read our Privacy Policy here.&nbsp; If you have any questions about this email, please contact <a href="mailto:admin@scalarlight.com" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">admin@scalarlight.com</a>.</span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+				<!--[if mso]>
+				</td>
+				<![endif]-->
+                
+				<!--[if mso]>
+				</tr>
+				</table>
+				<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                            </tr>
+                            <tr>
+                                <td valign="top" id="templateFooter" style="background:#FAFAFA none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FAFAFA;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 9px;padding-bottom: 9px;"></td>
+                            </tr>
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                        <!-- // END TEMPLATE -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+                </body>
+</html>
+<img src="https://www.scalarlight.com/trk.jpg?C8C74EFA00B5E8E10CB9F40C2A402B1D31ABD2D5CF25BDEDAC8205DE96E3AD6EC4025A62A741C70BCFE9477212F27E5B23C0A5EC6EA9A0AC0EB0BA2873834F359CFD9DFA910FF114C1A9B719B15A179D4AF22AAE3C5E80AB7AA3228348AD962EFB9DA763415394635C029385732244D61F2BAAD09C2815AEBC9600FDE9E5169AE5033F94EF6C044E" alt=""></body></html> 
+
