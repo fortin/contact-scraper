@@ -1,5 +1,6 @@
-"""Thanks Sasha, I can't go any higher and is why I limited it to the
+Thanks Sasha, I can't go any higher and is why I limited it to the
 homepage.
 
+--
 John Doe
-via mobile"""
+via mobile
