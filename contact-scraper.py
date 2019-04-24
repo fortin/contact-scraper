@@ -7,16 +7,23 @@
 #
 
 import phonenumbers
+import re
 
-numbers_file = open('test_email.eml', 'r')
-my_numbers = numbers_file.read()
+pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
+email = open('test_email.eml')
+my_email = email.read()
 
+emails = set()
 numbers = set()
 
-for match in phonenumbers.PhoneNumberMatcher(my_numbers, "US"):
+for i, line in enumerate(open('test_email.eml')):
+    for match in re.finditer(pattern, line):
+        emails.update(match.groups())
+
+for match in phonenumbers.PhoneNumberMatcher(my_email, "US"):
     try:
         numbers.add(phonenumbers.format_number(match.number, phonenumbers.PhoneNumberFormat.E164))
     except(TypeError):
         pass
 
-print(numbers)
+print(emails, numbers)
