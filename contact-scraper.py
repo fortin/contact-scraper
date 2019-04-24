@@ -8,13 +8,21 @@
 
 import phonenumbers
 import re
+import email
+import email.parser
 
 pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
-email = open('test_email.eml')
-my_email = email.read()
+msg = open('test_email.eml')
+my_email = msg.read()
 
 emails = set()
 numbers = set()
+
+parser = email.parser.HeaderParser()
+headers = parser.parsestr(str(my_email))
+
+for h in headers.items():
+    print(h)
 
 for i, line in enumerate(open('test_email.eml')):
     for match in re.finditer(pattern, line):
