@@ -5,10 +5,14 @@ import csv
 with open('test-headers.txt', 'r') as f:
     headers = f.read()
 
+headers = headers.replace("[", "{", 1)
+headers = headers.replace(")]", "}")
+headers = headers.replace("',", "':")
+headers = re.replace(s')
+print(headers)
 for char in headers:
     headers = headers.translate({ord(i):None for i in '[]'})
 
-dictionary = pickle.load(headers)
 
 print(type(headers))
 # print(dictionary)
