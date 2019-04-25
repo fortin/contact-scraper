@@ -20,9 +20,14 @@ numbers = set()
 
 parser = email.parser.HeaderParser()
 headers = parser.parsestr(str(my_email))
+names = []
 
 for h in headers.items():
-    print(h)
+    # m = re.search(r"From", h)
+    # if m:
+    names.append(h)
+
+print(names)
 
 for i, line in enumerate(open('test_email.eml')):
     for match in re.finditer(pattern, line):
