@@ -1,543 +1,902 @@
-Return-path: <info@clearwaterlettings.co.uk>
-Envelope-to: fortin@neomailbox.net
-Delivery-date: Tue, 02 Apr 2019 13:08:04 +0200
-Received: from _exim by s5.neomailbox.net with procmailed (Exim 4.85)
-	(envelope-from <info@clearwaterlettings.co.uk>)
-	id 1hBHGt-0005ut-D4
-	for fortin@neomailbox.net; Tue, 02 Apr 2019 13:08:03 +0200
-Received: from [127.0.0.1] (helo=s4.neomailbox.net)
-	by s5.neomailbox.net with esmtp (Exim 4.85)
-	(envelope-from <info@clearwaterlettings.co.uk>)
-	id 1hBHGr-00013W-DQ
-	for fortin@neomailbox.net; Tue, 02 Apr 2019 13:08:03 +0200
-Received: from _exim by s4.neomailbox.net with procmailed (Exim 4.86)
-	(envelope-from <info@clearwaterlettings.co.uk>)
-	id 1hBHGq-0002da-JN
-	for fortin@neomailbox.net; Tue, 02 Apr 2019 13:08:00 +0200
-Received: from [213.171.216.60] (helo=smtp.livemail.co.uk)
-	by s4.neomailbox.net with esmtps (TLSv1.2:DHE-RSA-AES256-GCM-SHA384:256)
-	(Exim 4.86)
-	(envelope-from <info@clearwaterlettings.co.uk>)
-	id 1hBHGo-0007Ew-Es
-	for fortin@neomailbox.net; Tue, 02 Apr 2019 13:08:00 +0200
-Received: from DESKTOP-JL50LO9 (unknown [51.179.168.22])
-	(Authenticated sender: info@clearwaterlettings.co.uk)
-	by smtp.livemail.co.uk (Postfix) with ESMTPA id 4CF90260333
-	for <fortin@neomailbox.net>; Tue,  2 Apr 2019 12:07:55 +0100 (BST)
-List-Unsubscribe: https://webutils.acquaintcrm.co.uk/marketingpreferences.aspx?SitePrefix=CLET&SiteID=0&ContactID=59
+Delivered-To: fortin@zoho.com
+Received-SPF: pass (zoho.com: domain of opayq.com designates 184.105.182.138 as permitted sender) client-ip=184.105.182.138; envelope-from=FWD.99ykyxx07hrn@opayq.com; helo=138-he.filtered.junkemailfilter.com;
+Authentication-Results: mx.zohomail.com;
+	dkim=pass;
+	spf=pass (zoho.com: domain of opayq.com designates 184.105.182.138 as permitted sender)  smtp.mailfrom=FWD.99ykyxx07hrn@opayq.com;
+	arc=fail;
+	dmarc=pass(p=none dis=none)  header.from=opayq.com
+Received: from 138-he.filtered.junkemailfilter.com (138-he.filtered.junkemailfilter.com [184.105.182.138]) by mx.zohomail.com
+	with SMTPS id 1556181690304384.60453126498066; Thu, 25 Apr 2019 01:41:30 -0700 (PDT)
+Received: from smtp3.opayq.com ([23.23.126.237]:37466) helo=[23.23.126.237]
+	by opayq-outbound.junkemailfilter.com with esmtps (TLSv1.2:AES256-SHA256:256)
+	(Exim 4.90)
+	id 1hJZwf-00019g-HE on interface=184.105.182.150
+	for fortin@zoho.com; Thu, 25 Apr 2019 01:41:29 -0700
+Return-Path: <FWD.99ykyxx07hrn@opayq.com>
+Return-Path: 
+Delivery-date: Thu, 25 Apr 2019 01:41:30 -0700
+DKIM-Signature: v=1; d=opayq.com; t=1556181688; b=jnkWSmZ4d45jAeZDx3Mj65MRJW6n55w7nYTUX6IYYrMhI2g96pOrz7J2bflvvdUe+Nk3UBfm80ZE8ftOdszpjc+FpYC3ruF7L0hm7EsFldhhKeDm5DFshlexZ1GPT/RzXll9sRbmqaBGpR+TB4gB4hbaTEF1fX1k7s2/jblzrqI=; s=abine; c=relaxed/relaxed; a=rsa-sha256; bh=3H5L63szaiyFAZh6m3zJ+qNQvOhfuBsjvi4iaIVLUWQ=; h=Date:From:Reply-To:Subject:To:List-Unsubscribe;
 MIME-Version: 1.0
-From: "Clearwater Lettings" <info@clearwaterlettings.co.uk>
-To: fortin@neomailbox.net
-Date: 2 Apr 2019 12:07:49 +0100
-Subject: Property Account Statement From Clearwater Lettings
-Content-Type: multipart/mixed;
- boundary=--boundary_126_f36fc5d3-12e8-461a-b8ea-3402146c37f4
-X-SA-Score: 2.8
-X-SA-Report: Spam detection software has NOT identified this incoming email as spam.
- 
- Spam analysis details:   (2.8 points, 5.0 required)
- 
-  pts rule name              description
- ---- ---------------------- --------------------------------------------------
- -0.2 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [213.171.216.60 listed in wl.mailspike.net]
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at http://www.dnswl.org/, no
-                             trust
-                             [213.171.216.60 listed in list.dnswl.org]
-  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
-                             See
-                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
-                              for more information.
-                             [URIs: clearwaterlettings.co.uk]
-  1.0 HTML_MESSAGE           BODY: HTML included in message
-  0.0 T_OBFU_PDF_ATTACH      BODY: PDF attachment with generic MIME type
-  1.8 HTML_IMAGE_ONLY_08     BODY: HTML: images with 400-800 bytes of words
-  0.1 RDNS_NONE              Delivered to internal network by a host with no rDNS
-  0.1 MISSING_MID            Missing Message-Id: header
-Message-Id: <E1hBHGq-0002da-JN@s4.neomailbox.net>
-
-
-----boundary_126_f36fc5d3-12e8-461a-b8ea-3402146c37f4
 Content-Type: multipart/alternative;
- boundary=--boundary_124_fb4dee0b-34df-4532-859b-0dc6cf04ee41
+	boundary="----=_NextPart_F69_939A_24C9E5B0.323F37A7"
+X-GetAbine-Processed: 1
+From: "HMRC Business Help and Support Emails [Masked]" <FWD.99ykyxx07hrn@opayq.com>
+Sender: "HMRC Business Help and Support Emails [Masked]" <FWD.99ykyxx07hrn@opayq.com>
+Reply-To: FWD.99ykyxx07hrn@opayq.com
+To: 99vdzkxptgsl@opayq.com
+X-GetAbine-Sender: afortin+caf_=99vdzkxptgsl=opayq.com@gmail.com
+X-GetAbine-Disposable: 99vdzkxptgsl@opayq.com
+List-Unsubscribe: <mailto:unsubscribe-910154065-99vdzkxptgsl@opayq.com>, <https://emails.abine.com/disableDisposable?fwd=FWD.99ykyxx07hrn@opayq.com>
+X-GetAbine-Host-Address: 23.23.126.237
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:delivered-to:dkim-signature
+         :content-transfer-encoding:errors-to:reply-to:mime-version
+         :message-id:subject:date:to:from;
+        bh=TDUb3e0Gk54fRHak8g9VMoBGg8wgENNvVVNlGSxjg0A=;
+        b=CJnLVHiiBDouLvF5EdC/t9ZEcOlgvXedYWfe5deZhCHv/vyBnqrv6Z+6cjZ4JMMi4s
+         djZUA5LjBcGt2bfnZ0N9nP7f9MmeOVn8VECQ7MmhrOG7B/ba9cEEHXnFLzAIPS8e0MTb
+         7Y2nz8MvdCW+pFt+/NdhjEBAxm+SrudBX6YurEoZV9Jug/hGUngg5xl/H0b6QittgX+i
+         /smal+IU8ZA5S2YeJFbpW9eVZhL6HhTjBXkU0ekS+YpUY8KGXcYn8KekJJ5/CcgmNmvt
+         xdq8OplLehksy2q+5VYNU/iyHPAenQ0vDv3zIHsud2V4vUoeTdHTiiuODaXJ7n1w9KZ4
+         BbYQ==
+X-Gm-Message-State: APjAAAWX4zxt03Inl1edt11butoWdIYfwSO92ZI4Ix/DsLIL6h/3gQ3V
+	9AAdKVgcjprbywk/Yg4PJGmy9iOz0B1wiWiMfbPSLMf7OdG0Ft4=
+X-Received: by 2002:a9d:7093:: with SMTP id l19mr23362918otj.121.1556181681844;
+        Thu, 25 Apr 2019 01:41:21 -0700 (PDT)
+X-Forwarded-To: 99vdzkxptgsl@opayq.com
+X-Forwarded-For: afortin@gmail.com 99vdzkxptgsl@opayq.com
+X-Google-Smtp-Source: APXvYqwhTgWvW+Xadz9/4i37ktDjjzX5rtwNkq47V0eBPYL4DkTYOm7wWWjFemSoHFHoGUxmJZG0
+X-Received: by 2002:a24:1fcd:: with SMTP id d196mr2744271itd.19.1556181679912;
+        Thu, 25 Apr 2019 01:41:19 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1556181679; cv=none;
+        d=google.com; s=arc-20160816;
+        b=GqL5hjCcn7c/Y+nmiUzMzS2gLkI0A5quiM649ofHmBZmIiy7FXImHyaa/Rqt6meWYM
+         c1CzhqXJxPMmdNif2Hh9wnKKmaSAnnTG7MZruCmuP1TaJJ6PE1nYntx1YFO0bOy/xQr9
+         wrII/feaY53DTg4ecS9vY6e/g8j27kmA9v01uU5/XFPV19oQdZkIX0F6Fg1Z4gU34Ovz
+         lLqGxGE3du1Vo9FsHPyVAtcYUnhuGsROS634ZYIsZP0a4s06VKJvSUnJUPyryQFUbVpV
+         0o22rBDlRZs+GLQtprzfgLWqqdBQe+OVlnr6mnU5a324Xh8W7cfaaDz0S3obiTtTxJs6
+         XFJQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=from:to:date:subject:message-id:mime-version:reply-to:errors-to
+         :content-transfer-encoding:dkim-signature;
+        bh=TDUb3e0Gk54fRHak8g9VMoBGg8wgENNvVVNlGSxjg0A=;
+        b=Xtfq7ijdrPllQ69NhwTJzYOBSQ2KdLc7CtzS1x17mifpA/UAj5b2kEJGP6WVoYm6nN
+         f1/XfO2h2y8g/gjlWZ5xN2w2uI8Vd94eQJbpcU3KPOSHqe+gs8xpYlM1ILMp89dUl4yX
+         LkKCbn9fHAf7/+6HU8a23lpRcEguAiAKpfWqkFpxPQiITRleMu/7ylFF9ecA/UjkYXSa
+         +Y7Cr7lBvLTmXZC1SdG4xFNP5OWDALIp6M37Gme4hORqz/nJNQ9ox3ba3yGXYXYSojcC
+         DAYJ6gLeQDrru5oTwVRoprYbWBittS+Oqf+EI1+ckDp/nivgLS9mfhV5GyY5Dn1aNvEm
+         BiLQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@advice.hmrc.gov.uk header.s=15q1 header.b=DYX2tDBK;
+       spf=pass (google.com: domain of no.reply@advice.hmrc.gov.uk designates 209.134.158.36 as permitted sender) smtp.mailfrom=no.reply@advice.hmrc.gov.uk;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=advice.hmrc.gov.uk
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@advice.hmrc.gov.uk header.s=15q1 header.b=DYX2tDBK;
+       spf=pass (google.com: domain of no.reply@advice.hmrc.gov.uk designates 209.134.158.36 as permitted sender) smtp.mailfrom=no.reply@advice.hmrc.gov.uk;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=advice.hmrc.gov.uk
+X-VirtualServer: VSG002, mailer158036.service.govdelivery.com, 172.25.0.56
+X-VirtualServerGroup: VSG002
+X-MailingID: 17103821::20190425.5126731::1001::MDB-PRD-BUL-20190425.5126731::afortin@gmail.com::100589_0
+X-SMHeaderMap: mid="X-MailingID"
+X-Destination-ID: afortin@gmail.com
+X-SMFBL: YWZvcnRpbkBnbWFpbC5jb20=
+x-subscriber: 3.FrKYokML0nizZzEbqUEIMehRitmM2QVlUfp8aTJHaexqjwl1jGfIbI1Qm+MLoHV4SiHc5NQef/c7Dm6AiIvccn4OtRDDYvphcD9xdHptss3wyZMY6NjddjB1ewX2e09FrXXhj2XgeO8Cr2D6/5hq5w==
+X-Accountcode: UKHMRCED
+Message-ID: <17103821.100589@advice.hmrc.gov.uk>
+X-ReportingKey: LJJJ2EWJK29BDXJJECCMJJ::afortin@gmail.com::afortin@gmail.com
+Subject: =?US-ASCII?Q?Receiving_income_from_UK_property=3F?=
+Date: Thu, 25 Apr 2019 03:40:57 -0500
+X-Sender-Domain: google.com
+X-Spamfilter-host: plato.junkemailfilter.com - http://www.junkemailfilter.com
+X-Key-ID: OTl2ZHpreHB0Z3NsQG9wYXlxLmNvbSBhZm9ydGluK2NhZl89OTl2ZHpreHB0Z3NsPW9wYXlxLmNvbUBnbWFpbC5jb20gMjAxOS0wNC0yNSAwMTo0MToyNC4wNDMgMWhKWndaLTAwMDdLTi1HRQ==
+X-Content-flags: accounting accounts advisers age alerts available blockquote business cash contact cover customer customs dashes date dearcustomer designed email email-adr emails feel free good government https income information internet link links longword online optout pass percent phone-num please preferences property public publications questions quoted receipts receive receiving report responses right security services specially spici start starting subscrib subscriber tax taxes text-plain time-ref toweb trad transfer trust twitter unsubscribe videos w3 watch web webchatprod webinar webinars webkit youtube ziqs
+X-Domain-list: google.com gmail.com hmrc.gov.uk messagelabs.com akam.net hmrc.gsi.gov.uk
+X-Relay-Countries: us
+X-Sender-Host-Address: 209.85.210.41
+X-Sender-Host-Name: mail-ot1-f41.google.com
+Errors-to: <>
+X-Key-ID: Zm9ydGluQHpvaG8uY29tIGZ3ZC45OXlreXh4MDdocm5Ab3BheXEuY29tIDIwMTktMDQtMjUgMDE6NDE6MjkuNzY1IDFoSlp3Zi0wMDAxOWctSEU=
+X-ZohoMail-DKIM: pass (identity @opayq.com)
+X-ZohoMail-Owner: <17103821.100589@advice.hmrc.gov.uk>+zmo_1_FWD.99ykyxx07hrn@opayq.com
+X-ZohoMail-Sender: 23.23.126.237
+
+------=_NextPart_F69_939A_24C9E5B0.323F37A7
+Content-Type: text/plain;
+	charset="Cp1252"
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+
+--------------------------Blur---------------------------
+Your Blur Masked Email 99vdzkxptgsl@opayq.com received this from afortin+ca=
+f_=3D99vdzkxptgsl=3Dopayq.com@gmail.com.
+Blur forwards Masked Emails to you here =96 just reply like normal and Blur=
+ keeps your email private.
+IF THIS IS SPAM, CLICK HERE TO BLOCK:
+https://dnt.abine.com/#/block_email/99vdzkxptgsl@opayq.com/FWD.99ykyxx07hrn=
+@opayq.com
+
+Masked Emails stop spam, defy tracking, and keep data private. INVITE FRIEN=
+DS TO TRY BLUR PREMIUM AT 50% OFF
+https://dnt.abine.com/#/referral
+-------------------------By Abine--------------------------
 
-Random [California] Phone Numbers
-415-997-9953
+HMRCs online support for landlords =20
 
-Landline, from Nicasio, CA(state),USA
+View in browser [ https://content.govdelivery.com/accounts/UKHMRCED/bulleti=
+ns/23e734f ]
 
-323-905-8326
+=20
+
+h m revenue and customs =20
+Support from HMRC
+=20
+=20
+=20
+=20
+=20
 
-Landline, from Los Angeles, CA(state),USA
+Dearcustomer,
 
-213-599-5391
+Whether you are a new landlord or just need a refresher, youll find practic=
+al online help from HMRC.
 
-Landline, from Los Angeles, CA(state),USA
-
-510-852-1206
-
-Cell Number, from Oakland, CA(state),USA
-
-213-716-7240
-
-Cell Number, from Los Angeles, CA(state),USA
-
-209-583-0812
-
-Landline, from Valley Springs, CA(state),USA
-
-415-740-6000
-
-Cell Number, from San Francisco, CA(state),USA
-
-562-590-5399
-
-Landline, from Long Beach, CA(state),USA
-
-209-869-9344
-
-Landline, from Riverbank, CA(state),USA
-
-916-470-4814
-
-Cell Number, from Sacramento, CA(state),USA
-
-530-438-0243
-
-Landline, from Williams, CA(state),USA
-
-510-255-3681
-
-Landline, from Richmond, CA(state),USA
-
-209-768-1063
-
-Cell Number, from Sonora, CA(state),USA
-
-760-303-8726
-
-Landline, from Ridgecrest, CA(state),USA
-
-619-392-0259
-
-Cell Number, from San Diego, CA(state),USA
-
-951-852-5587
-
-Cell Number, from Temecula, CA(state),USA
-
-626-452-0613
-
-Landline, from El Monte, CA(state),USA
-
-916-237-8211
-
-Landline, from Sacramento, CA(state),USA
-
-619-466-3847
-
-Landline, from La Mesa, CA(state),USA
-
-916-256-7043
-
-Landline, from Sacramento, CA(state),USA
-
-619-881-1351
-
-Landline, from San Diego, CA(state),USA
-
-714-559-1778
-
-Landline, from Anaheim, CA(state),USA
-
-510-367-2193
-
-Cell Number, from Richmond, CA(state),USA
-
-760-630-0264
-
-Landline, from Vista, CA(state),USA
-
-510-866-3775
-
-Cell Number, from San Francisco, CA(state),USA
-
-951-322-6154
-
-Landline, from Perris, CA(state),USA
-
-415-336-8117
-
-Cell Number, from Brisbane, CA(state),USA
-
-619-309-2914
-
-Landline, from San Diego, CA(state),USA
-
-510-819-6699
-
-Cell Number, from Oakland, CA(state),USA
-
-818-701-4516
-
-Landline, from Northridge, CA(state),USA
-
-310-324-9153
-
-Landline, from Gardena, CA(state),USA
-
-510-644-1656
-
-Landline, from Berkeley, CA(state),USA
-
-858-530-5818
-
-Landline, from San Diego, CA(state),USA
-
-951-314-1674
-
-Cell Number, from Corona, CA(state),USA
-
-530-408-4847
-
-Landline, from Weed, CA(state),USA
-
-951-692-4441
-
-Cell Number, from Hemet, CA(state),USA
-
-310-857-9304
-
-Landline, from Santa Monica, CA(state),USA
-
-909-297-0465
-
-Landline, from Upland, CA(state),USA
-
-916-769-1499
-
-Cell Number, from Sacramento, CA(state),USA
-
-916-668-1340
-
-Landline, from Sacramento, CA(state),USA
-
-408-764-5396
-
-Landline, from San Jose, CA(state),USA
-
-760-530-8827
-
-Landline, from Adelanto, CA(state),USA
-
-831-747-3693
-
-Landline, from Monterey, CA(state),USA
-
-714-433-2515
-
-Landline, from Santa Ana, CA(state),USA
-
-323-686-6552
-
-Landline, from El Monte, CA(state),USA
-
-818-945-2625
-
-Landline, from Glendale, CA(state),USA
-
-310-391-3951
-
-Landline, from Mar Vista, CA(state),USA
-
-949-789-2183
-
-Landline, from Irvine, CA(state),USA
-
-619-532-7237
-
-Landline, from San Diego, CA(state),USA
-
-916-828-8465
-
-Cell Number, from Sacramento, CA(state),USA
-
-619-783-1791
-
-Landline, from San Diego, CA(state),USA
-
-530-793-0804
-
-Landline, from Flournoy, CA(state),USA
-
-510-896-0210
-
-Landline, from Fremont, CA(state),USA
-
-714-706-2819
-
-Landline, from Brea, CA(state),USA
-
-310-906-3350
-
-Landline, from Los Angeles, CA(state),USA
-
-949-725-4292
-
-Landline, from Irvine, CA(state),USA
-
-323-232-0208
-
-Landline, from Los Angeles, CA(state),USA
-
-760-904-3097
-
-Landline, from Palm Springs, CA(state),USA
-
-408-312-0225
-
-Landline, from Sunnyvale, CA(state),USA
-
-916-677-5019
-
-Landline, from Roseville, CA(state),USA
-
-831-244-4085
-
-Landline, from Big Sur, CA(state),USA
-
-714-543-2198
-
-Landline, from Santa Ana, CA(state),USA
-
-213-927-3257
-
-Landline, from Los Angeles, CA(state),USA
-
-626-377-6055
-
-Landline, from El Monte, CA(state),USA
-
-310-808-5176
-
-Landline, from Gardena, CA(state),USA
-
-562-602-4894
-
-Landline, from Compton, CA(state),USA
-
-408-309-2253
-
-Cell Number, from San Jose, CA(state),USA
-
-760-583-0169
-
-Cell Number, from Oceanside, CA(state),USA
-
-310-437-0465
-
-Landline, from Mar Vista, CA(state),USA
-
-909-331-1597
-
-Landline, from Ontario, CA(state),USA
-
-909-398-9892
-
-Landline, from Claremont, CA(state),USA
-
-510-477-8009
-
-Landline, from Union City, CA(state),USA
-
-714-422-0049
-
-Landline, from Anaheim, CA(state),USA
-
-818-980-1295
-
-Landline, from N Hollywood, CA(state),USA
-
-916-880-7281
-
-Landline, from Sacramento, CA(state),USA
-
-619-299-7577
-
-Landline, from San Diego, CA(state),USA
-
-415-308-8697
-
-Cell Number, from San Francisco, CA(state),USA
-
-714-272-9617
-
-Cell Number, from Anaheim, CA(state),USA
-
-818-319-3288
-
-Cell Number, from Burbank, CA(state),USA
-
-619-556-7385
-
-Landline, from San Diego, CA(state),USA
-
-323-494-4204
-
-Cell Number, from Montebello, CA(state),USA
-
-562-972-1723
-
-Cell Number, from Long Beach, CA(state),USA
-
-714-981-8706
-
-Cell Number, from Anaheim, CA(state),USA
-
-530-925-1791
-
-Cell Number, from Mount Shasta, CA(state),USA
-
-714-584-8780
-
-Landline, from Santa Ana, CA(state),USA
-
-323-389-3334
-
-Landline, from Los Angeles, CA(state),USA
-
-530-669-0387
-
-Landline, from Woodland, CA(state),USA
-
-510-917-9147
-
-Cell Number, from Oakland, CA(state),USA
-
-209-873-2691
-
-Cell Number, from Fresno, CA(state),USA
-
-562-228-3426
-
-Landline, from Norwalk, CA(state),USA
-
-408-540-1074
-
-Landline, from Fremont, CA(state),USA
-
-415-945-0604
-
-Landline, from Corte Madera, CA(state),USA
-
-951-746-1531
-
-Cell Number, from Sun City, CA(state),USA
-
-909-503-2549
-
-Landline, from Colton, CA(state),USA
-
-909-667-7721
-
-Landline, from La Verne, CA(state),USA
-
-323-445-1958
-
-Cell Number, from Burbank, CA(state),USA
-
-714-853-3947
-
-Cell Number, from Fullerton, CA(state),USA
-
-310-788-4458
-
-Landline, from Beverly Hills, CA(state),USA
-
-209-558-7013
-
-Landline, from Modesto, CA(state),USA
-
-858-236-7456
-
-Landline, from Poway, CA(state),USA
-
-408-286-2661
-
-Landline, from San Jose, CA(state),USA
-
-209-433-0689
-
-Landline, from Lockeford, CA(state),USA
-
-951-226-7912
-
-Landline, from Lake Elsinore, CA(state),USA
-
-415-689-7594
-
-Cell Number, from San Francisco, CA(state),USA
-
-626-799-8611
-
-Landline, from South Pasadena, CA(state),USA
-
-714-891-8390
-
-Landline, from Westminster, CA(state),USA
-
-323-437-1782
-
-Cell Number, from Montebello, CA(state),USA
-
-213-739-0562
-
-Landline, from Los Angeles, CA(state),USA
-
-916-780-0417
-
-Landline, from Roseville, CA(state),USA
-
-909-201-4374
-
-Landline, from Fontana, CA(state),USA
-
-858-763-8914
-
-Cell Number, from San Diego, CA(state),USA
-
-949-320-1088
-
-Cell Number, from Laguna Beach, CA(state),USA
-
-760-459-5063
-
-Cell Number, from Palm Springs, CA(state),USA
-
-530-453-3744
-
-Landline, from Nicolaus, CA(state),USA
-
-714-772-1666
-
-Landline, from Anaheim, CA(state),USA
-
-619-582-8729
-
-Landline, from San Diego, CA(state),USA
-
-510-887-0039
-
-Landline, from Hayward, CA(state),USA
-
-818-350-9474
-
-Landline, from Northridge, CA(state),USA
-
-415-928-0959
-
-Landline, from San Francisco, CA(state),USA
-
-310-833-6726
-
-Landline, from San Pedro, CA(state),USA
+Start with this specially extended live webinar. Lasting about 90 minutes, =
+this webinar will ensure you have all the guidance you need to get your pro=
+perty income taxes right.
+
+*Individuals with income from UK residential property:*Join this live webin=
+ar to find out about the property income allowance, cash basis and traditio=
+nal accounting. We also cover expenses and deductions. You can ask question=
+s through the on-screen text box.
+
+*Choose your date and time* [ https://attendee.gotowebinar.com/rt/870365855=
+9873639681?source=3DCampaign-Apr-14 ]
+
+You can get help anytime with our YouTube channel. Theres a series of recor=
+ded mini-webinars starting with '*Part 1  Property income receipts* [ https=
+://www.youtube.com/watch?v=3DREsetI85TdI&index=3D5&list=3DPL8EcnheDt1zg-mO3=
+U1rZUF8vRJBd8dMDf&utm_source=3DHMRC-DCS-Apr-14&utm_campaign=3DDCS-Campaign&=
+utm_medium=3Demail ]' and short videos including '*Your income from propert=
+y tax return* [ https://www.youtube.com/watch?v=3DhtUNA2b7Gbk&list=3DPL8Ecn=
+heDt1ziQSjJNRITtCf7XD_ne-_lQ&index=3D21&utm_source=3DHMRC-DCS-Apr-14&utm_ca=
+mpaign=3DDCS-Campaign&utm_medium=3Demail ]'.
+
+The *HMRC Online Customer Forum* [ https://online.hmrc.gov.uk/webchatprod/c=
+ommunity/forums/show/45.page ] is a good place to go if youve got a questio=
+n about income from property. See what others are asking, ask your own ques=
+tions and receive responses from the experts.
+
+Theres also our *Property Rental toolkit* [ https://www.gov.uk/government/p=
+ublications/hmrc-property-rental-toolkit?&utm_source=3DHMRC-DCS-Apr-14&utm_=
+campaign=3DDCS-Campaign&utm_medium=3Demail ]. Its designed to help agents a=
+nd advisers, but youll find it helpful too.
+
+HMRCs online guide '*Letting out property* [ http://www.hmrc.gov.uk/courses=
+/syob3/new_letting/HTML/new_letting_menu.html?&utm_source=3DHMRC-DCS-Apr-14=
+
+&utm_campaign=3DDCS-Campaign&utm_medium=3Demail ]' has lots of useful infor=
+mation and is available whenever you need it.
+
+HMRC online  help you can trust.
+
+=20
+alison walsh signature
+
+Alison Walsh
+
+Head of Digital Communication Services
+
+=20
+=20
+youtube [ https://www.youtube.com/user/HMRCgovuk?utm_source=3DHMRC-DSBA-Soc=
+ialBox&amp;utm_campaign=3DSB&amp;utm_medium=3DEmail ]twitter [ https://twit=
+ter.com/hmrcbusiness ]visit gov dot u k [ https://www.gov.uk/ ]share [ http=
+s://content.govdelivery.com/accounts/UKHMRCED/bulletins/23e734f ]HMRC Forum=
+ [ https://online.hmrc.gov.uk/webchatprod/community/forums/list.page ]  =20
+=20
+
+Stay safe online
+
+If you think that an email is suspicious please report it to phishing@hmrc.=
+gsi.gov.uk. For more information please visit our security pages at GOV.UK =
+[ https://www.gov.uk/ ] and search 'Avoid and report internet scams and phi=
+shing'.
+
+Subscriber Preferences [ https://public.govdelivery.com/accounts/UKHMRCED/s=
+ubscriber/edit?preferences=3Dtrue#tab1 ] |Contact Us [ https://www.gov.uk/c=
+ontact-hmrc ] |Help [ https://insights.govdelivery.com/Communications/Subsc=
+riber_Help_Center ]|Unsubscribe [ https://public.govdelivery.com/accounts/U=
+KHMRCED/subscriber/one_click_unsubscribe?verification=3D5.1221d2bcaad067e84=
+69b7bade7957bd2&destination=3Dafortin%40gmail.com ]
+
+Please feel free to use this information and pass it on.
+
+=20
+=20
+
+Support
+
+For more information and support from HMRC please visit our help and suppor=
+t pages [ https://www.gov.uk/government/collections/hmrc-webinars-email-ale=
+rts-and-videos ].
+
+=20
+=20
+=20
+=20
+=20
+=20
+=20
+________________________________________________________________________
+
+Sent on behalf of HMRC by GovDelivery GovDelivery logo [ https://subscriber=
+help.granicus.com/ ]
+
+
+------=_NextPart_F69_939A_24C9E5B0.323F37A7
+Content-Type: text/html;
+	charset="Cp1252"
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xml:lang=3D"en" lang=3D"en">
+<head>
+<title>    Receiving income from UK property?
+</title>
+    <meta content=3D"text/html; charset=3DUTF-8">
+<meta name=3D"viewport" content=3D"initial-scale=3D1.0">
+<meta name=3D"format-detection" content=3D"telephone=3Dno">
+<style type=3D"text/css">
+/*start reset css*/
+div { line-height: 1; }
+body, table, td, p, a, li, blockquote { -webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%; }
+body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; }
+table { border-spacing: 0; }
+table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+img { -ms-interpolation-mode: bicubic; }
+body { margin: 0; padding: 0; }
+img { border: none !important; height: auto; line-height: 1; outline: none;=
+ text-decoration: none; }
+table td { border-collapse: collapse !important; }
+.preheader { display: none !important; visibility: hidden; opacity: 0; colo=
+r: transparent; height: 0; width: 0; }
+/*end reset css*/
+a[x-apple-data-detectors] {
+color: inherit !important;
+text-decoration: none !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+}
+
+/* Sets the line height in everything but Outlook */
+table#yahoo body, table#yahoo p, table#yahoo .gd_p, table#yahoo p span, tab=
+le#yahoo li, table#yahoo li span { line-height: 1.4; }
+
+
+/* outlook.com line-height control */
+.ExternalClass p,=20
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td
+{line-height: 100%}
+
+table#yahoo .govd_template_image { max-width: 100% !important; max-width:10=
+0%; }
+table#yahoo .govd_template_image, table#yahoo .govd_template_image img { he=
+ight:auto !important; height:auto; }
+
+@media only screen and (max-device-width: 480px) {
+table#yahoo, table#yahoo table { position: relative; }
+table#yahoo .govd_header { max-width: 480px !important; }
+table#yahoo .govd_hr img, table#yahoo .govd_hr_inner img { display:none !im=
+portant; }
+table#yahoo img { max-width: 100% !important; width: auto !important; }
+table#yahoo .govd_template_image { height: auto !important; max-width: 100%=
+ !important; width: auto !important; margin:0 !important; }
+table#yahoo table.gd_combo_table .govd_template_image { margin:0 auto 10px =
+auto !important; display:block !important; float:none !important; text-alig=
+n:center; }
+table#yahoo table.gd_combo_table td.gd_combo_image_cell .govd_template_imag=
+e { margin:0 !important; text-align:left; }
+table#yahoo #main-header .govd_template_image { max-width: 480px !important=
+; width: 100% !important; }
+table#yahoo .govd_content_container .govd_image_display { margin-left:0 !im=
+portant; }
+table#yahoo .container-fill, table.gd_tbl_wrap, table.gd_tbl_wrap table { m=
+ax-width: 480px !important; }
+.main-table, .mobile-footer, .mobile-tagline, table.gd_tbl_wrap, table.gd_t=
+bl_wrap table { width:100% !important; min-width:100% !important; max-width=
+:480px !important; }
+table#yahoo .tablecell, .tablecell { width:100% !important; display: block =
+!important; }
+table#yahoo p, table#yahoo p span, table#yahoo .gd_p, table#yahoo li { font=
+-size:13pt !important; }
+table#yahoo #view-in-browser p, table#yahoo #view-in-browser p span, table#=
+yahoo #view-in-browser .gd_p, table#yahoo #view-in-browser li { font-size:8=
+pt !important; }
+table#yahoo h1 { font-size:18pt !important; }
+table#yahoo h2 { font-size:16pt !important; }
+table#yahoo h3 { font-size:14pt !important; }
+table#yahoo #main-body .govd_hr {background:transparent none !important;}
+.mobile-hide {display:none !important;}
+.mobile-padding {padding:0 !important;}
+.mobile-columns {padding:10px 20px !important;}
+}
+</style>
+
+</head>
+<body style=3D"line-height: 1.4;margin:0;padding:0;width: 100% !important;"=
+>
+
+<div style=3D"background-color:#FFF8DC;">
+  <div style=3D"clear:both;padding:5px;border:1px dashed #6495ED;color:blac=
+k;margin: 2px;">
+    Preview: HMRCs online support for landlords View in browser [ https://<=
+br/><br/>
+    Your Blur Masked Email 99vdzkxptgsl@opayq.com received this from aforti=
+n+caf_=3D99vdzkxptgsl=3Dopayq.com@gmail.com.<br/>
+    Blur forwards Masked Emails to you here =96 just reply like normal and =
+Blur keeps your email private.<br/>
+    IF THIS IS SPAM, <a href=3D"https://dnt.abine.com/#/block_email/99vdzkx=
+ptgsl@opayq.com/FWD.99ykyxx07hrn@opayq.com" rel=3D"nofollow">CLICK HERE TO =
+BLOCK.</a><br/>
+    <br/>
+Masked Emails stop spam, defy tracking, and keep data private. <a href=3D"h=
+ttps://dnt.abine.com/#/referral"> INVITE FRIENDS TO TRY BLUR PREMIUM AT 50%=
+ OFF</a>.
+  </div>
+</div><span></span><br/>
+
+
+<table bgcolor=3D'#ffffff' border=3D'0' cellpadding=3D'0' cellspacing=3D'0'=
+ style=3D'width: 100%;'>
+<tbody>
+<tr bgcolor=3D'#ffffff'>
+<td align=3D'center' style=3D'background-color: #ffffff; padding: 0px; font=
+-size:1px; font-family:&#39;Helvetica Neue&#39;, Helvetica, Arial, sans-ser=
+if; color:#ffffff' valign=3D'top'>
+HMRC=92s online support for landlords
+</td>
+</tr>
+</tbody>
+</table>
+
+
+  <a id=3D"gd_top" name=3D"gd_top"></a>
+
+ =20
+
+
+
+ =20
+  <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" al=
+ign=3D"center" class=3D"gd_tbl_wrap"><tr><td style=3D"margin: 0; padding: 0=
+; width: 100% !important"><table class=3D"main-table" width=3D"100%" align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0" id=3D"yahoo" style=3D"borde=
+r-collapse: collapse;">
+<tr>
+
+<td width=3D"100%" style=3D"padding: 0 0 20px;" class=3D"mobile-padding">=
+=20
+
+<!--[if mso]>
+<table class=3D"main-table" width=3D"600" align=3D"center" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"width:600px;">
+<tr>
+<td>
+<![endif]-->
+
+<div style=3D"max-width: 600px; width: 100%; margin: 0 auto;">
+
+<table width=3D"100%" align=3D"center" style=3D"border-collapse: collapse;"=
+ cellpadding=3D"0" cellspacing=3D"0">
+
+<tr>
+<td id=3D"view-in-browser" width=3D"100%" data-govdstyle=3D"all" data-govdt=
+itle=3D"View in Browser" class=3D"thin" style=3D"padding: 10px;">
+<p class=3D"gd_p" style=3D"text-align: left; line-height: 1.1; color: #0000=
+00; font-family: arial, helvetica, sans-serif; font-size: 15px; margin: 0;"=
+ align=3D"left"><a href=3D"https://links.advice.hmrc.gov.uk/track?type=3Dcl=
+ick&enid=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVz=
+c2FnZWlkPU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcml=
+hbD0xNzEwMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYW=
+lsLmNvbSZ0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&100&&&=
+https://content.govdelivery.com/accounts/UKHMRCED/bulletins/23e734f" style=
+=3D"color: #000000; text-decoration: none; -ms-word-break: break-all; word-=
+break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none=
+;">View in browser</a></p>
+
+</td>
+</tr>
+
+<tr>
+<td width=3D"100%">
+<table class=3D"main-table" width=3D"100%" align=3D"center" cellpadding=3D"=
+0" cellspacing=3D"0" bgcolor=3D"#FFFFFF" style=3D"background-color: #FFF; b=
+order-collapse: collapse;">
+
+<tr>
+<td id=3D"banner-bg" data-govdstyle=3D"all" data-govdtitle=3D"Banner Backgr=
+ound" style=3D"background-color: #f2f2f2;" bgcolor=3D"#f2f2f2">
+<table class=3D"main-table" width=3D"100%" align=3D"center" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D"border-collapse: collapse;">
+<tr>
+<td width=3D"50%" align=3D"left" valign=3D"top">
+<table width=3D"100%" align=3D"left" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"border-collapse: collapse;">
+<tr>
+<td id=3D"left-banner-top" width=3D"100%" data-govdstyle=3D"all" data-govdt=
+itle=3D"Left Banner Top" valign=3D"top" style=3D"background-color: #f2f2f2;=
+ padding: 20px;" bgcolor=3D"#f2f2f2">
+<img class=3D"govd_template_image" src=3D"https://content.govdelivery.com/a=
+ttachments/fancy_images/UKHMRCED/2017/11/1643466/1608032/banner_crop.png" s=
+tyle=3D"width: 81px; height: auto !important; max-height: auto !important; =
+border: none;" alt=3D"h m revenue and customs" width=3D"81" height=3D"49">
+</td>
+</tr>
+<tr>
+
+<td id=3D"left-banner-bottom" width=3D"100%" data-govdstyle=3D"all" data-go=
+vdtitle=3D"Left Banner Bottom" valign=3D"top" style=3D"background-color: #f=
+2f2f2; padding: 0px 20px;" bgcolor=3D"#f2f2f2">
+<h1 style=3D"text-align: left; line-height: 1.1; font-weight: normal; color=
+: #000000; font-family: arial, helvetica, sans-serif; font-size: 26px; marg=
+in: 0 0 15px;" align=3D"left">Support from HMRC</h1>
+</td>
+</tr>
+</table>
+</td>
+<td width=3D"50%" align=3D"right" valign=3D"top">
+<table width=3D"100%" align=3D"left" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"border-collapse: collapse;">
+<tr>
+<td id=3D"right-banner" width=3D"100%" data-govdstyle=3D"all" data-govdtitl=
+e=3D"Right Banner" valign=3D"top" align=3D"right" style=3D"background-color=
+: #f2f2f2;" bgcolor=3D"#f2f2f2">
+<img class=3D"govd_template_image" src=3D"https://content.govdelivery.com/a=
+ttachments/fancy_images/UKHMRCED/2017/11/1643459/1608033/right_crop.png" st=
+yle=3D"width: 300px; height: auto !important; max-height: auto !important; =
+border: none;" width=3D"300" height=3D"157">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+
+<tr>
+<td id=3D"main-body" width=3D"100%" data-govdstyle=3D"all" data-govdtitle=
+=3D"Main Body" style=3D"padding: 20px 20px 10px;">
+<p class=3D"gd_p" style=3D"text-align: left; line-height: 1.4; color: #0000=
+00; font-family: arial, helvetica, sans-serif; font-size: 13px; margin: 15p=
+x 0;" align=3D"left">Dear=A0<span style=3D"line-height: 1.4;">customer,</sp=
+an></p>
+<p style=3D"line-height: 1.4; color: #000000; font-family: arial, helvetica=
+, sans-serif; font-size: 13px; text-align: left; margin: 15px 0;" align=3D"=
+left">Whether you are a new landlord or just need a refresher, you=92ll fin=
+d practical online help from HMRC.</p>
+<p style=3D"line-height: 1.4; color: #000000; font-family: arial, helvetica=
+, sans-serif; font-size: 13px; text-align: left; margin: 15px 0;" align=3D"=
+left">Start with this specially extended live webinar. Lasting about 90 min=
+utes, this webinar will ensure you have all the guidance you need to get yo=
+ur property income taxes right.</p>
+<p style=3D"line-height: 1.4; color: #000000; font-family: arial, helvetica=
+, sans-serif; font-size: 13px; text-align: left; margin: 15px 0;" align=3D"=
+left"><strong>Individuals with income from UK residential property:=A0</str=
+ong>Join this live webinar to find out about the property income allowance,=
+ cash basis and traditional accounting. We also cover expenses and deductio=
+ns. You can ask questions through the on-screen text box.</p>
+
+<p style=3D"line-height: 1.4; color: #000000; font-family: arial, helvetica=
+, sans-serif; font-size: 13px; text-align: left; margin: 15px 0;" align=3D"=
+left"><a href=3D"https://links.advice.hmrc.gov.uk/track?type=3Dclick&enid=
+=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlk=
+PU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzE=
+wMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbS=
+Z0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&101&&&https://=
+attendee.gotowebinar.com/rt/8703658559873639681?source=3DCampaign-Apr-14" s=
+tyle=3D"color: #0000EE; text-decoration: underline; -ms-word-break: break-a=
+ll; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyph=
+ens: none;"><strong>Choose your date and time</strong></a></p>
+<p style=3D"line-height: 1.4; color: #000000; font-family: arial, helvetica=
+, sans-serif; font-size: 13px; text-align: left; margin: 15px 0;" align=3D"=
+left">You can get help anytime with our YouTube channel. There=92s a series=
+ of recorded mini-webinars starting with '<a href=3D"https://links.advice.h=
+mrc.gov.uk/track?type=3Dclick&enid=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPT=
+IwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlkPU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZ=
+GF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzEwMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29t=
+JnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbSZ0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF=
+0ZUlkPSYmJg=3D=3D&&&102&&&https://www.youtube.com/watch?v=3DREsetI85TdI&ind=
+ex=3D5&list=3DPL8EcnheDt1zg-mO3U1rZUF8vRJBd8dMDf&utm_source=3DHMRC-DCS-Apr-=
+14&utm_campaign=3DDCS-Campaign&utm_medium=3Demail" style=3D"color: #0000EE;=
+ text-decoration: underline; -ms-word-break: break-all; word-break: break-w=
+ord; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;"><strong>Par=
+t 1 =96 Property income receipts</strong></a>' and short videos including '=
+
+<a href=3D"https://links.advice.hmrc.gov.uk/track?type=3Dclick&enid=3DZWFzP=
+TEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlkPU1EQi1Q=
+UkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzEwMzgyMSZ=
+lbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbSZ0YXJnZX=
+RpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&103&&&https://www.yout=
+ube.com/watch?v=3DhtUNA2b7Gbk&list=3DPL8EcnheDt1ziQSjJNRITtCf7XD_ne-_lQ&ind=
+ex=3D21&utm_source=3DHMRC-DCS-Apr-14&utm_campaign=3DDCS-Campaign&utm_medium=
+=3Demail" style=3D"color: #0000EE; text-decoration: underline; -ms-word-bre=
+ak: break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphens:=
+ none; hyphens: none;"><strong>Your income from property tax return</strong=
+></a>'.</p>
+
+<p style=3D"line-height: 1.4; color: #000000; font-family: arial, helvetica=
+, sans-serif; font-size: 13px; text-align: left; margin: 15px 0;" align=3D"=
+left">The <a href=3D"https://links.advice.hmrc.gov.uk/track?type=3Dclick&en=
+id=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZW=
+lkPU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xN=
+zEwMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNv=
+bSZ0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&104&&&https:=
+//online.hmrc.gov.uk/webchatprod/community/forums/show/45.page" style=3D"co=
+lor: #0000EE; text-decoration: underline; -ms-word-break: break-all; word-b=
+reak: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;=
+"><strong>HMRC Online Customer Forum</strong></a> is a good place to go if =
+you=92ve got a question about income from property. See what others are ask=
+ing, ask your own questions and receive responses from the experts.</p>
+<p style=3D"line-height: 1.4; color: #000000; font-family: arial, helvetica=
+, sans-serif; font-size: 13px; text-align: left; margin: 15px 0;" align=3D"=
+left">There=92s also our <a href=3D"https://links.advice.hmrc.gov.uk/track?=
+type=3Dclick&enid=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY=
+3MzEmbWVzc2FnZWlkPU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMD=
+AxJnNlcmlhbD0xNzEwMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9yd=
+GluQGdtYWlsLmNvbSZ0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D=
+&&&105&&&https://www.gov.uk/government/publications/hmrc-property-rental-to=
+olkit?&utm_source=3DHMRC-DCS-Apr-14&utm_campaign=3DDCS-Campaign&utm_medium=
+=3Demail" style=3D"color: #0000EE; text-decoration: underline; -ms-word-bre=
+ak: break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphens:=
+ none; hyphens: none;"><strong>Property Rental toolkit</strong></a>. It=92s=
+ designed to help agents and advisers, but you=92ll find it helpful too.</p=
+>
+
+<p style=3D"line-height: 1.4; color: #000000; font-family: arial, helvetica=
+, sans-serif; font-size: 13px; text-align: left; margin: 15px 0;" align=3D"=
+left">HMRC=92s online guide '<a href=3D"https://links.advice.hmrc.gov.uk/tr=
+ack?type=3Dclick&enid=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjU=
+xMjY3MzEmbWVzc2FnZWlkPU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD=
+0xMDAxJnNlcmlhbD0xNzEwMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZ=
+m9ydGluQGdtYWlsLmNvbSZ0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=
+=3D=3D&&&106&&&http://www.hmrc.gov.uk/courses/syob3/new_letting/HTML/new_le=
+tting_menu.html?&utm_source=3DHMRC-DCS-Apr-14&utm_campaign=3DDCS-Campaign&u=
+tm_medium=3Demail" style=3D"color: #0000EE; text-decoration: underline; -ms=
+-word-break: break-all; word-break: break-word; -webkit-hyphens: none; -moz=
+-hyphens: none; hyphens: none;"><strong>Letting out property</strong></a>' =
+has lots of useful information and is available whenever you need it.</p>
+<p style=3D"line-height: 1.4; color: #000000; font-family: arial, helvetica=
+, sans-serif; font-size: 13px; text-align: left; margin: 15px 0;" align=3D"=
+left">HMRC online =96 help you can trust.</p>
+
+</td>
+</tr>
+
+<tr>
+<td id=3D"bottom-body-bg" data-govdstyle=3D"all" data-govdtitle=3D"Bottom B=
+ody Background" style=3D"background-color: #FFFFFF; padding: 0px;" bgcolor=
+=3D"#FFFFFF">
+<table class=3D"main-table" width=3D"100%" align=3D"center" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D"border-collapse: collapse;">
+<tr>
+<td id=3D"bottom-body" width=3D"100%" data-govdstyle=3D"all" data-govdtitle=
+=3D"Bottom Body" style=3D"background-color: #FFFFFF; padding: 0px 20px 20px=
+;" bgcolor=3D"#FFFFFF">
+<img class=3D"govd_template_image" src=3D"https://content.govdelivery.com/a=
+ttachments/fancy_images/UKHMRCED/2018/04/1891962/2207231/a-walsh-signature-=
+original_crop.png" style=3D"width: 132px; height: auto !important; max-heig=
+ht: auto !important; border: none;" alt=3D"alison walsh signature" width=3D=
+"132" height=3D"70"><p class=3D"gd_p" style=3D"text-align: left; line-heigh=
+t: 1.4; color: #000000; font-family: arial, helvetica, sans-serif; font-siz=
+e: 13px; margin: 15px 0;" align=3D"left">Alison Walsh</p>
+<p class=3D"gd_p" style=3D"text-align: left; line-height: 1.4; color: #0000=
+00; font-family: arial, helvetica, sans-serif; font-size: 13px; margin: 15p=
+x 0;" align=3D"left"><span style=3D"line-height: 1.4;">Head
+of Digital Communication Services</span></p>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+ =20
+<tr>
+<td id=3D"social-footer-bg" data-govdstyle=3D"all" data-govdtitle=3D"Social=
+ Footer Background" style=3D"background-color: #E6E6E6;" bgcolor=3D"#E6E6E6=
+">
+<table class=3D"main-table" width=3D"100%" align=3D"center" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D"border-collapse: collapse;">
+
+<tr>
+<td id=3D"social-footer" width=3D"100%" data-govdstyle=3D"all" data-govdtit=
+le=3D"Social Footer" align=3D"center" valign=3D"top" style=3D"background-co=
+lor: #E6E6E6; padding: 15px 5px 0px;" bgcolor=3D"#E6E6E6">
+<a href=3D"https://links.advice.hmrc.gov.uk/track?type=3Dclick&enid=3DZWFzP=
+TEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlkPU1EQi1Q=
+UkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzEwMzgyMSZ=
+lbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbSZ0YXJnZX=
+RpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&107&&&https://www.yout=
+ube.com/user/HMRCgovuk?utm_source=3DHMRC-DSBA-SocialBox&amp;utm_campaign=3D=
+SB&amp;utm_medium=3DEmail" target=3D"_blank" rel=3D"noopener" style=3D"colo=
+r: #0000EE; text-decoration: underline; -ms-word-break: break-all; word-bre=
+ak: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;">=
+
+<img class=3D"govd_template_image" src=3D"https://content.govdelivery.com/a=
+ttachments/fancy_images/UKHMRCED/2018/04/1908767/1906176/icon-youtube-origi=
+nal_crop.png" style=3D"width: 95px; height: auto !important; max-height: au=
+to !important; border: none;" alt=3D"youtube" width=3D"95" height=3D"84"></=
+a><a href=3D"https://links.advice.hmrc.gov.uk/track?type=3Dclick&enid=3DZWF=
+zPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlkPU1EQi=
+1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzEwMzgyM=
+SZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbSZ0YXJn=
+ZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&108&&&https://twitte=
+r.com/hmrcbusiness" target=3D"_blank" rel=3D"noopener" style=3D"color: #000=
+0EE; text-decoration: underline; -ms-word-break: break-all; word-break: bre=
+ak-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;"><img cl=
+ass=3D"govd_template_image" src=3D"https://content.govdelivery.com/attachme=
+nts/fancy_images/UKHMRCED/2018/04/1908768/1906177/hmrc-twitter-original_cro=
+p.png" style=3D"width: 95px; height: auto !important; max-height: auto !imp=
+ortant; border: none;" alt=3D"twitter" width=3D"95" height=3D"84"></a><a hr=
+ef=3D"https://links.advice.hmrc.gov.uk/track?type=3Dclick&enid=3DZWFzPTEmbX=
+NpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlkPU1EQi1QUkQtQ=
+lVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzEwMzgyMSZlbWFp=
+bGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbSZ0YXJnZXRpZD0=
+mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&109&&&https://www.gov.uk/" =
+target=3D"_blank" rel=3D"noopener" style=3D"color: #0000EE; text-decoration=
+: underline; -ms-word-break: break-all; word-break: break-word; -webkit-hyp=
+hens: none; -moz-hyphens: none; hyphens: none;"><img class=3D"govd_template=
+_image" src=3D"https://content.govdelivery.com/attachments/fancy_images/UKH=
+MRCED/2018/04/1908756/1906178/icon-govuk-original_crop.png" style=3D"width:=
+ 95px; height: auto !important; max-height: auto !important; border: none;"=
+ alt=3D"visit gov dot u k" width=3D"95" height=3D"84"></a><a href=3D"https:=
+//links.advice.hmrc.gov.uk/track?type=3Dclick&enid=3DZWFzPTEmbXNpZD0mYXVpZD=
+0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlkPU1EQi1QUkQtQlVMLTIwMTkwN=
+DI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzEwMzgyMSZlbWFpbGlkPWFmb3J0=
+aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbSZ0YXJnZXRpZD0mZmw9JmV4dHJ=
+hPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&110&&&https://content.govdelivery.com/a=
+ccounts/UKHMRCED/bulletins/23e734f" target=3D"_blank" rel=3D"noopener" styl=
+e=3D"color: #0000EE; text-decoration: underline; -ms-word-break: break-all;=
+ word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens=
+: none;"><img class=3D"govd_template_image" src=3D"https://content.govdeliv=
+ery.com/attachments/fancy_images/UKHMRCED/2018/04/1908757/1906179/icon-shar=
+e-original_crop.png" style=3D"width: 95px; height: auto !important; max-hei=
+ght: auto !important; border: none;" alt=3D"share" width=3D"95" height=3D"8=
+4"></a><a href=3D"https://links.advice.hmrc.gov.uk/track?type=3Dclick&enid=
+=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlk=
+PU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzE=
+wMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbS=
+Z0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&111&&&https://=
+online.hmrc.gov.uk/webchatprod/community/forums/list.page" target=3D"_blank=
+" rel=3D"noopener" style=3D"color: #0000EE; text-decoration: underline; -ms=
+-word-break: break-all; word-break: break-word; -webkit-hyphens: none; -moz=
+-hyphens: none; hyphens: none;"><img class=3D"govd_template_image" src=3D"h=
+ttps://content.govdelivery.com/attachments/fancy_images/UKHMRCED/2018/08/20=
+87996/2146195/pagesagent_crop.png" style=3D"width: 95px; height: auto !impo=
+rtant; max-height: auto !important; border: none;" alt=3D"HMRC Forum" width=
+=3D"95" height=3D"84"></a>
+
+</td>
+</tr>
+ =20
+<tr>
+<td id=3D"social-footer-2" width=3D"100%" data-govdstyle=3D"all" data-govdt=
+itle=3D"Social Footer 2" align=3D"center" valign=3D"top" style=3D"backgroun=
+d-color: #E6E6E6; padding: 0px 5px 15px;" bgcolor=3D"#E6E6E6">
+
+</td>
+</tr>
+ =20
+</table>
+</td>
+</tr>
+
+<tr>
+<td id=3D"footer-bg" data-govdstyle=3D"all" data-govdtitle=3D"Footer Backgr=
+ound" style=3D"background-color: #007a7c; padding: 20px 10px;" bgcolor=3D"#=
+007a7c">
+
+<!--[if mso]>
+<table class=3D"main-table" width=3D"100%" align=3D"center" cellpadding=3D"=
+0" cellspacing=3D"0">
+<tr>
+<td width=3D"69%" class=3D"tablecell" align=3D"left" valign=3D"top">
+<![endif]-->
+
+<div style=3D"max-width: 386px; width: 100%; vertical-align: top; display: =
+inline-block; border-right-width: 1px; border-right-color: #ffffff; border-=
+right-style: solid;">
+
+<table width=3D"100%" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"border-collapse: collapse;">
+<tr>
+<td id=3D"left-footer" width=3D"100%" data-govdstyle=3D"all" data-govdtitle=
+=3D"Left Footer" style=3D"padding: 0px 10px;">
+<h2 style=3D"text-align: left; line-height: 1.1; font-weight: bold; color: =
+#FFFFFF; font-family: arial, helvetica, sans-serif; font-size: 14px; margin=
+: 0 0 10px;" align=3D"left"><span style=3D"line-height: 1.1; font-weight: b=
+old;"><span style=3D"line-height: 1.1; font-weight: bold;">Stay safe online=
+</span></span></h2>
+<p class=3D"gd_p" style=3D"text-align: left; line-height: 1.4; color: #FFFF=
+FF; font-family: arial, helvetica, sans-serif; font-size: 11px; margin: 0 0=
+ 10px;" align=3D"left"><span style=3D"line-height: 1.4;"></span></p>
+<p class=3D"gd_p" style=3D"text-align: left; line-height: 1.4; color: #FFFF=
+FF; font-family: arial, helvetica, sans-serif; font-size: 11px; margin: 0 0=
+ 10px;" align=3D"left">If you think that an email is suspicious please repo=
+rt it to <a href=3D"mailto:phishing@hmrc.gsi.gov.uk" style=3D"color: #FFFFF=
+F; text-decoration: underline; -ms-word-break: break-all; word-break: break=
+-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;">phishing@=
+hmrc.gsi.gov.uk</a>. For more information please visit our security pages a=
+t <a href=3D"https://links.advice.hmrc.gov.uk/track?type=3Dclick&enid=3DZWF=
+zPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlkPU1EQi=
+1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzEwMzgyM=
+SZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbSZ0YXJn=
+ZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&112&&&https://www.go=
+v.uk/" style=3D"color: #FFFFFF; text-decoration: underline; -ms-word-break:=
+ break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: no=
+ne; hyphens: none;">GOV.UK</a> and search 'Avoid and report internet scams =
+and phishing'.</p>
+
+<p class=3D"gd_p" style=3D"text-align: left; line-height: 1.4; color: #FFFF=
+FF; font-family: arial, helvetica, sans-serif; font-size: 11px; margin: 0 0=
+ 10px;" align=3D"left"><a href=3D"https://links.advice.hmrc.gov.uk/track?ty=
+pe=3Dclick&enid=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3M=
+zEmbWVzc2FnZWlkPU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAx=
+JnNlcmlhbD0xNzEwMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGl=
+uQGdtYWlsLmNvbSZ0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&=
+&113&&&https://public.govdelivery.com/accounts/UKHMRCED/subscriber/edit?pre=
+ferences=3Dtrue#tab1" style=3D"color: #FFFFFF; text-decoration: underline; =
+-ms-word-break: break-all; word-break: break-word; -webkit-hyphens: none; -=
+moz-hyphens: none; hyphens: none;">Subscriber Preferences</a><span style=3D=
+"line-height: 1.4;">=A0 |=A0=A0</span><span style=3D"line-height: 1.4;"><a =
+href=3D"https://links.advice.hmrc.gov.uk/track?type=3Dclick&enid=3DZWFzPTEm=
+bXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlkPU1EQi1QUkQ=
+tQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzEwMzgyMSZlbW=
+FpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbSZ0YXJnZXRpZ=
+D0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&114&&&https://www.gov.uk/=
+contact-hmrc" style=3D"color: #FFFFFF; text-decoration: underline; -ms-word=
+-break: break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyph=
+ens: none; hyphens: none;">Contact Us</a></span><span style=3D"line-height:=
+ 1.4;">=A0 |=A0=A0</span><a href=3D"https://links.advice.hmrc.gov.uk/track?=
+type=3Dclick&enid=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY=
+3MzEmbWVzc2FnZWlkPU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMD=
+AxJnNlcmlhbD0xNzEwMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9yd=
+GluQGdtYWlsLmNvbSZ0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D=
+
+&&&115&&&https://insights.govdelivery.com/Communications/Subscriber_Help_Ce=
+nter" style=3D"color: #FFFFFF; text-decoration: underline; -ms-word-break: =
+break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: non=
+e; hyphens: none;">Help</a><span style=3D"line-height: 1.4;">=A0=A0|=A0=A0<=
+/span><a href=3D"https://links.advice.hmrc.gov.uk/track?type=3Dclick&enid=
+=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlk=
+PU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzE=
+wMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbS=
+Z0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&116&&&https://=
+public.govdelivery.com/accounts/UKHMRCED/subscriber/one_click_unsubscribe?v=
+erification=3D5.1221d2bcaad067e8469b7bade7957bd2&destination=3Dafortin%40gm=
+ail.com" style=3D"color: #FFFFFF; text-decoration: underline; -ms-word-brea=
+k: break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: =
+none; hyphens: none;">Unsubscribe</a></p>
+
+<p class=3D"gd_p" style=3D"text-align: left; line-height: 1.4; color: #FFFF=
+FF; font-family: arial, helvetica, sans-serif; font-size: 11px; margin: 0 0=
+ 10px;" align=3D"left">Please feel free to use this information and pass it=
+ on.</p>
+</td>
+</tr>
+</table>
+
+</div>
+
+<!--[if mso]>
+</td>
+<td width=3D"31%" class=3D"tablecell" align=3D"left" valign=3D"top">
+<![endif]-->
+
+<div style=3D"max-width: 175px; width: 100%; vertical-align: top; display: =
+inline-block;">
+
+<table width=3D"100%" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"border-collapse: collapse;">
+<tr>
+<td id=3D"right-footer" width=3D"100%" data-govdstyle=3D"all" data-govdtitl=
+e=3D"Right Footer" style=3D"padding: 0px 10px;">
+<h2 style=3D"text-align: left; line-height: 1.1; font-weight: bold; color: =
+#FFFFFF; font-family: arial, helvetica, sans-serif; font-size: 14px; margin=
+: 0 0 10px;" align=3D"left">Support</h2>
+<p class=3D"gd_p" style=3D"text-align: left; line-height: 1.4; color: #FFFF=
+FF; font-family: arial, helvetica, sans-serif; font-size: 11px; margin: 0 0=
+ 10px;" align=3D"left">For more information and support from HMRC please vi=
+sit our <a href=3D"https://links.advice.hmrc.gov.uk/track?type=3Dclick&enid=
+=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlk=
+PU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnNlcmlhbD0xNzE=
+wMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJpZD1hZm9ydGluQGdtYWlsLmNvbS=
+Z0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSYmJg=3D=3D&&&117&&&https://=
+www.gov.uk/government/collections/hmrc-webinars-email-alerts-and-videos" st=
+yle=3D"color: #FFFFFF; text-decoration: underline; -ms-word-break: break-al=
+l; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphe=
+ns: none;">help and support pages</a>.</p>
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<!--[if mso]>
+
+</td>
+</tr>
+</table>
+<![endif]-->
+
+</td>
+</tr>
+</table></td></tr></table>
+ =20
+
+
+<div id=3D"mail_footer">
+
+
+</div>
+<div id=3D"tagline">
+    <hr>
+<table style=3D"width: 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0">
+<tbody>
+<tr>
+
+<td style=3D"color: #757575; font-size: 10px; font-family: Arial;" width=3D=
+"89%">Sent on behalf of HMRC by GovDelivery</td>
+<td align=3D"right" width=3D"11%"><a href=3D"https://links.advice.hmrc.gov.=
+uk/track?type=3Dclick&enid=3DZWFzPTEmbXNpZD0mYXVpZD0mbWFpbGluZ2lkPTIwMTkwND=
+I1LjUxMjY3MzEmbWVzc2FnZWlkPU1EQi1QUkQtQlVMLTIwMTkwNDI1LjUxMjY3MzEmZGF0YWJhc=
+2VpZD0xMDAxJnNlcmlhbD0xNzEwMzgyMSZlbWFpbGlkPWFmb3J0aW5AZ21haWwuY29tJnVzZXJp=
+ZD1hZm9ydGluQGdtYWlsLmNvbSZ0YXJnZXRpZD0mZmw9JmV4dHJhPU11bHRpdmFyaWF0ZUlkPSY=
+mJg=3D=3D&&&118&&&https://subscriberhelp.granicus.com/" target=3D"_blank"><=
+img src=3D"https://content.govdelivery.com/images/govd-logo-dark.png" borde=
+r=3D"0" alt=3D"GovDelivery logo" width=3D"115"></a></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<IMG SRC=3D"https://links.advice.hmrc.gov.uk/track?enid=3DZWFzPTEmbXNpZD0mY=
+XVpZD0mbWFpbGluZ2lkPTIwMTkwNDI1LjUxMjY3MzEmbWVzc2FnZWlkPU1EQi1QUkQtQlVMLTIw=
+MTkwNDI1LjUxMjY3MzEmZGF0YWJhc2VpZD0xMDAxJnR5cGU9b3BlbiZzZXJpYWw9MTcxMDM4MjE=
+mZW1haWxpZD1hZm9ydGluQGdtYWlsLmNvbSZ1c2VyaWQ9YWZvcnRpbkBnbWFpbC5jb20mdGFyZ2=
+V0aWQ9JmZsPSZleHRyYT1NdWx0aXZhcmlhdGVJZD0mJiY=3D" WIDTH=3D"1" HEIGHT=3D"1" =
+STYLE=3D"border-width:0; border-style:hidden;" ALT=3D""/></body>
+</html>
+
+
+------=_NextPart_F69_939A_24C9E5B0.323F37A7--
