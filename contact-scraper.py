@@ -14,50 +14,59 @@ import csv
 import json
 import phonenumbers
 
-def extract_headers(filename):
-    with open(filename, 'r') as f:
-        headers = f.read()
-    headers = headers.replace('"', '').replace("[(", "{", 1).replace(")]", "}").replace("',", "':").replace("'", '"').replace("), (", ",")
+def header_parser(filename):
+    # parse email headers
+    with open(filename, 'r') as msg:
+        my_email = msg.read()
+        parser = email.parser.HeaderParser()
+        raw_headers = parser.parsestr(my_email)
+    return(str(raw_headers))
+
+def extract_headers(raw_headers):
+    # with open(filename, 'r') as f:
+    #     headers = f.read()
+    headers = raw_headers.replace('"', '').replace("[(", "{", 1).replace(")]", "}").replace("',", "':").replace("'", '"').replace("), (", ",")
     # strip double quotes, convert brackets [()] to braces and make string dict-like for json.loads
     headers = re.sub(r"{(.+?}).+", "\\1", headers)
     # get rid of everything after the headers
     return(headers)
 
-# TODO is there a less bruteforce way of doing headers2dict?
+# TODO is there a less bruteforce way of doing the above?
 
-headers = str(extract_headers('test-headers.txt'))
-headers = json.loads(headers)
-wanted_keys = ['From', 'Organization'] # The keys you want
-from_value = dict((k, headers[k]) for k in wanted_keys if k in headers)
-print(from_value)
+raw_headers = header_parser('test_email.eml')
+# print(headers)
+# print(type(headers))
+# headers = str(extract_headers(headers))
 
-pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
-msg = open('test_email.eml')
-my_email = msg.read()
+# names = []
+# for h in headers.items():
+#     names.append(h)
 
-emails = set()
-numbers = set()
+# print(names) # TODO process headers from string rather than external file.
 
-# parse email headers
-parser = email.parser.HeaderParser()
-headers = parser.parsestr(str(my_email))
-names = []
+headers = str(extract_headers(raw_headers))
+print(headers)
+print(type(headers))
+# headers = json.loads(headers)
+# wanted_keys = ['From'] # The key(s) you want
+# from_field = dict((k, headers[k]) for k in wanted_keys if k in headers)
 
-for h in headers.items():
-    names.append(h)
+# print(from_field)
 
-print(names) # TODO process headers from string rather than external file.
 
-# extract all email addresses from message
-for i, line in enumerate(open('test_email.eml')):
-    for match in re.finditer(pattern, line):
-        emails.update(match.groups())
+# pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
+# numbers = set()
+
+# extractdas all email addresses from message
+# for i, line in enumerate(open('test_email.eml')):
+#     for match in re.finditer(pattern, line):
+#         emails.update(match.groups())
 
 # extract all US phone numbers from message
-for match in phonenumbers.PhoneNumberMatcher(my_email, "US"):
-    try:
-        numbers.add(phonenumbers.format_number(match.number, phonenumbers.PhoneNumberFormat.E164))
-    except(TypeError):
-        pass
-
-print(emails, numbers)
+# for match in phonenumbers.PhoneNumberMatcher(my_email, "US"):
+#     try:
+#         numbers.add(phonenumbers.format_number(match.number, phonenumbers.PhoneNumberFormat.E164))
+#     except(TypeError):
+#         pass
+#
+# print(emails, numbers)
