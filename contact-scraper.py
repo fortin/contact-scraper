@@ -23,7 +23,7 @@ def extract_headers(filename):
     # get rid of everything after the headers
     return(headers)
 
-# TODO is there a less bruteforce way of doing headers2dict?
+# TODO is there a less bruteforce way of doing extract_headers?
 
 headers = str(extract_headers('test-headers.txt'))
 headers = json.loads(headers)
