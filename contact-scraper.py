@@ -20,22 +20,24 @@ def header_parser(filename):
         my_email = msg.read()
         parser = email.parser.HeaderParser()
         raw_headers = parser.parsestr(my_email)
-    return(str(raw_headers))
+    return(raw_headers)
 
 def extract_headers(raw_headers):
     # with open(filename, 'r') as f:
     #     headers = f.read()
-    headers = raw_headers.replace('"', '').replace("[(", "{", 1).replace(")]", "}").replace("',", "':").replace("'", '"').replace("), (", ",")
+    headers = str(raw_headers)
     # strip double quotes, convert brackets [()] to braces and make string dict-like for json.loads
     headers = re.sub(r"{(.+?}).+", "\\1", headers)
     # get rid of everything after the headers
+    for char in headers:
+        headers = headers.translate({ord(i):None for i in '[]'})
     return(headers)
 
 # TODO is there a less bruteforce way of doing the above?
 
 raw_headers = header_parser('test_email.eml')
-# print(headers)
-# print(type(headers))
+print(raw_headers)
+print(type(raw_headers))
 # headers = str(extract_headers(headers))
 
 # names = []
@@ -45,8 +47,8 @@ raw_headers = header_parser('test_email.eml')
 # print(names) # TODO process headers from string rather than external file.
 
 headers = str(extract_headers(raw_headers))
-print(headers)
-print(type(headers))
+# print(headers)
+# print(type(headers))
 # headers = json.loads(headers)
 # wanted_keys = ['From'] # The key(s) you want
 # from_field = dict((k, headers[k]) for k in wanted_keys if k in headers)
