@@ -14,50 +14,62 @@ import csv
 import json
 import phonenumbers
 
-def extract_headers(filename):
-    with open(filename, 'r') as f:
-        headers = f.read()
-    headers = headers.replace('"', '').replace("[(", "{", 1).replace(")]", "}").replace("',", "':").replace("'", '"').replace("), (", ",")
-    # strip double quotes, convert brackets [()] to braces and make string dict-like for json.loads
-    headers = re.sub(r"{(.+?}).+", "\\1", headers)
-    # get rid of everything after the headers
-    return(headers)
+my_file = 'test_email.eml'
 
-# TODO is there a less bruteforce way of doing extract_headers?
-
-headers = str(extract_headers('test-headers.txt'))
+raw_headers = header_parser(my_file)
+headers = str(extract_headers(raw_headers))
 headers = json.loads(headers)
-wanted_keys = ['From', 'Organization'] # The keys you want
-from_value = dict((k, headers[k]) for k in wanted_keys if k in headers)
-print(from_value)
+wanted_keys = ['From'] # The key(s) you want
+from_field = dict((k, headers[k]) for k in wanted_keys if k in headers)
 
+print(from_field)
+numbers = number_catcher(my_file)
+print(numbers)
+
+# TODO turn email catcher into function
 pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
-msg = open('test_email.eml')
-my_email = msg.read()
 
 emails = set()
-numbers = set()
-
-# parse email headers
-parser = email.parser.HeaderParser()
-headers = parser.parsestr(str(my_email))
-names = []
-
-for h in headers.items():
-    names.append(h)
-
-print(names) # TODO process headers from string rather than external file.
 
 # extract all email addresses from message
 for i, line in enumerate(open('test_email.eml')):
     for match in re.finditer(pattern, line):
         emails.update(match.groups())
 
-# extract all US phone numbers from message
-for match in phonenumbers.PhoneNumberMatcher(my_email, "US"):
-    try:
-        numbers.add(phonenumbers.format_number(match.number, phonenumbers.PhoneNumberFormat.E164))
-    except(TypeError):
-        pass
 
 print(emails, numbers)
+
+def header_parser(filename):
+    # parse email headers
+    with open(filename, 'r') as msg:
+        my_email = msg.read()
+        parser = email.parser.HeaderParser()
+        raw_headers = parser.parsestr(my_email)
+    return(raw_headers)
+
+def extract_headers(raw_headers):
+    str_headers = []
+    for h in raw_headers.items():
+        str_headers.append(h)
+    headers = str(str_headers)
+    headers = headers.replace('"', '').replace("[(", "{", 1).replace(")]", "}").replace("',", "':").replace("'", '"').replace("), (", ",")
+    # strip double quotes, convert brackets [()] to braces and make string dict-like for json.loads
+    headers = re.sub(r"{(.+?}).+", "\\1", headers)
+    # get rid of everything after the headers
+    for char in headers:
+        headers = headers.translate({ord(i):None for i in '[]'})
+    return(headers)
+
+# TODO is there a less bruteforce way of doing the cleanup above?
+
+def number_catcher(filename):
+    # extract all US phone numbers from message
+    with open(filename, 'r') as msg:
+        my_email = msg.read()
+        numbers = set()
+        for match in phonenumbers.PhoneNumberMatcher(my_email, "US"):
+            try:
+                numbers.add(phonenumbers.format_number(match.number, phonenumbers.PhoneNumberFormat.E164))
+            except(TypeError):
+                pass
+    return(numbers)
