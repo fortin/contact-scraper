@@ -11,7 +11,7 @@ import email
 import email.parser
 import json
 import phonenumbers
-from io import IOBase
+# from io import IOBase
 
 def header_parser(filename):
     # parse email headers
@@ -26,10 +26,10 @@ def header_cleaner(raw_headers):
     for h in raw_headers.items():
         str_headers.append(h)
     headers = str(str_headers)
-    headers = headers.replace('"', '').replace("[(", "{", 1).replace(")]", "}").replace("',", "':").replace("'", '"').replace("), (", ",")
     # strip double quotes, convert brackets [()] to braces and make string dict-like for json.loads
-    headers = re.sub(r"{(.+?}).+", "\\1", headers)
+    headers = headers.replace('"', '').replace("[(", "{", 1).replace(")]", "}").replace("',", "':").replace("'", '"').replace("), (", ",")
     # get rid of everything after the headers
+    headers = re.sub(r"{(.+?}).+", "\\1", headers)
     # for char in headers:
     #     headers = headers.translate({ord(i):None for i in '[]'})
     return(headers)
@@ -42,25 +42,17 @@ def number_catcher(filename):
         my_email = msg.read()
         numbers = set()
         for match in phonenumbers.PhoneNumberMatcher(my_email, "US"):
-            try:
-                numbers.add(phonenumbers.format_number(match.number, phonenumbers.PhoneNumberFormat.E164))
-            except(TypeError):
-                pass
+            numbers.add(phonenumbers.format_number(match.number, phonenumbers.PhoneNumberFormat.E164))
     return(numbers)
 
 def email_catcher(filename):
     # extract all email addresses from message
     pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
     emails = set()
-    # if isinstance(filename, IOBase):
     with open(filename) as f:
         for i, line in enumerate(f):
             for match in re.finditer(pattern, line):
                 emails.update(match.groups())
-    # else:
-    # for i, line in enumerate(filename):
-    #     for match in re.finditer(pattern, line):
-    #         emails.update(match.groups())
 # TODO check if filename is a file or string type and react accordingly.
     return(emails)
 
