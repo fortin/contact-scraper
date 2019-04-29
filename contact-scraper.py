@@ -9,35 +9,9 @@
 import re
 import email
 import email.parser
-import string
-import csv
 import json
 import phonenumbers
-
-my_file = 'test_email.eml'
-
-raw_headers = header_parser(my_file)
-headers = str(extract_headers(raw_headers))
-headers = json.loads(headers)
-wanted_keys = ['From'] # The key(s) you want
-from_field = dict((k, headers[k]) for k in wanted_keys if k in headers)
-
-print(from_field)
-numbers = number_catcher(my_file)
-print(numbers)
-
-# TODO turn email catcher into function
-pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
-
-emails = set()
-
-# extract all email addresses from message
-for i, line in enumerate(open('test_email.eml')):
-    for match in re.finditer(pattern, line):
-        emails.update(match.groups())
-
-
-print(emails, numbers)
+from io import IOBase
 
 def header_parser(filename):
     # parse email headers
@@ -47,7 +21,7 @@ def header_parser(filename):
         raw_headers = parser.parsestr(my_email)
     return(raw_headers)
 
-def extract_headers(raw_headers):
+def header_cleaner(raw_headers):
     str_headers = []
     for h in raw_headers.items():
         str_headers.append(h)
@@ -56,8 +30,8 @@ def extract_headers(raw_headers):
     # strip double quotes, convert brackets [()] to braces and make string dict-like for json.loads
     headers = re.sub(r"{(.+?}).+", "\\1", headers)
     # get rid of everything after the headers
-    for char in headers:
-        headers = headers.translate({ord(i):None for i in '[]'})
+    # for char in headers:
+    #     headers = headers.translate({ord(i):None for i in '[]'})
     return(headers)
 
 # TODO is there a less bruteforce way of doing the cleanup above?
@@ -73,3 +47,35 @@ def number_catcher(filename):
             except(TypeError):
                 pass
     return(numbers)
+
+def email_catcher(filename):
+    # extract all email addresses from message
+    pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
+    emails = set()
+    # if isinstance(filename, IOBase):
+    with open(filename) as f:
+        for i, line in enumerate(f):
+            for match in re.finditer(pattern, line):
+                emails.update(match.groups())
+    # else:
+    # for i, line in enumerate(filename):
+    #     for match in re.finditer(pattern, line):
+    #         emails.update(match.groups())
+# TODO check if filename is a file or string type and react accordingly.
+    return(emails)
+
+my_file = 'test_email.eml'
+
+raw_headers = header_parser(my_file)
+headers = header_cleaner(raw_headers)
+headers = json.loads(headers)
+wanted_keys = ['From'] # The key(s) you want
+
+from_hdr = dict((k, headers[k]) for k in wanted_keys if k in headers)
+print(from_hdr)
+
+numbers = number_catcher(my_file)
+print(numbers)
+
+emails = email_catcher(my_file)
+print(emails)
