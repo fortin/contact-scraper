@@ -23,9 +23,11 @@ def header_parser(filename):
     return(raw_headers)
 
 def extract_headers(raw_headers):
-    # with open(filename, 'r') as f:
-    #     headers = f.read()
-    headers = str(raw_headers)
+    str_headers = []
+    for h in raw_headers.items():
+        str_headers.append(h)
+    headers = str(str_headers)
+    headers = headers.replace('"', '').replace("[(", "{", 1).replace(")]", "}").replace("',", "':").replace("'", '"').replace("), (", ",")
     # strip double quotes, convert brackets [()] to braces and make string dict-like for json.loads
     headers = re.sub(r"{(.+?}).+", "\\1", headers)
     # get rid of everything after the headers
@@ -33,42 +35,40 @@ def extract_headers(raw_headers):
         headers = headers.translate({ord(i):None for i in '[]'})
     return(headers)
 
-# TODO is there a less bruteforce way of doing the above?
+# TODO is there a less bruteforce way of doing the cleanup above?
 
-raw_headers = header_parser('test_email.eml')
-print(raw_headers)
-print(type(raw_headers))
-# headers = str(extract_headers(headers))
+def number_catcher(filename):
+    # extract all US phone numbers from message
+    with open(filename, 'r') as msg:
+        my_email = msg.read()
+        numbers = set()
+        for match in phonenumbers.PhoneNumberMatcher(my_email, "US"):
+            try:
+                numbers.add(phonenumbers.format_number(match.number, phonenumbers.PhoneNumberFormat.E164))
+            except(TypeError):
+                pass
+    return(numbers)
 
-# names = []
-# for h in headers.items():
-#     names.append(h)
+my_file = 'test_email.eml'
 
-# print(names) # TODO process headers from string rather than external file.
-
+raw_headers = header_parser(my_file)
 headers = str(extract_headers(raw_headers))
-# print(headers)
-# print(type(headers))
-# headers = json.loads(headers)
-# wanted_keys = ['From'] # The key(s) you want
-# from_field = dict((k, headers[k]) for k in wanted_keys if k in headers)
+headers = json.loads(headers)
+wanted_keys = ['From'] # The key(s) you want
+from_field = dict((k, headers[k]) for k in wanted_keys if k in headers)
 
-# print(from_field)
+print(from_field)
+numbers = number_catcher(my_file)
+print(numbers)
+
+pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
+
+emails = set()
+
+# extract all email addresses from message
+for i, line in enumerate(open('test_email.eml')):
+    for match in re.finditer(pattern, line):
+        emails.update(match.groups())
 
 
-# pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
-# numbers = set()
-
-# extractdas all email addresses from message
-# for i, line in enumerate(open('test_email.eml')):
-#     for match in re.finditer(pattern, line):
-#         emails.update(match.groups())
-
-# extract all US phone numbers from message
-# for match in phonenumbers.PhoneNumberMatcher(my_email, "US"):
-#     try:
-#         numbers.add(phonenumbers.format_number(match.number, phonenumbers.PhoneNumberFormat.E164))
-#     except(TypeError):
-#         pass
-#
-# print(emails, numbers)
+print(emails, numbers)
