@@ -64,7 +64,18 @@ headers = json.loads(headers)
 wanted_keys = ['From'] # The key(s) you want
 
 from_hdr = dict((k, headers[k]) for k in wanted_keys if k in headers)
-print(from_hdr)
+from_val = str([*from_hdr.values()])
+
+contact = from_val.split()
+
+contact = {
+            'lastname' : contact[1].replace("[", "").replace("]", ""),
+            'firstname': contact[0].replace("[", "").replace("]", "").replace("'", ""),
+            'email'    : contact[-1].replace("[", "").replace("]", ""),
+            'company'  : None
+            }
+
+print(contact)
 
 numbers = number_catcher(my_file)
 print(numbers)

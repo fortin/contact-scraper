@@ -1,249 +1,154 @@
-Delivered-To: fortin@zoho.com
-Received-SPF: pass (zoho.com: domain of opayq.com designates 184.105.182.139 as permitted sender) client-ip=184.105.182.139; envelope-from=FWD.9rm1zdn4d12v@opayq.com; helo=139-he.filtered.junkemailfilter.com;
-Authentication-Results: mx.zohomail.com;
-	dkim=pass;
-	spf=pass (zoho.com: domain of opayq.com designates 184.105.182.139 as permitted sender)  smtp.mailfrom=FWD.9rm1zdn4d12v@opayq.com;
-	arc=fail (BodyHash is different from the expected one);
-	dmarc=pass(p=none dis=none)  header.from=opayq.com
-Received: from 139-he.filtered.junkemailfilter.com (139-he.filtered.junkemailfilter.com [184.105.182.139]) by mx.zohomail.com
-	with SMTPS id 1556568503726828.3802380249787; Mon, 29 Apr 2019 13:08:23 -0700 (PDT)
-Received: from smtp2.opayq.com ([54.235.124.91]:50728) helo=[54.235.124.91]
-	by opayq-outbound.junkemailfilter.com with esmtps (TLSv1.2:AES256-SHA256:256)
-	(Exim 4.90)
-	id 1hLCZZ-0000TK-IP on interface=184.105.182.150
-	for fortin@zoho.com; Mon, 29 Apr 2019 13:08:23 -0700
-Return-Path: <FWD.9rm1zdn4d12v@opayq.com>
-Return-Path: 
-Delivery-date: Mon, 29 Apr 2019 13:08:23 -0700
-DKIM-Signature: v=1; d=opayq.com; t=1556568499; b=QPqk6fiITF89ge0Vmf1jt8MNslYLBIfQStpvB4iX9ELsckWFayUNroxQAZMhgiX8gOBhvlS7Z4JM8dDL0ZcYdsXCNqMBjJ1dZV+ya5qAykSdxnG8oM+ofoXRqtGf+/m5ylRoo1j6kJrhwC4xXunsl4IKiIDnajfdKdrbWyMdHnk=; s=abine; c=relaxed/relaxed; a=rsa-sha256; bh=1oj12KgLuMNo85wkIxpobhe774DiHmmAWmAdj6oxZwU=; h=Date:From:Reply-To:Subject:To:List-Unsubscribe;
-MIME-Version: 1.0
-Content-Type: multipart/mixed;
-	boundary="_010_YT1PR01MB25530734EE44C067D9B13784FC390YT1PR01MB2553CANP_"
-X-GetAbine-Processed: 1
-From: "*ia-dp-infovie [Masked]" <FWD.9rm1zdn4d12v@opayq.com>
-Sender: "*ia-dp-infovie [Masked]" <FWD.9rm1zdn4d12v@opayq.com>
-Reply-To: FWD.9rm1zdn4d12v@opayq.com
-To: 99vdzkxptgsl@opayq.com
-X-GetAbine-Sender: afortin+caf_=99vdzkxptgsl=opayq.com@gmail.com
-X-GetAbine-Disposable: 99vdzkxptgsl@opayq.com
-List-Unsubscribe: <mailto:unsubscribe-910154065-99vdzkxptgsl@opayq.com>, <https://emails.abine.com/disableDisposable?fwd=FWD.9rm1zdn4d12v@opayq.com>
-X-GetAbine-Host-Address: 54.235.124.91
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20161025;
-        h=x-gm-message-state:delivered-to:dkim-signature:from:to:subject
-         :thread-topic:thread-index:sender:date:message-id:accept-language
-         :content-language:mime-version;
-        bh=pKa7UNsEFFESpFDVUV8NfW+gsaiDLXk5QSqutQnTlh4=;
-        b=MxEcL1R48mnmkvjI5W/Omu/CBdr1Y3kwH2ah8cfr2cqql3ofY5CXLK12SZt9Bed4oK
-         VJYwubNybvitff0SH+UH5wmpXlwsSow3W5H4y7MpQc1cUGfAtNWZ+b8GL9LM3PceyHDW
-         rk6tqt5mRmGmC3tpepYpDeyaayCt3qmVbnMkIPt/HaU6nOhuXkQwq6Jlmy0diH+njgip
-         TmrVKt4eoT3+bXqQZGkpdaf2KeqiidD+QOVqQdvzOGhRxtGZFNbEVXbNOxBXOHG1cuV8
-         b1UOkgDrX9kBD+X1hsxYrcc/oUoobpNB8PaYLzn9fblejQbG/yw2XKKjdgYID6hnuZBZ
-         Acog==
-X-Gm-Message-State: APjAAAWxno9uGCik7xp55JK0e+YM9Aq44EWiS6OLbgiNf4zw6Dpz24FH
-	dMuQds6sVC4aiXNd5ypRHb40u5ufSKwyXujtO8kS/Q1u3gSD1hM=
-X-Received: by 2002:aca:f4cf:: with SMTP id s198mr564487oih.153.1556568493679;
-        Mon, 29 Apr 2019 13:08:13 -0700 (PDT)
-X-Forwarded-To: 99vdzkxptgsl@opayq.com
-X-Forwarded-For: afortin@gmail.com 99vdzkxptgsl@opayq.com
-X-Google-Smtp-Source: APXvYqx/qHE0xNQ6avoAFt0PXvQjFLGlg4dRU/9u4eKp55MkCRAv4w2tgt/g8jeBvmwh6PIvFI68
-X-Received: by 2002:a0d:ea04:: with SMTP id t4mr31079381ywe.68.1556568490106;
-        Mon, 29 Apr 2019 13:08:10 -0700 (PDT)
-ARC-Seal: i=1; a=rsa-sha256; t=1556568490; cv=none;
-        d=google.com; s=arc-20160816;
-        b=dR6ilxf2BWdtFWONj9l0u+f4TSEERwKE5ZOiWHntHKTVagQll+L4veXxZ5oGybDTL1
-         ppYqfOxAQxuVZf31nu85spLTdmA5U942Roakgub6P5bn8Kb1bTeDAnJjIJGE6e+COXm2
-         QI+j2YLJBWeBSEaR/SkY6zGOHFTResMjvGsljq0R1aYrwATc/Bb7n/3ycGZP6+G0i3go
-         D+gCBn43xn/BixFFPWkMoXp18DwrkFiqoMyOOHRt0EnsMoK79AlFVVr6UmYoTjsozrJY
-         Bsc/aP0ISe1zfhXplzTEIwgy8H2rc56H5T3eKsgN6PVpky4DvkxUfJaCoFMimxd3HJ2+
-         71fw==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
-        h=mime-version:content-language:accept-language:message-id:date
-         :sender:thread-index:thread-topic:subject:to:from:dkim-signature;
-        bh=pKa7UNsEFFESpFDVUV8NfW+gsaiDLXk5QSqutQnTlh4=;
-        b=BSgnZlcQlcc9m8gA1oRg5OyzMRYJKy2ST4yJk/p2bAKL39JbHszIbyvOnu4H6HDC51
-         /aQ79zUqpspRTAIn7ltd3QCP/BOn8FGUTz2/mTQxAR4K+lDXuPTe1n2lcYnnstwrbn6S
-         Xw5lMYna08y2qwgJbCX8RX+AgUa8dXEJYDDVa0El7ldCV5iVx9VKqUX66tn/bVbce0zv
-         aUThgWSREP9dHg1lCgTufIh3Wr2lXPRBIHX6xuFxuRQZcKvP6W3tuDdVrv4AERNOEAlh
-         b4L3VcGZ2dQA0FWyy6Fm2r279wgbV2naFUgvpBeBcWrJG9AbaM3G0CYKZ6lBorBxrMBv
-         nBKA==
-ARC-Authentication-Results: i=1; mx.google.com;
-       dkim=pass header.i=@indall.onmicrosoft.com header.s=selector1-ia-ca header.b=kQrcNMjK;
-       spf=pass (google.com: domain of paige.doddridge@ia.ca designates 67.231.151.131 as permitted sender) smtp.mailfrom=Paige.Doddridge@ia.ca;
-       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=ia.ca
-Authentication-Results: mx.google.com;
-       dkim=pass header.i=@indall.onmicrosoft.com header.s=selector1-ia-ca header.b=kQrcNMjK;
-       spf=pass (google.com: domain of paige.doddridge@ia.ca designates 67.231.151.131 as permitted sender) smtp.mailfrom=Paige.Doddridge@ia.ca;
-       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=ia.ca
-Subject: Sommaire
-Thread-Topic: Sommaire
-Thread-Index: AdT+xztvmNaqXyDcT724xVX8DYbHuQ==
-Date: Mon, 29 Apr 2019 20:08:06 +0000
-Message-ID: <YT1PR01MB25530734EE44C067D9B13784FC390@YT1PR01MB2553.CANPRD01.PROD.OUTLOOK.COM>
-Accept-Language: fr-CA, en-US
-Content-Language: fr-FR
+Received: from relay14.mail.ox.ac.uk (163.1.2.162) by HUB05.ad.oak.ox.ac.uk
+ (163.1.154.231) with Microsoft SMTP Server (TLS) id 14.3.248.2; Fri, 27 Oct
+ 2017 11:10:52 +0100
+Received: from out.mailprotect.org.uk ([5.150.104.10])	by
+ relay14.mail.ox.ac.uk with esmtp (Exim 4.89)	(envelope-from
+ <aswift@tiffin.kingston.sch.uk>)	id 1e81bI-0003hs-k4	for
+ antonio.fortin@lmh.ox.ac.uk; Fri, 27 Oct 2017 11:10:52 +0100
+Received: from TIFFIN-EXCHANGE.TIFFIN.INTERNAL ([10.162.20.37])	by Atomwide
+ MailProtect with SMTP	id 81aRey3490IWq81aRelCnJ; Fri, 27 Oct 2017 11:10:11
+ +0100
+X-MP-OriginatingIP: +zFXfLx2qkxpODjTsFQE2A==
+X-MP-Out-ID: 81aRey3490IWq81aRelCnJ
+Received: from TIFFIN-EXCHANGE.TIFFIN.INTERNAL ([::1]) by
+ TIFFIN-EXCHANGE.TIFFIN.INTERNAL ([::1]) with mapi id 14.03.0266.001; Fri, 27
+ Oct 2017 11:10:38 +0100
+From: "A SWIFT (AS)" <ASwift@tiffin.kingston.sch.uk>
+To: "A SWIFT (AS)" <ASwift@tiffin.kingston.sch.uk>
+Subject: Tiffnews, October 2017
+Thread-Topic: Tiffnews, October 2017
+Thread-Index: AdNOYci0cEx8702gTy2QVu+uvEpFQwAAYMAgACjW3+AAABKbQAABLkTg
+Date: Fri, 27 Oct 2017 10:10:37 +0000
+Message-ID: <2F592534D3A0E54B98BEBA4AA095C4A82F3F712F@TIFFIN-EXCHANGE.TIFFIN.INTERNAL>
+Accept-Language: en-GB, en-US
+Content-Language: en-US
 X-MS-Has-Attach: yes
-X-MS-TNEF-Correlator: 
-x-ms-exchange-messagesentrepresentingtype: 2
-x-originating-ip: [207.134.102.19]
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: 816f5163-93ca-4f39-ba6a-08d6ccde64b4
-x-microsoft-antispam: BCL:0;PCL:0;RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600141)(711020)(4605104)(2017052603328)(49563074)(7193020);SRVR:YT1PR01MB2747;
-x-ms-traffictypediagnostic: YT1PR01MB2747:
-x-ms-exchange-purlcount: 5
-x-microsoft-antispam-prvs: <YT1PR01MB2747C7EBE44766EDF9D25F7AFC390@YT1PR01MB2747.CANPRD01.PROD.OUTLOOK.COM>
-x-ms-oob-tlc-oobclassifiers: OLM:8882;
-x-forefront-prvs: 0022134A87
-x-forefront-antispam-report: SFV:NSPM;SFS:(10009020)(136003)(376002)(396003)(39860400002)(346002)(366004)(199004)(189003)(6392003)(486006)(476003)(7116003)(97736004)(66476007)(52536014)(1411001)(2351001)(733005)(1361003)(76116006)(66574012)(66066001)(73956011)(3480700005)(74316002)(6436002)(7846003)(6916009)(6506007)(14454004)(316002)(102836004)(221733001)(64756008)(66556008)(7736002)(66946007)(66576008)(186003)(26005)(66446008)(33656002)(2906002)(53936002)(6306002)(25786009)(54896002)(54556002)(9686003)(236005)(99936001)(55016002)(478600001)(53376002)(71200400001)(71190400001)(99286004)(5660300002)(5640700003)(2501003)(74482002)(8936002)(68736007)(3846002)(81156014)(81166006)(1730700003)(8676002)(7696005)(606006)(72206003)(790700001)(6116002)(14444005)(256004)(861006);DIR:OUT;SFP:1101;SCL:1;SRVR:YT1PR01MB2747;H:YT1PR01MB2553.CANPRD01.PROD.OUTLOOK.COM;FPR:;SPF:None;LANG:fr;PTR:InfoNoRecords;A:1;MX:3;
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam-message-info: YF8wv23Zx8pA2l9LAzVltfwNsi9WejOU0GRQCV4FybNuwQFL28WATAUoKE4x5PQsS5ia8PYZClTv936ZPagXl+OBKrgizJm0O0ONL4yXKy6us67thjlufhhP6xYW9ad8Gc56+bo/+k1RcudjdlmyXj7QBTtR+8fX+gtPMa16I/j6Ggewkvo/e3nXJAYAwTiwqHiMMEaFLnXr8aRGIlIO9XmDK5PT6Q8cCkXID/9meFTiLq7Zh+Hpo01VEW59rusoQ5iB1WjDrwTa0lge+1zh8VbO8zTvV5OTTF8Sdu84/48Yt8ebJbS+tMS+XybFqKlnEsaXQ8R5fVStMyk2ExK4j2bLSVj59O6U/annogNRZqec2Ke1LUgiiTLcq72ZV0DlVAIbI+yGvZK5NdeFORFJla9RFsOmesiMaHdC9XaGwE4=
-X-OriginatorOrg: ia.ca
-X-MS-Exchange-CrossTenant-Network-Message-Id: 816f5163-93ca-4f39-ba6a-08d6ccde64b4
-X-MS-Exchange-CrossTenant-originalarrivaltime: 29 Apr 2019 20:08:06.2664
- (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: cc9f55cb-28a1-42fe-947f-a5a399a1ddb6
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: YT1PR01MB2747
-X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:,, definitions=2019-04-29_11:,,
- signatures=0
-X-Proofpoint-Spam-Details: rule=inbound_notspam policy=inbound score=0 priorityscore=1501
- malwarescore=0 suspectscore=0 phishscore=0 bulkscore=0 spamscore=0
- clxscore=1011 lowpriorityscore=0 mlxscore=0 impostorscore=0
- mlxlogscore=999 adultscore=0 classifier=spam adjust=0 reason=mlx
- scancount=1 engine=8.0.1-1810050000 definitions=main-1904290132
-X-Sender-Domain: google.com
-X-Spamfilter-host: plato.junkemailfilter.com - http://www.junkemailfilter.com
-X-Key-ID: OTl2ZHpreHB0Z3NsQG9wYXlxLmNvbSBhZm9ydGluK2NhZl89OTl2ZHpreHB0Z3NsPW9wYXlxLmNvbUBnbWFpbC5jb20gMjAxOS0wNC0yOSAxMzowODoxNS41MTIgMWhMQ1pTLTAwMDNMNy1WWA==
-X-Content-flags: cialis css dashes disclosing drugs email email-adr facebook hidden-text https immediately info infolife information informations infovie insurance intended link links longword mailto message month multipart-alt niqu notify phone-num please po-box police privil privileged quoted re received search-eng secret services specialist suite terminus text-plain time-ref transfer twitter university w3 youtube
-X-Domain-list: google.com gmail.com ia.ca pphosted.com nsone.net
-X-Relay-Countries: us ca
-X-Sender-Host-Address: 209.85.167.173
-X-Sender-Host-Name: mail-oi1-f173.google.com
-Errors-to: <>
-X-Key-ID: Zm9ydGluQHpvaG8uY29tIGZ3ZC45cm0xemRuNGQxMnZAb3BheXEuY29tIDIwMTktMDQtMjkgMTM6MDg6MjIuOTcyIDFoTENaWi0wMDAwVEstSVA=
-X-Outscan: http://www.junkemailfilter.com
-X-Zoho-Virus-Status: 1
-X-ZohoMail-DKIM: pass (identity @opayq.com)
-X-ZohoMail-Owner: <YT1PR01MB25530734EE44C067D9B13784FC390@YT1PR01MB2553.CANPRD01.PROD.OUTLOOK.COM>+zmo_1_FWD.9rm1zdn4d12v@opayq.com
-X-ZohoMail-Sender: 54.235.124.91
-
---_010_YT1PR01MB25530734EE44C067D9B13784FC390YT1PR01MB2553CANP_
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.162.22.252]
 Content-Type: multipart/related;
-	boundary="_009_YT1PR01MB25530734EE44C067D9B13784FC390YT1PR01MB2553CANP_";
+	boundary="_005_2F592534D3A0E54B98BEBA4AA095C4A82F3F712FTIFFINEXCHANGET_";
 	type="multipart/alternative"
+X-CMAE-Envelope: MS4wfJcrI2LdO/vcLiiVV6P4QMgyU1xX5MRvbfqPpJF8Qth4X3ETqm+ZEdT/AjB+FUHR66b9ETsxyLVg8OqWpRhD7w8/OsPExE4CA7hLbG0Ujz7IpoG0d6B/
+ G0kOk1FV6ZWQGpWMAJLibRvYP69mkH+ui3KjjujZTWTSeK1fwlv4MQ5DnwDruuHFT6OsZFPoYfaIjJF/jkooRfLfpOBPblxp8zFzaiKVaUiE5L9Icsxk8Y9E
+ OM9ntaB4xjUCyQ/PFv/rGMeDMxKlblOf+3SlUrU5JGW6IyRnknwWl9ShYHY5VSrIBIpQ9oRWTRKjiMlRZ6PXj8I6rP9wX8wBPQx9YjWnbHmcG9gdzsCZld0U
+ Fc++rIkGJnQVTPHjlJbO2nzIc5qjaPtAw/naYTImjk9d6VucJm7DJyxYD7sJQJZTeenf2Rxud6cP/FYDB7uu4vaJ1uDLw6ygKltvjGKnOnBRLRtoYki/N9VP
+ RkzVdmy15Ymmg7C+KneBaLrYHGACWzJuvBZVfdDrqd6rJORTfMD3s+kdNg5c7xKz2UegB6F7R050mHnlJVssEcejJMrEQOf1jKglXfoLA27VXNoX6lo4XZH/
+ tfgLUZ3RvqGw3DxoOZLCphC0QqFBsfzlQ1+af80ArC8KNhanK2FhJtFFm95GjwlHXnjtGtc9Oebq7JynvX99PORU9LUVeYOZQcVHQYQdqR55LyW//Ned46Zz
+ +6i/UqIPeGAgEPAEKr8ZDGLI8xMpCoaur/ZzV6za0Dz/fdKMgLv7cFEZS4m+t2ToWNzhcdIDG61QeEfN0F0DDyThIFouH31/JTq/vpjWraW4NrKv/wV8crA+
+ jGqQ6paCbi+SmnXQOYrjlJNJjbIYeC6dZ5RVs97NdG1jtBlgXia3siTaUTX40pVLpiay8Y3YYxOPv7DhCtBZ/zZJ2DfW6xd0m4/Z43BclZb+7SGrT/rZNX0b
+ u73lPgumIT/tcYxAZW/ctU0lSjP0DEeHSOTNTf5wxUHjlB/DZCbs0TEA/pJy0dPMob4OH78v9zgyRDayX+hqFgKE+5RZ/mAy/IfNIIVHA/jJ7ZXVVWEHAFFg
+ Gvdp8EeCphg2XGRudGtYd4+fY329aSRwx4fL8+RuZbUaejPpe4KgzQq2vCObYukwEiNT9/xbo7FQrj4sKJSUIE10nFCeT/v5n7VcNqyn5YPHEoZXD14pPR1O
+ B7//gBPOw5DwDoU0Z4P73ylyP+O4xXUdzyIM12H3QUMdaFAG8x5B46Upp1mbj/g8FW85maJqzrqIqHBwSSDNleukoBiV5gO1ahIR6PxV7yNIQPXv4qfdPy+Z
+ HuBfjh6xYsAsRjCnERyCIeWlbFWEscPlN6Gi99PtI5NOk9VxTkDUceqoimhT2iUYrDw86NhTOGEHyAFTFWrCCWsn0cLQV0XgWpWZn+0UGCo15NXVb6oOM+P2
+ VNS/aQq5XmTMwhW9g1WhJN38w3oW8k1TVims7HgRh4nhkjEklKW2gMwBNn7nNvkwbuWq61ywGPdKIbee+uUCbVsZuBiziLiyllu031EJi5cziEmlgBGdNzA4
+ lsrGQVncN4ZsfQPrVPfN1RZU3xzFAbnjIXL7KmCWgyE3kO9DPzoX9PUfw8EZM3pgvV0PpBxbmdRfYPZ/ZsykxUOHV6NTMVnksS8lZyH1H61U4SP0pOdZKVeG
+ bVmrRoZecCb6hp0apTvv9soDdPRwT8MYT5uSJ/f7nju0yai7SZsg7ZDcyDdemzTwfA4S6T1KvFInXY96jjDt83AEI9kOdcktvf+DJty8rVgOtziIESy5pA9n
+ 8SJpohczxQJ9FGnbfbJbqMysfeZE3og6KXzwEJlkCUo4JWSZ5LT6hRzBRPvZeMlBoyA9omyAHSAtek7DOJqt8xpanTnkeFwg7amKNso2jUomT+j1SyyN/vaN
+ br5Nsbki6V7amsek2v4x3T7M7tO6E+eZXI4ZQCS1P6qcqM+pamWw8rxhYUkyt8W/pWtxvtNgYQlI5V89jEO0kd3hfO83x/9ymWPLjKn2nOl8u/RF3VOB97MS
+ 7OWC8XD4Dp6XAh+35zdFjXTbno+ehpZnlRa1BikTkh9Belw7ePYnE4KHM8Kb8lNSX0uDws3R0cq+cyV/4ALagfCrnBTYjX+Q65sF4mSu8OCbht1bB2E0a5dP
+ zR1lRsyelo6r/eWfxhnCgFrn53QqAIp1EnbkaID2a8mCJXgYdMlATtBWl1HmaYjjfGM9+sKI/LzXWygEFSWnemRk+UMrxpxjOEyQF2FCh3rtOPa81LybMdAI
+ DLwIrgu52PMTzjojnt8xgruHG7IppUeynafWUZOV8AuzHwIpp/FRVBXCkIq09qtUeHD/Oc6TI5xchP+Hnsx/JPGKjpBkdhrmOkCEr+nv6m+GIWvWXgvUwCQj
+ eOe2sSrIXYM/5zRn91u4oMzyvCGw2Eibz2+1rZ5yFeQ+Iasy7+6WnlMAg8bS1MjFtUqoUe6viwEtJSK/MPLkkmsjmrIUgWpSRfPgrS4otppQmHn7tsPk476h
+ O9ETKZxMBsX6lpVLgmWEy4EbyslDNLbbY+EUNyJldHWo49UzOjHDB2lMb0uLb7vhnmPx9iKxI1OsTCNwplFCc+XfGfQgozI6vKmTdYHfgQ52X38k7BSJ2SzP
+ ZCDUgjCCIAj5cjquVvWQbzpZ8mVVRGHcnZ4Gmnt3PYENItwvPss2TCgvIb/JYF24t074JEsLx6UCBZ39S2deAZZSwMNrNe79JzEXsfOXD5oXwRGMmvKBHm8n
+ ukup+emPMVEf6mfyHCfkvDADUJG+U9EiAG17nXM1X9iJatDcZVBbRovum5uaBrbiblaFH2WwL2mjOuukqH8JJrw9v9+He1QA1ghzOfSYwfJ/d+wl0SuynuaT
+ MXIfj0iXt7zzVKSWe9wCTubyBOuq8pFBkLhfIUnV2bYHmcM7lLt14/Q3JNvITVeRdKJ+V4N9UKeFuHm0XUOV7IPKxDEPxnZ8H1tak56LDneIehzG0aV/ceYS
+ PliG2yWyuZamexKCPlC82JqV7mAHmOp+r9t+ZJnrBtLt5a0T7aoPx1pEqWFKfGu3nsHx8d6IrS0KjKuVrP+7Sz+s3y1+Fp3y3VDauaynN5FMxTfH60lw/YnU
+ 9KJUqsqgDkq5juWq9GWlA5o1yZgmKANyq6Z+5QKUnnrUHjF0JxnEyz6NuMP0C3qFhV0V0s9fju23tu/3/ZUZ0UAI75O0jX7yT6kdVQ773u6g4/P34zmcy/kb
+ yKjTIy8O8d7z4opkBqH0reCcsd5t8k38mOOYZlbxAUFgl1fPnrf2ECNNBAN8HyzZXHv6tNfShVG2E41EW+1QBrrHzPUz4L9Fop0aR2vTIzh1A8YKVo7KCoj6
+ 5u1z9DAvhRv4KT34szf2sHnt2BsGZn3vN4wbSMBD/BNh8iKiKhqlTBg/BWd2mXX2giO+/RdvC7qXroxrgOSoeAoVD5L+1TSDM5cDDkAWQcNezfpAZvBEYOOt
+ q0v5YWb20xLt+YehcYIUVjvyfLZgQBGv5Ps6QlDQdhJC4tttp7PZXAR/f2m+g9s5G3G5fZ7gHrxZ3R2pEC6TFrOcPbJHCb35Ut6n5omOp6EBDmw+WUW9x9mt
+ pUGLIVcH5/EkplFpB1eN/O20hKnKMwd5BSRszfT7YupZ9SgYAtMr4AS7LUTgC3vufEgUaOYfeMQZsofU4wpwc5zyn1G41i5SApCR6OswNIT6zbu7jXf6ck7e
+ IpoIA3F+8Cn2FhSeSkflaHRSDU9gkoKEmT9Qdni3MuWqTiYkv76spS9PXHW+lfLCv7sYZuo8Z++Aq3uSxUCDPW8x37mLaKzaRMMOk0h30Rxz7WSVMs1NMniw
+ YpL6LjbhjYDZYvX+Vd2PhwFx2GXq6kF6eMNuctyb5aFaKVTMMtRRsQ5u1D8icPzdT1kmETL31cdRD9O+0EERe2LiYgAOleclyTbqZpBgTMi8mk0zazZYWD2e
+ sqCpg1Okzu782CefuT+pHvNovBc21yPnSbK3vi2LriQGzB82Q1wYbZwUXKWEAOQzAdon+1v/HdaZq+5iM82ltykkVDfY/LLc7duHMbtLA9ko05LxoifiVsfu
+ lnFip7rywMLwoWvRwxPsiC0pfY31Tts3J805taV45HG4Rlbtl/C0nxNXDuLASGfGwx+tacs4wMNboZJHhBDJaxYbsVmrkYKsN0tftu1PBgkNJPMiqttg/GpU
+ VxYoRM+mmOrNewoiU6ArTvTksix/JQeb2aFYXWUshgIs5FdI2f8DeJJ/S998imxsCoBgK9vommVBVtmPfuXBpxJ/3y5vi4g5cvEpvFWwysb07U5uv6FdbNr9
+ y6xmf8IPBaSW2+L/4XdRb7r5cCy9rMday/pLpC7nSeRS7ZoBAo+qN3pK0/CByhB7EXFacTev/W01LFtc2Uyk0lL2Bp5FHGOLdZ0F8sHarLwdfkLFs3rWbolk
+ ePIS243yg4qEyhLpJUW7nTZOYyG4zHNKrJYp4hKXzDm8fbLHDcY69Y2jzaxD4LblCCy/5ZaqMiQ6ZeplKyaAeydkv3F3SbaZ2f9IyHdhpbhtHT49UOo2iFpw
+ oL7mFtTHbwVqgOLrqQmTsj19vRvVw3LS7iB2oO+DN1c4E5IT3iwTvSaWF3ABztjaeDoWLkp/ZYn5YdQXM9t15+PyWCh78eoCrB7JKmMNu5TBVSGi7AsO09JV
+ 2LLwBFhKilK9dYPFVg+zNz5jcmVkPi5lqP4cWjaH3TLCqZ4IhrcjAkkS6XtwOwdh7ivDhOLSGC5ZOU7ltuFdYUxwIxw6bwsckpq9AZFYkXgcqNMOit+6R5T1
+ ab6L24YeHzQB9knNrL7qSJcYo8fSWSREbqT3PF8WyhKZvtTQih7l4QUOBT0u96vrvDGhsHQ2h+bGo3i7beuArV5BDEJJMBBtpGencHb26Ki3k5JDjbIdDvT2
+ 0SOdaGNfb1TMVlx8VPSH5ppKqRZxW+OG1MlNkU3qLpWiq+yfWMux60vahGvIe7uin2+WKcag126jESgUA1/rCKKwgVtvgsyZwiY50YALbFiaq7+ZlRe1Bpla
+ IAgeeHHiaD2dwmnaImX0jDGCOgZrtydNGjnKlF8/AEIQayoWWL6l5QiDYmnBBSMTz+o8ucwhrL5zdN3s2lEcT0YpzPPJzuWmtFDEisU4SKWLy9NSFjXkdS4M
+ ExMe/ZfPTbV77OUmFv7TfJiKD4fIf3Dzhk4WzRKqfxC0lJ+wAuI/VFavJSpmDuxBqrBpCAotZhPsobZDgfxWkpJIjJcTkSo+PVoU/STWy1Kq+vfpuQega/E5
+ 92z77wArlR9F0olpLV8sj/adOJr4/Rq3nzLRsXGfuu/RYwjn3MyQ4fWUAWhnZc79d6KIkivV2nojnYx0Ulf9abaznOPbOMky5TZCKj9sOCJeZjEUNbQMyX1p
+ I6YV7YeW4N/s7/jA1QC5oWPdkxWA9Q9wwTV1S8eEV61kwTc1uE2r1W8F41KNmfEoYiQpFvkSf1/yGJiNAV2zRLAYE2bzgUEnfvgMQlANCfj1m9OKkVhgccTL
+ c0tch8CTvMQKqhix/hqdJwK6nlf2k37kGOLQbBXij+VZ1IihgsRz7bGAQDMhLzn+eidddaaMZYTn8HlzmNOi/O0ip27yM8FmB+fEotmNCecSeKFahX5C0n3f
+ pAb465QxQQuX0K9peU0MtrpkFQ4FlaCJI2KYX1hoEn8wUosLQZ89cEsIsVz1xzo/o6Y+j97rTVYhs1c83n7dRIdFU56h0jVBsDjsI8oWShjFDxzKqDY/rl3N
+ W3IoLWSlw+NdOCd6Q2Mrjw6j+pmkNwodnL7Y9Q0bZbXa+ezmWSazyllOYRdL6jrellLIHzo1HOIqzICnFiM59n1wqxip2ZUGrTe7xmk64odLfpjmWG+iEYB7
+ 28D3x05+32+J7Tpc+9QUtdI5P07AWk8M3golITDhqhuxqZDBCQXMmhNJbkieYl5WD8nJ7nkuEwDngUcTPKlHJpy+aDEUAZBAzThAcZlVfCJqO9XVqFVfNh7X
+ AsZXPedQc/z+CmdlhriKGXbN871Th8PuleNWRoITnKpCN7YH1yyj5VyBrWwqRVuwyP6DfMvQu3JUUM4MI2Ewia02CzSPw87NqsOd/CEEU0BZpCydPP8+0L+t
+ 97QIB0bUWa1hzADUBVargpqujZiLQN1O500GkynrwWBVQy1NnEbGxhJEa8m2VO5Etb5PVZJ705Y3m5P+xWqMaaZefzh6g1FQzkX3exz+r2Hl3lT1Q2jB6Vos
+ SUuZ5wqdLiVATdmtSo8AQzbkaMuWIQng5Nb1BdzM2R4c9XrL1T+hRLOW65rtC881YDdqIJjZ4QOY5ivjFOK7Ks4faEgbqd2YZNiNgH82lyQe48uJYHYD9tLd
+ Ro7ln8KKuXXnl47TGY9TOV20KVnkNuGoO3Hlb8dWRK5jElarSvNmiZdo2pf3Sy+E3GvkiWMwaZSx85FwUIo9HC+kGzZxEcbP8rDcteL7JAqZdGPenWU0xQh+
+ RAhqLEYuXguQqSf9by7grMjskPZMyrErLXLyipK43mCUllBhzfw8kJcsgOtsMO20DEcKVYb2ZKIWf0JMkdBmXSNJOokyeZSC4zsxH8RC4YOKanjXGi+IkOFB
+ 56AhRnQ4d+JYCmpw8JXLSFJG634g81+ahK2gTMNhOQ0qAzLtiP93J5GCuxSq1+hG1KjcI4hbWpUiyM9JtlJKccHbrkdkYceLANk8v/YdLqQvS+yckESG4OTB
+ H02lTPfKyfUFQ352kfoGhE+2FlPY01FetfyL/9RHAHJNgEWGYQ95O2EvwAqkVE5DoyDlWLvkBFuSdK+5l8rJA3UXhvK0vx3hH/fRR9QhBZCLdmykjkzB6Ega
+ gwU0C5VJnIfd5Jd5dgLwFyAakoQ2XvmqNqaSerl1xFZyGRoIYaZh3INCZFZBGYUwn6FO9XI9mZmjn/LX0L1p92BdEgR7JgrcFYq11AmLIokoIId/LrtWZzoh
+ u35INi3H5ox4b3Iog2waVIk9hgkJXIXZb5qRWuMMgb+voOt1TghOUUdwh1Hh+hPBCyeTAtSytuDvI18zTj94wZaUVptKcA305n4DN84sdvfji84z5Vnb1g+p
+ MR76uEbyhjJhk4S45Vr6cV/OYWxw0HQTnc3/EWRm4a8MtDSWVCD9J2jkY8PnG27DztKJdzcXfivdSArFMDuLtDYlCVO0cg==
+X-Oxmail-Spam-Status: score=0.0 tests=HTML_MESSAGE
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Oxmail-Spam-Level: /
+Return-Path: aswift@tiffin.kingston.sch.uk
+X-MS-Exchange-Organization-AuthSource: HUB05.ad.oak.ox.ac.uk
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AVStamp-Mailbox: Sophos;-715947518;0;PM
+MIME-Version: 1.0
 
---_009_YT1PR01MB25530734EE44C067D9B13784FC390YT1PR01MB2553CANP_
+--_005_2F592534D3A0E54B98BEBA4AA095C4A82F3F712FTIFFINEXCHANGET_
 Content-Type: multipart/alternative;
-	boundary="_000_YT1PR01MB25530734EE44C067D9B13784FC390YT1PR01MB2553CANP_"
+	boundary="_000_2F592534D3A0E54B98BEBA4AA095C4A82F3F712FTIFFINEXCHANGET_"
 
---_000_YT1PR01MB25530734EE44C067D9B13784FC390YT1PR01MB2553CANP_
-Content-Type: text/plain; charset="iso-8859-1"
+--_000_2F592534D3A0E54B98BEBA4AA095C4A82F3F712FTIFFINEXCHANGET_
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
 
+ [cid:image003.png@01D29CBE.AB58F9A0]     [Description: amended logo]
 
---------------------------Blur---------------------------
-Your Blur Masked Email 99vdzkxptgsl@opayq.com received this from afortin+ca=
-f_=3D99vdzkxptgsl=3Dopayq.com@gmail.com.
-Blur forwards Masked Emails to you here ? just reply like normal and Blur k=
-eeps your email private.
-IF THIS IS SPAM, CLICK HERE TO BLOCK:
-https://dnt.abine.com/#/block_email/99vdzkxptgsl@opayq.com/FWD.9rm1zdn4d12v=
-@opayq.com
+Please click this link<http://www.tiffinfriends.org/design/pdfs/Tiffnews,%2=
+0October%202017.pdf> to view the October 2017 edition of Tiffnews, the publ=
+ication for alumni and friends of Tiffin School.
 
-Masked Emails stop spam, defy tracking, and keep data private. INVITE FRIEN=
-DS TO TRY BLUR PREMIUM AT 50% OFF
-https://dnt.abine.com/#/referral
--------------------------By Abine--------------------------
+It includes details of:
 
-Bonjour,
+*         the Tiffin Alumni Dinner incorporating the 60th Anniversary of th=
+e Tiffin Boys' Choir on 10 November 2017
 
-Pour faire suite =E0 votre demande, veuillez trouver en pi=E8ce jointe le s=
-ommaire de votre police d'assurance vie.
+*         the Tiffinian Association AGM on 10 November 2017
 
-N'h=E9sitez pas =E0 communiquer avec nous pour de plus amples informations.
+*         the Tiffin Boys' Choir - past and present
 
-Merci, bonne journ=E9e
+Kind regards
 
+Alex Swift
+Tiffin School Alumni and Development Officer
+020 8546 4638
 
-[iA Groupe financier / iA Financial Group]
-[Macintosh HD:Users:q10153:Desktop:Facebook.png]<https://fr-ca.facebook.com=
-/industriellealliance>   [Macintosh HD:Users:q10153:Desktop:Twitter.png] <h=
-ttp://www.twitter.com/indusalliance>    [Macintosh HD:Users:q10153:Desktop:=
-Linked.png] <https://www.linkedin.com/company/industrielle_alliance>    [Ma=
-cintosh HD:Users:q10153:Desktop:YouTube.png] <https://www.youtube.com/user/=
-IAquebec>
+Tiffin School website<http://www.tiffinschool.co.uk/>
+Tiffinian Association website<http://www.tiffinfriends.org/>
 
-ia.ca<http://ia.ca/>
+If you wish to unsubscribe from Tiffnews, please email TAL@tiffin.kingston.=
+sch.uk<mailto:TAL@tiffin.kingston.sch.uk> with the word UNSUBSCRIBE
 
 
 
 
+Tiffin School is a company limited by guarantee with exempt charitable stat=
+us, registered in England & Wales at Queen Elizabeth Road, Kingston upon Th=
+ames, Surrey, KT2 6RL. Registration Number 07547311
 
-
-
-
-
-
-Paige Doddridge
-Sp=E9cialiste Relation Client / Client Relation Specialist
-Assurance individuelle/Individual Insurance
-Industrielle Alliance, Assurance et services financiers
-Industrial Alliance, Insurance and Financial Services
-1-844-4iA-INFO (42-4636)
-NOUVEAU! infovie@ia.ca<mailto:infovie@ia.ca>
-NEW! infolife@ia.ca<mailto:infolife@ia.ca>
-
-
-Qu=E9bec
-1080, Grande All=E9e Ouest
-C.P. 1907, Succ. Terminus
-Qu=E9bec QC G1K 7M3
-Fax / T=E9l=E9copieur:
-1-418-684-5208
-
-Toronto
-522 University Avenue
-Suite 400
-Toronto ON  M5G 1Y7
-Fax / T=E9l=E9copieur:
-1-877-780-7231
-
-Vancouver
-400-988 Broadway West
-PO Box 5900
-Vancouver BC  V6B 5H6
-Fax / T=E9l=E9copieur:
-1-844-739-0634
-
-
-
-Ce message peut contenir de l'information privil=E9gi=E9e ou confidentielle=
-. Si ce message ne vous est pas adress=E9 ou si vous l'avez re=E7u par erre=
-ur,
-veuillez aviser l'=E9metteur imm=E9diatement et effacer l'original, sans en=
- tirer de copie ni en d=E9voiler le contenu.
-This message may contain privileged or confidential information. If you are=
- not the intended recipient of this message, or if you have received it
-by mistake, please notify the sender immediately and delete the original wi=
-thout making a copy or disclosing its content.
-
-
-
-
-
---_000_YT1PR01MB25530734EE44C067D9B13784FC390YT1PR01MB2553CANP_
-Content-Type: text/html; charset="iso-8859-1"
+--_000_2F592534D3A0E54B98BEBA4AA095C4A82F3F712FTIFFINEXCHANGET_
+Content-Type: text/html; charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
-
 
 <html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
 osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
 xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
-//www.w3.org/TR/REC-html40">
-<head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
-1">
+//www.w3.org/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
 <meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
 <!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
 o\:* {behavior:url(#default#VML);}
@@ -252,392 +157,285 @@ w\:* {behavior:url(#default#VML);}
 </style><![endif]--><style><!--
 /* Font Definitions */
 @font-face
-=09{font-family:"Cambria Math";
-=09panose-1:2 4 5 3 5 4 6 3 2 4;}
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
 @font-face
-=09{font-family:Calibri;
-=09panose-1:2 15 5 2 2 2 4 3 2 4;}
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
 /* Style Definitions */
 p.MsoNormal, li.MsoNormal, div.MsoNormal
-=09{margin:0cm;
-=09margin-bottom:.0001pt;
-=09font-size:11.0pt;
-=09font-family:"Calibri",sans-serif;
-=09mso-fareast-language:EN-US;}
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
 a:link, span.MsoHyperlink
-=09{mso-style-priority:99;
-=09color:#0563C1;
-=09text-decoration:underline;}
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
 a:visited, span.MsoHyperlinkFollowed
-=09{mso-style-priority:99;
-=09color:#954F72;
-=09text-decoration:underline;}
-span.EmailStyle17
-=09{mso-style-type:personal;
-=09font-family:"Calibri",sans-serif;
-=09color:windowtext;}
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.EmailStyle19
+	{mso-style-type:personal;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+span.EmailStyle20
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:#1F497D;}
+span.EmailStyle21
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EmailStyle22
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:#1F497D;}
+span.EmailStyle23
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EmailStyle24
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:#1F497D;}
+span.EmailStyle25
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EmailStyle26
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:#1F497D;}
+span.EmailStyle27
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EmailStyle28
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:#1F497D;}
+span.EmailStyle29
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EmailStyle30
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:#1F497D;}
+span.EmailStyle31
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
 .MsoChpDefault
-=09{mso-style-type:export-only;
-=09font-family:"Calibri",sans-serif;
-=09mso-fareast-language:EN-US;}
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
 @page WordSection1
-=09{size:612.0pt 792.0pt;
-=09margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
 div.WordSection1
-=09{page:WordSection1;}
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:1571816635;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1345071468 134807553 134807555 134807557 134807553 1=
+34807555 134807557 134807553 134807555 134807557;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
 --></style><!--[if gte mso 9]><xml>
 <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
 </xml><![endif]--><!--[if gte mso 9]><xml>
-
 <o:shapelayout v:ext=3D"edit">
 <o:idmap v:ext=3D"edit" data=3D"1" />
 </o:shapelayout></xml><![endif]-->
 </head>
-<body lang=3D"FR-CA" link=3D"#0563C1" vlink=3D"#954F72">
-
-<div style=3D"background-color:#FFF8DC;">
-  <div style=3D"clear:both;padding:5px;border:1px dashed #6495ED;color:blac=
-k;margin: 2px;">
-    Preview: Bonjour, Pour faire suite =E0 votre demande, veuillez trouver =
-e<br/><br/>
-    Your Blur Masked Email 99vdzkxptgsl@opayq.com received this from aforti=
-n+caf_=3D99vdzkxptgsl=3Dopayq.com@gmail.com.<br/>
-    Blur forwards Masked Emails to you here ? just reply like normal and Bl=
-ur keeps your email private.<br/>
-    IF THIS IS SPAM, <a href=3D"https://dnt.abine.com/#/block_email/99vdzkx=
-ptgsl@opayq.com/FWD.9rm1zdn4d12v@opayq.com" rel=3D"nofollow">CLICK HERE TO =
-BLOCK.</a><br/>
-    <br/>
-Masked Emails stop spam, defy tracking, and keep data private. <a href=3D"h=
-ttps://dnt.abine.com/#/referral"> INVITE FRIENDS TO TRY BLUR PREMIUM AT 50%=
- OFF</a>.
-  </div>
-
-</div><span></span><br/>
-
-
+<body lang=3D"EN-GB" link=3D"#0563C1" vlink=3D"#954F72">
 <div class=3D"WordSection1">
-<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:FR-CA">Bonjour,<=
-o:p></o:p></span></p>
-<p class=3D"MsoNormal" style=3D"margin-left:70.8pt"><span style=3D"mso-fare=
-ast-language:FR-CA"><o:p>&nbsp;</o:p></span></p>
-
-<p class=3D"MsoNormal"><span style=3D"color:black;mso-fareast-language:FR-C=
-A">Pour faire suite =E0 votre demande,
-</span><span style=3D"mso-fareast-language:FR-CA">veuillez trouver en pi=E8=
-ce jointe le sommaire de votre police d'assurance vie.<o:p></o:p></span></p=
->
-<p class=3D"MsoNormal" style=3D"margin-left:70.8pt"><span style=3D"mso-fare=
-ast-language:FR-CA"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:black;mso-fareast-language:FR-C=
-A">N</span><span style=3D"mso-fareast-language:FR-CA">&#8217;h=E9sitez pas =
-=E0
-
-<span style=3D"color:black">communiquer avec nous pour de </span>plus ample=
-s informations<span style=3D"color:black">.<o:p></o:p></span></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:black;mso-fareast-language:FR-C=
-A"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:black;mso-fareast-language:FR-C=
-A">Merci, bonne journ=E9e<o:p></o:p></span></p>
-
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
-=3D"0" width=3D"859" style=3D"width:644.25pt;margin-left:72.0pt;border-coll=
-apse:collapse">
-<tbody>
-<tr>
-<td width=3D"146" valign=3D"top" style=3D"width:109.8pt;border:solid white =
-1.0pt;border-right:solid #7F7F7F 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
-<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;color:#1F497D;mso-fa=
-reast-language:FR-CA"><img width=3D"130" height=3D"96" style=3D"width:1.354=
-1in;height:1.0in" id=3D"Image_x0020_11" src=3D"cid:image001.jpg@01D4FEA5.BA=
-CBE2D0" alt=3D"iA Groupe financier / iA Financial Group"></span><span style=
-=3D"color:#365F91;mso-fareast-language:FR-CA"><o:p></o:p></span></p>
-
-<p class=3D"MsoNormal"><a href=3D"https://fr-ca.facebook.com/industrielleal=
-liance"><span style=3D"font-size:12.0pt;color:#365F91;mso-fareast-language:=
-FR-CA;text-decoration:none"><img border=3D"0" width=3D"18" height=3D"17" st=
-yle=3D"width:.1875in;height:.177in" id=3D"Image_x0020_27" src=3D"cid:image0=
-02.jpg@01D4FEA5.BACBE2D0" alt=3D"Macintosh HD:Users:q10153:Desktop:Facebook=
-.png"></span></a><span style=3D"font-size:12.0pt;color:#365F91;mso-fareast-=
-language:FR-CA">&nbsp;&nbsp;
-</span><a href=3D"http://www.twitter.com/indusalliance"><span style=3D"font=
--size:12.0pt;color:#365F91;mso-fareast-language:FR-CA;text-decoration:none"=
-><img border=3D"0" width=3D"18" height=3D"17" style=3D"width:.1875in;height=
-:.177in" id=3D"Image_x0020_28" src=3D"cid:image003.jpg@01D4FEA5.BACBE2D0" a=
-lt=3D"Macintosh HD:Users:q10153:Desktop:Twitter.png"></span></a><span style=
-=3D"font-size:12.0pt;color:#365F91;mso-fareast-language:FR-CA">&nbsp;&nbsp;=
-
-&nbsp;</span><a href=3D"https://www.linkedin.com/company/industrielle_allia=
-nce"><span style=3D"font-size:12.0pt;color:#365F91;mso-fareast-language:FR-=
-CA;text-decoration:none"><img border=3D"0" width=3D"17" height=3D"16" style=
-=3D"width:.177in;height:.1666in" id=3D"Image_x0020_29" src=3D"cid:image004.=
-jpg@01D4FEA5.BACBE2D0" alt=3D"Macintosh HD:Users:q10153:Desktop:Linked.png"=
-></span></a><span style=3D"font-size:12.0pt;color:#365F91;mso-fareast-langu=
-age:FR-CA">&nbsp;&nbsp;&nbsp;</span><a href=3D"https://www.youtube.com/user=
-/IAquebec"><span style=3D"font-size:12.0pt;color:#365F91;mso-fareast-langua=
-ge:FR-CA;text-decoration:none"><img border=3D"0" width=3D"18" height=3D"17"=
- style=3D"width:.1875in;height:.177in" id=3D"Image_x0020_30" src=3D"cid:ima=
-ge005.png@01D4FEA5.BACBE2D0" alt=3D"Macintosh HD:Users:q10153:Desktop:YouTu=
-be.png"></span></a><span style=3D"font-size:12.0pt;color:#365F91;mso-fareas=
-t-language:FR-CA"><o:p></o:p></span></p>
-
-<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;color:#365F91;mso-fa=
-reast-language:FR-CA"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><s=
-pan lang=3D"FR" style=3D"font-size:12.0pt;color:#365F91;mso-fareast-languag=
-e:FR-CA"><a href=3D"http://ia.ca/"><b><span style=3D"font-size:11.0pt;color=
-:#042D54">ia.ca</span></b></a></span><u><span lang=3D"FR" style=3D"color:#0=
-42D54;mso-fareast-language:FR-CA"><o:p></o:p></span></u></p>
-
-</td>
-<td width=3D"15" valign=3D"top" style=3D"width:11.1pt;border:solid white 1.=
-0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"color:#0057A5;mso-fareast-language:FR-CA"><o:p>=
-&nbsp;</o:p></span></b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:10.0pt;color:#4C4C4E;mso-fareast-lang=
-uage:FR-CA"><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><s=
-pan lang=3D"FR" style=3D"font-size:10.0pt;color:#4C4C4E;mso-fareast-languag=
-e:FR-CA"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:10.0pt;color:#4C4C4E;mso-fareast-lang=
-uage:FR-CA"><o:p>&nbsp;</o:p></span></b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:10.0pt;color:#4C4C4E;mso-fareast-lang=
-uage:FR-CA"><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><s=
-pan lang=3D"FR" style=3D"font-size:10.0pt;color:#4C4C4E;mso-fareast-languag=
-e:FR-CA"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><s=
-pan lang=3D"FR" style=3D"font-size:10.0pt;color:#4C4C4E;mso-fareast-languag=
-e:FR-CA"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#365F91;mso-fareast-language:FR=
--CA"><o:p>&nbsp;</o:p></span></p>
-
-</td>
-<td width=3D"698" colspan=3D"2" valign=3D"top" style=3D"width:523.65pt;bord=
-er:solid white 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
 <table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
 =3D"0" style=3D"border-collapse:collapse">
 <tbody>
-<tr>
-<td width=3D"682" valign=3D"top" style=3D"width:511.3pt;padding:0cm 5.4pt 0=
-cm 5.4pt">
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"color:#1F497D;mso-fareast-language:FR-CA">Paige=
- Doddridge</span></b><span lang=3D"FR" style=3D"color:#0057A5;mso-fareast-l=
-anguage:FR-CA"><o:p></o:p></span></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><s=
-pan lang=3D"FR" style=3D"font-size:10.0pt;color:#4C4C4E;mso-fareast-languag=
-e:FR-CA">Sp=E9cialiste Relation Client / Client Relation Specialist<b><o:p>=
-
-</o:p></b></span></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:10.0pt;color:#4C4C4E;mso-fareast-lang=
-uage:FR-CA">Assurance individuelle/Individual Insurance<o:p></o:p></span></=
-b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:10.0pt;color:#4C4C4E;mso-fareast-lang=
-uage:FR-CA">Industrielle Alliance, Assurance et services financiers<o:p></o=
-:p></span></b></p>
-
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:10.0pt;color:#4C4C4E;mso-fareast-lang=
-uage:FR-CA">Industrial Alliance, Insurance and Financial Services<o:p></o:p=
-></span></b></p>
-<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;color:#4C4C4E;mso=
--fareast-language:FR-CA">1-844-4iA-INFO (42-4636)<o:p></o:p></span></b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span style=3D"font-size:10.0pt;color:red;mso-fareast-language:FR-CA">NOUV=
-EAU!</span></b><span style=3D"font-size:10.0pt;color:#4F81BD;mso-fareast-la=
-nguage:FR-CA">
-
-<a href=3D"mailto:infovie@ia.ca"><span style=3D"color:blue">infovie@ia.ca</=
-span></a> </span>
-<span style=3D"font-size:10.0pt;color:#1F497D;mso-fareast-language:FR-CA"><=
-o:p></o:p></span></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span style=3D"font-size:10.0pt;color:red;mso-fareast-language:FR-CA">NEW!=
-</span></b><span style=3D"color:#1F497D;mso-fareast-language:FR-CA">
-</span><span style=3D"font-size:10.0pt;color:#4F81BD;mso-fareast-language:F=
-R-CA"><a href=3D"mailto:infolife@ia.ca"><span style=3D"color:blue">infolife=
-@ia.ca</span></a></span><b><span style=3D"color:#1F497D;mso-fareast-languag=
-e:FR-CA"><o:p></o:p></span></b></p>
-
+<tr style=3D"height:394.45pt">
+<td width=3D"707" valign=3D"top" style=3D"width:551.2pt;border:solid white =
+1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:394.45pt">
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB">&nbsp;<im=
+g width=3D"46" height=3D"47" style=3D"width:.4791in;height:.4895in" id=3D"_=
+x0000_i1025" src=3D"cid:image001.jpg@01D2EDF7.09DED830" alt=3D"cid:image003=
+.png@01D29CBE.AB58F9A0">&nbsp;&nbsp;&nbsp;&nbsp;<img width=3D"48" height=3D=
+"47" style=3D"width:.5in;height:.4895in" id=3D"_x0000_i1026" src=3D"cid:ima=
+ge002.png@01D2EDF7.09DED830" alt=3D"Description: amended logo">&nbsp;&nbsp;=
+&nbsp;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-GB"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB">Please<sp=
+an style=3D"color:#0070C0">
+</span><span style=3D"color:#2E75B6;mso-style-textfill-fill-color:#2E75B6;m=
+so-style-textfill-fill-alpha:100.0%"><a href=3D"http://www.tiffinfriends.or=
+g/design/pdfs/Tiffnews,%20October%202017.pdf"><span style=3D"color:#2E75B6;=
+mso-style-textfill-fill-color:#2E75B6;mso-style-textfill-fill-alpha:100.0%"=
+>click
+ this link</span></a></span> to view the October 2017 edition of Tiffnews, =
+the publication for alumni and friends of Tiffin School.<o:p></o:p></span><=
+/p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB">It includ=
+es details of:<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-18.0pt;mso-list:l0 leve=
+l1 lfo2"><![if !supportLists]><span style=3D"font-family:Symbol;mso-fareast=
+-language:EN-GB"><span style=3D"mso-list:Ignore">&middot;<span style=3D"fon=
+t:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;
+</span></span></span><![endif]><span style=3D"mso-fareast-language:EN-GB">t=
+he Tiffin Alumni Dinner incorporating the 60<sup>th</sup> Anniversary of th=
+e Tiffin Boys&#8217; Choir on 10 November 2017<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-18.0pt;mso-list:l0 leve=
+l1 lfo2"><![if !supportLists]><span style=3D"font-family:Symbol;mso-fareast=
+-language:EN-GB"><span style=3D"mso-list:Ignore">&middot;<span style=3D"fon=
+t:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;
+</span></span></span><![endif]><span style=3D"mso-fareast-language:EN-GB">t=
+he Tiffinian Association AGM on 10 November 2017<o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-18.0pt;mso-list:l0 leve=
+l1 lfo2"><![if !supportLists]><span style=3D"font-family:Symbol;mso-fareast=
+-language:EN-GB"><span style=3D"mso-list:Ignore">&middot;<span style=3D"fon=
+t:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;
+</span></span></span><![endif]><span style=3D"mso-fareast-language:EN-GB">t=
+he Tiffin Boys&#8217; Choir &#8211; past and present<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoNormal">Kind regards<o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB">Alex Swif=
+t<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB">Tiffin Sc=
+hool Alumni and Development Officer</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB">020 8546 =
+4638<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#2E75B6"><a href=3D"http://www.=
+tiffinschool.co.uk/"><i><span style=3D"color:#2E75B6">Tiffin School website=
+</span></i></a><i><o:p></o:p></i></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#2E75B6"><a href=3D"http://www.=
+tiffinfriends.org/"><i><span style=3D"color:#2E75B6">Tiffinian Association =
+website</span></i></a><i><o:p></o:p></i></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto"><span style=3D"color:black;mso-fareast-language:EN-GB">If you wish=
+ to unsubscribe from Tiffnews, please email
+</span><span style=3D"color:#2E75B6"><a href=3D"mailto:TAL@tiffin.kingston.=
+sch.uk" target=3D"_blank"><span style=3D"color:#2E75B6;mso-fareast-language=
+:EN-GB">TAL@tiffin.kingston.sch.uk</span></a>
+</span><span style=3D"color:black;mso-fareast-language:EN-GB">with the word=
+ UNSUBSCRIBE<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto"><b><span style=3D"mso-fareast-language:EN-GB"><o:p>&nbsp;</o:p></s=
+pan></b></p>
 </td>
 </tr>
 </tbody>
 </table>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><s=
-pan style=3D"color:#1F497D;mso-fareast-language:FR-CA">&nbsp;&nbsp;&nbsp;&n=
-bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
-;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
-bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
-;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
-bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
-;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-<o:p></o:p></span></p>
-<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
-=3D"0" style=3D"border-collapse:collapse">
-<tbody>
-<tr style=3D"height:58.0pt">
-<td width=3D"149" valign=3D"top" style=3D"width:112.1pt;border-top:solid #4=
-F81BD 1.0pt;border-left:none;border-bottom:solid #4F81BD 1.0pt;border-right=
-:none;padding:0cm 5.4pt 0cm 5.4pt;height:58.0pt">
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:9.0pt;color:#1F497D;mso-fareast-langu=
-age:FR-CA">Qu=E9bec<o:p></o:p></span></b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-langu=
-age:FR-CA">1080, Grande All=E9e Ouest
-
-</span></b><span lang=3D"FR" style=3D"font-size:9.0pt;color:#4C4C4E;mso-far=
-east-language:FR-CA"><o:p></o:p></span></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-langu=
-age:FR-CA">C.P. 1907, Succ. Terminus</span></b><b><span lang=3D"FR" style=
-=3D"font-size:9.0pt;color:#365F91;mso-fareast-language:FR-CA"><o:p></o:p></=
-span></b></p>
-
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-langu=
-age:FR-CA">Qu=E9bec Q</span></b><b><span lang=3D"FR" style=3D"font-size:9.0=
-pt;color:#1F497D;mso-fareast-language:FR-CA">C</span></b><b><span lang=3D"F=
-R" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-language:FR-CA">
- G1K 7M3<o:p></o:p></span></b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-langu=
-age:FR-CA">Fax / T=E9l=E9copieur:</span></b><b><span lang=3D"FR" style=3D"f=
-ont-size:9.0pt;color:#1F497D;mso-fareast-language:FR-CA"><o:p></o:p></span>=
-
-</b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-langu=
-age:FR-CA">1</span></b><b><span lang=3D"FR" style=3D"font-size:9.0pt;color:=
-#1F497D;mso-fareast-language:FR-CA">-</span></b><b><span lang=3D"FR" style=
-=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-language:FR-CA">418-684-5208<=
-/span></b><b><span lang=3D"FR" style=3D"font-size:9.0pt;color:#4F81BD;mso-f=
-areast-language:FR-CA"><o:p></o:p></span></b></p>
-
-</td>
-<td width=3D"150" valign=3D"top" style=3D"width:112.15pt;border-top:solid #=
-4F81BD 1.0pt;border-left:none;border-bottom:solid #4F81BD 1.0pt;border-righ=
-t:none;padding:0cm 5.4pt 0cm 5.4pt;height:58.0pt">
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span style=3D"font-size:9.0pt;color:#1F497D;mso-fareast-language:FR-CA">T=
-oronto<o:p></o:p></span></b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-language:FR-CA">5=
-22 University Avenue</span></b><span style=3D"font-size:9.0pt;color:#4C4C4E=
-;mso-fareast-language:FR-CA"><o:p></o:p></span></p>
-
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-language:FR-CA">S=
-uite 400</span></b><b><span style=3D"font-size:9.0pt;mso-fareast-language:F=
-R-CA"><o:p></o:p></span></b></p>
-<p class=3D"MsoNormal"><b><span style=3D"font-size:9.0pt;color:#4C4C4E;mso-=
-fareast-language:FR-CA">Toronto ON&nbsp; M5G 1Y7<o:p></o:p></span></b></p>
-
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-langu=
-age:FR-CA">Fax / T=E9l=E9copieur:
-</span></b><b><span lang=3D"FR" style=3D"font-size:9.0pt;color:#1F497D;mso-=
-fareast-language:FR-CA"><o:p></o:p></span></b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-langu=
-age:FR-CA">1-877-780-7231</span></b><b><span style=3D"font-size:9.0pt;color=
-:#1F497D;mso-fareast-language:FR-CA"><o:p></o:p></span></b></p>
-
-</td>
-<td width=3D"150" valign=3D"top" style=3D"width:112.15pt;border-top:solid #=
-4F81BD 1.0pt;border-left:none;border-bottom:solid #4F81BD 1.0pt;border-righ=
-t:none;padding:0cm 5.4pt 0cm 5.4pt;height:58.0pt">
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"EN-CA" style=3D"font-size:9.0pt;color:#1F497D;mso-fareast-la=
-nguage:FR-CA">Vancouver<o:p></o:p></span></b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"EN-CA" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-la=
-nguage:FR-CA">400-988 Broadway West</span></b><span lang=3D"EN-CA" style=3D=
-"font-size:9.0pt;color:#4C4C4E;mso-fareast-language:FR-CA"><o:p></o:p></spa=
-n></p>
-
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"EN-CA" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-la=
-nguage:FR-CA">PO Box 5900 &nbsp;<o:p></o:p></span></b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-language:FR-CA">V=
-ancouver&nbsp;BC&nbsp; V6B 5H6 &nbsp;<o:p></o:p></span></b></p>
-
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-langu=
-age:FR-CA">Fax / T=E9l=E9copieur:</span></b><b><span lang=3D"FR" style=3D"f=
-ont-size:9.0pt;color:#1F497D;mso-fareast-language:FR-CA"><o:p></o:p></span>=
-</b></p>
-<p class=3D"MsoNormal" style=3D"line-height:12.05pt;text-autospace:none"><b=
-><span lang=3D"FR" style=3D"font-size:9.0pt;color:#4C4C4E;mso-fareast-langu=
-age:FR-CA">1-844-739-0634</span></b><b><span lang=3D"FR" style=3D"font-size=
-:9.0pt;color:#1F497D;mso-fareast-language:FR-CA"><o:p></o:p></span></b></p>
-
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr>
-<td width=3D"808" colspan=3D"3" valign=3D"top" style=3D"width:606.3pt;paddi=
-ng:0cm 5.4pt 0cm 5.4pt">
-<p class=3D"MsoNormal"><span lang=3D"FR" style=3D"font-size:8.0pt;color:#1F=
-497D;mso-fareast-language:FR-CA"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal"><span lang=3D"FR" style=3D"font-size:8.0pt;color:#17=
-365D;mso-fareast-language:FR-CA">Ce message peut contenir de l&#8217;inform=
-ation privil=E9gi=E9e ou confidentielle. Si ce message ne vous est pas adre=
-ss=E9 ou si vous l&#8217;avez re=E7u par erreur,
-
-</span><span lang=3D"FR" style=3D"font-size:8.0pt;color:#1F497D;mso-fareast=
--language:FR-CA"><o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span lang=3D"FR" style=3D"font-size:8.0pt;color:#17=
-365D;mso-fareast-language:FR-CA">veuillez aviser l&#8217;=E9metteur imm=E9d=
-iatement et effacer l&#8217;original, sans en tirer de copie ni en d=E9voil=
-er le contenu.</span><span lang=3D"FR" style=3D"font-size:8.0pt;mso-fareast=
--language:FR-CA"><o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span lang=3D"EN-CA" style=3D"font-size:8.0pt;color:=
-#17365D;mso-fareast-language:FR-CA">This message may contain privileged or =
-confidential information. If you are not the intended recipient of this mes=
-sage, or if you have received it
-
-</span><span lang=3D"EN-CA" style=3D"color:#1F497D;mso-fareast-language:FR-=
-CA"><o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span lang=3D"EN-CA" style=3D"font-size:8.0pt;color:=
-#17365D;mso-fareast-language:FR-CA">by mistake, please notify the sender im=
-mediately and delete the original without making a copy or disclosing its c=
-ontent.</span><span lang=3D"EN-CA" style=3D"font-size:8.0pt;mso-fareast-lan=
-guage:FR-CA"><o:p></o:p></span></p>
-</td>
-<td width=3D"51" style=3D"width:38.25pt;padding:0cm 0cm 0cm 0cm"></td>
-
-</tr>
-<tr>
-<td width=3D"146" style=3D"width:109.8pt;padding:0cm 0cm 0cm 0cm"></td>
-<td width=3D"15" style=3D"width:11.1pt;padding:0cm 0cm 0cm 0cm"></td>
-<td width=3D"647" style=3D"width:485.4pt;padding:0cm 0cm 0cm 0cm"></td>
-<td width=3D"51" style=3D"width:38.25pt;padding:0cm 0cm 0cm 0cm"></td>
-</tr>
-</tbody>
-</table>
-<p class=3D"MsoNormal"><span lang=3D"EN-CA" style=3D"mso-fareast-language:F=
-R-CA"><o:p>&nbsp;</o:p></span></p>
-
-<p class=3D"MsoNormal"><span lang=3D"EN-CA"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
 </div>
+Tiffin School is a company limited by guarantee with exempt charitable stat=
+us, registered in England &amp; Wales at Queen Elizabeth Road, Kingston upo=
+n Thames, Surrey, KT2 6RL. Registration Number 07547311
 </body>
 </html>
 
---_000_YT1PR01MB25530734EE44C067D9B13784FC390YT1PR01MB2553CANP_--
+--_000_2F592534D3A0E54B98BEBA4AA095C4A82F3F712FTIFFINEXCHANGET_--
+
