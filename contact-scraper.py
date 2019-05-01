@@ -46,6 +46,8 @@ def number_catcher(filename):
         numbers = set()
         for match in phonenumbers.PhoneNumberMatcher(my_email, "US"):
             numbers.add(phonenumbers.format_number(match.number, phonenumbers.PhoneNumberFormat.E164))
+            if numbers != set(): # stop after first match
+                break
         if numbers == set():
             numbers = None
         numbers = str(numbers).replace("{'", "").replace("'}", "")
