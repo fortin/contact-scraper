@@ -7,39 +7,19 @@
 #
 
 import re
-import email
-import email.parser
-import json
+from email.parser import HeaderParser
 import phonenumbers
 
 def header_parser(filename):
     # parse email headers
-    with open(filename, 'r') as msg:
-        my_email = msg.read()
-        parser = email.parser.HeaderParser()
-        raw_headers = parser.parsestr(my_email)
-    return(raw_headers)
-
-def header_cleaner(raw_headers):
-    str_headers = []
-    for h in raw_headers.items():
-        # stop when binary data starts
-        if h == "Content-Type: image" or h == "Content-Type: application":
-            break
-        else:
-            str_headers.append(h)
-    headers = str(str_headers)
-    # strip double quotes, convert brackets [()] to braces and make string dict-like for json.loads
-    headers = headers.replace('"', '').replace("[(", "{", 1).replace(")]", "}").replace("',", "':").replace("'", '"').replace("), (", ",")
-    # get rid of everything after the headers
-    headers = re.sub(r"{(.+?}).+", "\\1", headers)
-    # for char in headers:
-    #     headers = headers.translate({ord(i):None for i in '[]'})
+    with open(filename, 'r') as f:
+        q = f.read()
+        parser = HeaderParser()
+        h = parser.parsestr(q)
+        headers = dict(h.items())
     return(headers)
 
-# TODO is there a less bruteforce way of doing the cleanup above?
-
-def number_catcher(filename):
+def num_catcher(filename):
     # extract all US phone numbers from message
     with open(filename, 'r') as msg:
         my_email = msg.read()
@@ -61,7 +41,6 @@ def email_catcher(filename):
         for i, line in enumerate(f):
             for match in re.finditer(pattern, line):
                 emails.update(match.groups())
-# TODO check if filename is a file or string type and react accordingly.
     return(emails)
 
 def dict_pop(contact, numbers):
@@ -100,19 +79,19 @@ def dict_pop(contact, numbers):
 
 my_file = 'test_email.eml'
 
-raw_headers = header_parser(my_file)
-headers = header_cleaner(raw_headers)
-headers = json.loads(headers)
+headers = header_parser(my_file)
+
 from_key = ['From'] # The key(s) you want
 
 from_hdr = dict((k, headers[k]) for k in from_key if k in headers)
 from_val = str([*from_hdr.values()])
 
 contact = from_val.split()
-numbers = number_catcher(my_file)
 
-# emails = email_catcher(my_file)
-# print(emails)
+numbers = num_catcher(my_file)
 contact = dict_pop(contact, numbers)
 
 print(contact)
+
+# emails = email_catcher(my_file)
+# print(emails)
