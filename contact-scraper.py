@@ -12,10 +12,10 @@ import phonenumbers
 
 def header_parser(filename):
     # parse email headers
-    with open(filename, 'r') as f:
-        q = f.read()
+    with open(filename, 'r') as msg:
+        my_email = msg.read()
         parser = HeaderParser()
-        h = parser.parsestr(q)
+        h = parser.parsestr(my_email)
         headers = dict(h.items())
     return(headers)
 
