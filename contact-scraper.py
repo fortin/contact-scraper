@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-#  Contact Scraper for Gmail
+#  Contact Scraper for email
 #
 #  Created by Antonio Fortin on 2019-04-01.
 #  Copyright (c) 2019 Antonio Fortin. All rights reserved.
