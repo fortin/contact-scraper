@@ -37,7 +37,7 @@ def num_catcher(filename):
 
 
 def email_catcher(filename):
-    # extract all email addresses from message
+    # extract all email addresses from message (not necessary yet)
     pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
     emails = set()
     with open(filename) as f:
@@ -48,12 +48,16 @@ def email_catcher(filename):
 
 
 def dict_pop(contact, numbers):
+    # TODO why isn't replace getting rid of double quotes?
+    domain = re.sub(r"([a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+))",
+                    r"\2",
+                    contact[-1]).replace("[", "").replace("]", "").replace("<", "").replace(">", "")
     if contact[0].isupper():
         contact = {
-            'lastname': contact[0].replace("[", "").replace("]", "").replace("'", ""),
+            'lastname': contact[0].replace("[", "").replace("]", "").replace("'", "").replace('\"', ""),
             'firstname': contact[1].replace("[", "").replace("]", "").replace("'", ""),
-            'email': contact[-1].replace("[", "").replace("]", "").replace("'", ""),
-            'company': None,
+            'email': contact[-1].replace("[", "").replace("]", "").replace("'", "").replace("<", "").replace(">", ""),
+            'company': domain,
             'address': None,
             'phone': numbers
         }
@@ -62,20 +66,19 @@ def dict_pop(contact, numbers):
             contact = {
                 'lastname': contact[1].replace("[", "").replace("]", "").replace("'", ""),
                 'firstname': contact[0].replace("[", "").replace("]", "").replace("'", ""),
-                'email': contact[-1].replace("[", "").replace("]", "").replace("'", ""),
-                'company': None,
+                'email': contact[-1].replace("[", "").replace("]", "").replace("'", "").replace("<", "").replace(">", ""),
+                'company': domain,
                 'address': None,
                 'phone': numbers
             }
         except:
             pass
     else:
-        company = str(contact[0:-1]).replace("[", "").replace("]",
-                                                              "").replace("'", "").replace('"', "").replace(",", "")
+        company = str(contact[0:-1]).replace("[", "").replace("]", "").replace("'", "").replace('"', "").replace(",", "")
         contact = {
             'lastname': None,
             'firstname': None,
-            'email': contact[-1].replace("[", "").replace("]", "").replace("'", ""),
+            'email': contact[-1].replace("[", "").replace("]", "").replace("'", "").replace("<", "").replace(">", ""),
             'company': company,
             'address': None,
             'phone': numbers
@@ -93,7 +96,6 @@ from_hdr = dict((k, headers[k]) for k in from_key if k in headers)
 from_val = str([*from_hdr.values()])
 
 contact = from_val.split()
-
 numbers = num_catcher(my_file)
 contact = dict_pop(contact, numbers)
 
