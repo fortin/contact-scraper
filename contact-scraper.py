@@ -48,7 +48,7 @@ def email_catcher(filename):
 
 
 def dict_pop(contact, numbers):
-# TODO why isn't replace getting rid of double quotes?
+    # TODO why isn't replace getting rid of double quotes?
     domain = re.sub(r"[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)",
                     r"\1",
                     contact[-1]).replace("[", "").replace("]", "").replace("<", "").replace(">", "")
@@ -90,12 +90,9 @@ my_file = 'test_email.eml'
 
 headers = header_parser(my_file)
 
-from_key = ['From']  # The key(s) you want
-
-from_hdr = dict((k, headers[k]) for k in from_key if k in headers)
-from_val = str([*from_hdr.values()])
-
+from_val = headers['From']
 contact = from_val.split()
+
 numbers = num_catcher(my_file)
 contact = dict_pop(contact, numbers)
 
