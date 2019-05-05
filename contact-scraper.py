@@ -28,7 +28,7 @@ def num_catcher(filename):
         for match in phonenumbers.PhoneNumberMatcher(my_email, "US"):
             numbers.add(phonenumbers.format_number(
                 match.number, phonenumbers.PhoneNumberFormat.E164))
-            if numbers != set():  # stop after first match
+            if numbers != set():  # stop after first match (not ideal)
                 break
         if numbers == set():
             numbers = None
@@ -48,9 +48,9 @@ def email_catcher(filename):
 
 
 def dict_pop(contact, numbers):
-    # TODO why isn't replace getting rid of double quotes?
-    domain = re.sub(r"([a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+))",
-                    r"\2",
+# TODO why isn't replace getting rid of double quotes?
+    domain = re.sub(r"[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)",
+                    r"\1",
                     contact[-1]).replace("[", "").replace("]", "").replace("<", "").replace(">", "")
     if contact[0].isupper():
         contact = {
