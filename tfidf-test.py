@@ -1,13 +1,17 @@
 import re
 import os
 import sys
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
+import pandas as pd
+import csv
 
-path = "/Users/antonio/pCloud Drive/My Documents/Linguistics/corpora/enron-email/maildir/arnold-j/sent"
+path = "/Users/antonio/pCloud Drive/My Documents/Linguistics/corpora/enron-email/maildir/skilling-j/sent"
 
+cv = CountVectorizer()
 tfidf_vectorizer = TfidfVectorizer()
-transformer = TfidfTransformer()
+# transformer = TfidfTransformer()
 
 def read_files(path):
     # TODO skip headers?
@@ -24,7 +28,32 @@ def read_files(path):
     return train_set
 
 corpus = read_files(path)
-X = tfidf_vectorizer.fit_transform(corpus)
+# X = tfidf_vectorizer.fit_transform(corpus)
+# this step generates word counts for the words in your docs
 
-print(tfidf_vectorizer.get_feature_names())
-print(X.toarray())
+word_count_vector = cv.fit_transform(corpus)
+
+tfidf_transformer=TfidfTransformer(smooth_idf=True,use_idf=True)
+tfidf_transformer.fit(word_count_vector)
+
+# count matrix
+count_vector=cv.transform(corpus)
+
+# tf-idf scores
+tf_idf_vector=tfidf_transformer.transform(count_vector)
+
+first_document_vector=tf_idf_vector[0]
+feature_names = cv.get_feature_names()
+
+#print the scores
+df = pd.DataFrame(first_document_vector.T.todense(), index=feature_names, columns=["tfidf"])
+df.sort_values(by=["tfidf"],ascending=False).to_csv("foo.csv")
+
+# print idf values
+df_idf = pd.DataFrame(tfidf_transformer.idf_, index=cv.get_feature_names(),columns=["tf_idf_weights"])
+
+# sort ascending
+df_idf.sort_values(by=['tf_idf_weights']).to_csv("bar.csv")
+# print(word_count_vector.shape)
+# print(tfidf_vectorizer.get_feature_names())
+# print(X.toarray())
