@@ -96,7 +96,10 @@ def process_files(d):
     for k, v in d.items():
         df = pd.DataFrame()
         parser = HeaderParser()
-        v = 
+        v = [x.replace("\n", "") for x in v]
+        # v = [[x] for x in ",".join(str(x) for x in v).split("': ')]
+        # v['From: '.split('From: ')[0]] = v
+        print(v)
         sys.exit()
         h = parser.parsestr(v)
         from_header = h['From:']
@@ -155,3 +158,4 @@ sys.exit()
 # corpus = sig_corpus + nosig_corpus
 #
 # X = tfidf_vectorizer.fit_transform(corpus).todense()
+#
