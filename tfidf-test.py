@@ -34,7 +34,6 @@ nosig_test_path = "data/nosig_test"
 
 # cv = CountVectorizer()
 # tfidf_vectorizer = TfidfVectorizer()
-# tfidf_vectorizer = TfidfVectorizer()
 # transformer = TfidfTransformer()
 # svc_clf = LinearSVC()
 # lr = LogisticRegression()
@@ -99,8 +98,8 @@ def process_files(d):
         v = [x.replace("\n", "") for x in v]
         # v = [[x] for x in ",".join(str(x) for x in v).split("': ')]
         # v['From: '.split('From: ')[0]] = v
-        print(v)
-        sys.exit()
+        # print(v)
+        # sys.exit()
         h = parser.parsestr(v)
         from_header = h['From:']
         for line in v:
@@ -109,21 +108,24 @@ def process_files(d):
         result[file_name.split('.')[0]] = df
     return(result)
 
-# sig_corpus = process_files(read_files(sig_path))
-# nosig_corpus = process_files(read_files(nosig_path))
+sig_corpus = process_files(read_files(sig_path))
+nosig_corpus = process_files(read_files(nosig_path))
 
+# print(type(sig_corpus))
 # def from_extractor(df):
 #     df['From'] = df['line'].str.extract("From: (.+?)\n")
 #     return df['From'].dropna()
 
-# sig_corpus = read_files(sig_path)
-# nosig_corpus = read_files(nosig_path)
+# sig_corpus = list(read_files(sig_path))
+# nosig_corpus = list(read_files(nosig_path))
 
-sig_test_corpus = process_files(read_files(sig_test_path))
+# sig_test_corpus = process_files(read_files(sig_test_path))
 # nosig_test_corpus = read_files(nosig_test_path)
 
-# corpus = sig_corpus + nosig_corpus
-print(type(sig_test_corpus))
+corpus = sig_corpus + nosig_corpus
+# corpus = list(corpus)
+
+print(corpus)
 # pat = '\n\n'
 # hit_words = ('\n')
 # email = '/Users/antonio/Documents/Dropbox/Code/Python/Contact-Scraper/data/dasovich-j/dasovich-j-246.txt'
@@ -145,7 +147,7 @@ sys.exit()
 #
 # print(from_info)
 # print(sig_test_corpus.values[0])
-# print(hit_word_feature(list(sig_test_corpus.values())[0], hit_words, 3))
+print(hit_word_feature(list(sig_test_corpus.values())[0], hit_words, 3))
 
 # for line in f:
     # print(line)
