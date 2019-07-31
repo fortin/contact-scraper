@@ -27,23 +27,27 @@ def read_files(path):
                     result[file_name.split('.')[0]] = data.readlines()
     return result
 
+def createfeats(x):
+
 sig_corpus = read_files(sig_path)
 nosig_corpus = read_files(nosig_path)
 
-# sig_test_corpus = read_files(sig_test_path)
-# nosig_test_corpus = read_files(nosig_test_path)
+# print(sig_corpus)
+# print(type(sig_corpus))
+# print(nosig_corpus)
+# print(type(nosig_corpus))
+# sys.exit()
+sig_test_corpus = read_files(sig_test_path)
+nosig_test_corpus = read_files(nosig_test_path)
 
-# y = [1]*len(sig_corpus) + [0]*len(nosig_corpus)
-#
-corpus = [sig_corpus, nosig_corpus]
+# corpus = {**sig_corpus, **nosig_corpus}
 # print(corpus)
 # sys.exit()
-
-# corpus = [sig_test_corpus, nosig_test_corpus]
+corpus = {**sig_test_corpus, **nosig_test_corpus}
 
 result = []
 
-for email in corpus:
+for email in list(corpus.values()):
     df = pd.DataFrame(columns=['line'])
     email = [x.replace("\n", "") for x in email]
     email = [x.replace("\t", "") for x in email]
@@ -51,39 +55,39 @@ for email in corpus:
         df = df.append({'line': line}, ignore_index=True)
     result.append(df)
 
-all_rows = pd.concat([result[0], result[1]])
+
+# So in the detect step
+# Ie what we are now doing
+# We need to convert each email to a features df
+# Prior to the concat
+# So....
+# To do that
+# Create a function
+# Which turns any single email df
+# Into the features df
+# Call it createfeats or something
+# Then use [createfeats(x) for x in blah]
+# Where blah is the list of the email df
+# (I forgot the name, should be obvious)
+# (exactly the things we were concat-ing just now)
+
 print(result[1])
 sys.exit()
 
-y = [1]*len(sig_corpus) + [0]*len(nosig_corpus)
-# print(len(all_rows))
-# print(len(y))
+all_rows = pd.concat(result)
+# print(all_rows)
 # sys.exit()
 
-# corpus = sig_corpus + nosig_corpus
-#
-# X = tfidf_vectorizer.fit_transform(corpus).todense()
-#
-# cv.fit(X, y)
-
-cv.fit(all_rows.values.ravel(), y)
-
-# df of all features X
-# df of all labels y
-# if they are of the same length, fit(X, y) will work
+cv.fit(all_rows.values.ravel())
 
 def row_cv(x):
     return pd.Series(np.array(cv.transform([x['line']]).todense())[0])
 
+# email0 = result[0]
 
-sig = result[0]
-nosig =result[1]
+q = result[1].apply(row_cv, result_type='expand', axis=1)
 
-q = sig.apply(row_cv, result_type='expand', axis=1)
-r = nosig.apply(row_cv, result_type='expand', axis=1)
+r = q.rolling(4, center=True).sum()
+print(r)
 
-v = q.rolling(4, center=True).sum()
-w = r.rolling(4, center=True).sum()
-
-print(v)
-print(w)
+feats = [createfeats(x) for x in result]
