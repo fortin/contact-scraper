@@ -8,7 +8,7 @@
 import re
 from email.parser import HeaderParser
 import phonenumbers
-
+from names_dataset import NameDataset
 
 def header_parser(filename):
     # parse email headers
@@ -48,41 +48,20 @@ def email_catcher(filename):
 
 
 def dict_pop(contact, numbers):
-    # TODO why isn't replace getting rid of double quotes?
     domain = re.sub(r"[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)",
                     r"\1",
-                    contact[-1]).replace("[", "").replace("]", "").replace("<", "").replace(">", "")
-    if contact[0].isupper():
+                    contact[-1])
+    try:
         contact = {
-            'lastname': contact[0].replace("[", "").replace("]", "").replace("'", "").replace('\"', ""),
-            'firstname': contact[1].replace("[", "").replace("]", "").replace("'", ""),
-            'email': contact[-1].replace("[", "").replace("]", "").replace("'", "").replace("<", "").replace(">", ""),
+            'lastname': contact[1],
+            'firstname': contact[0],
+            'email': contact[-1],
             'company': domain,
             'address': None,
             'phone': numbers
         }
-    elif len(contact) < 4:
-        try:
-            contact = {
-                'lastname': contact[1].replace("[", "").replace("]", "").replace("'", ""),
-                'firstname': contact[0].replace("[", "").replace("]", "").replace("'", ""),
-                'email': contact[-1].replace("[", "").replace("]", "").replace("'", "").replace("<", "").replace(">", ""),
-                'company': domain,
-                'address': None,
-                'phone': numbers
-            }
-        except:
-            pass
-    else:
-        company = str(contact[0:-1]).replace("[", "").replace("]", "").replace("'", "").replace('"', "").replace(",", "")
-        contact = {
-            'lastname': None,
-            'firstname': None,
-            'email': contact[-1].replace("[", "").replace("]", "").replace("'", "").replace("<", "").replace(">", ""),
-            'company': company,
-            'address': None,
-            'phone': numbers
-        }
+    except:
+        pass
     return(contact)
 
 
@@ -91,7 +70,7 @@ my_file = 'test_email.eml'
 headers = header_parser(my_file)
 
 from_val = headers['From']
-contact = from_val.split()
+contact = re.sub(r'[^@. a-zA-Z]', '', from_val).split()
 
 numbers = num_catcher(my_file)
 contact = dict_pop(contact, numbers)
