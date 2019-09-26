@@ -6,13 +6,20 @@
 #
 
 import re
+import email.message
 from email.parser import HeaderParser
 import phonenumbers
 from names_dataset import NameDataset
 
-def header_parser(filename):
+def payload_parser(filename):
     # parse email headers
     with open(filename, 'r') as msg:
+        # if msg.is_multipart():
+        #     for payload in msg.get_payload():
+        #         # if payload.is_multipart(): ...
+        #         print(payload.get_payload())
+        # else:
+        #     body = msg.get_payload()
         my_email = msg.read()
         parser = HeaderParser()
         h = parser.parsestr(my_email)
@@ -30,11 +37,11 @@ def num_catcher(filename):
                 match.number, phonenumbers.PhoneNumberFormat.E164))
             if numbers != set():  # stop after first match (not ideal)
                 break
-        if numbers == set() or len(numbers) == 1:
+        if len(numbers) == 0:
             numbers = None
             return(numbers)
-        else:
-            numbers = numbers[-1]#str(numbers).replace("{'", "").replace("'}", "")
+        # else:
+        #     numbers = numbers[0]#str(numbers).replace("{'", "").replace("'}", "")
     return(numbers)
 
 
@@ -99,15 +106,15 @@ def dict_pop(contact, numbers):
     return(contact)
 
 m = NameDataset()
-my_file = 'test_email.eml'
+my_file = 'BankWireReceived.eml'
 
-headers = header_parser(my_file)
+headers = payload_parser(my_file)
 
 from_val = headers['From']
 contact = re.sub(r'[^@. a-zA-Z]', '', from_val).split()
 
 numbers = num_catcher(my_file)
-# print(numbers)
+print(numbers)
 contact = dict_pop(contact, numbers)
 
 # print(first_name, last_name)
