@@ -6,26 +6,37 @@
 #
 
 import re
-import email.message
+import email
 from email.parser import HeaderParser
 import phonenumbers
 from names_dataset import NameDataset
 
-def payload_parser(filename):
+def header_parser(filename):
     # parse email headers
     with open(filename, 'r') as msg:
-        # if msg.is_multipart():
-        #     for payload in msg.get_payload():
-        #         # if payload.is_multipart(): ...
-        #         print(payload.get_payload())
-        # else:
-        #     body = msg.get_payload()
         my_email = msg.read()
         parser = HeaderParser()
         h = parser.parsestr(my_email)
         headers = dict(h.items())
     return(headers)
 
+def body_extractor(filename):
+    msg = email.message_from_file(open(filename, 'r'))
+    body = ''
+
+    if msg.is_multipart():
+        for part in msg.walk():
+            ctype = part.get_content_type()
+            cdispo = str(part.get('Content-Disposition'))
+
+        # skip any text/plain (txt) attachments
+            if ctype == 'text/plain' or ctype == 'text/html' and 'attachment' not in cdispo:
+                body = part.get_payload(decode=True) # decode
+                break
+    # not multipart - i.e. plain text, no attachments
+    else:
+        body = b.get_payload(decode=True)
+    return(body)
 
 def num_catcher(filename):
     # extract all US phone numbers from message
@@ -91,7 +102,7 @@ def dict_pop(contact, numbers):
     domain = re.sub(r"[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)",
                     r"\1",
                     email)
-    # TODO is there a way to have a for loop that applies the regex to each variable as a string, and overwrites the variable with the output?
+    # TODO is there a way to have a for loop that applies the regex to each variable as a string and overwrites the variable with the output?
     try:
         contact = {
             'lastname': last_name,
@@ -108,7 +119,7 @@ def dict_pop(contact, numbers):
 m = NameDataset()
 my_file = 'BankWireReceived.eml'
 
-headers = payload_parser(my_file)
+headers = header_parser(my_file)
 
 from_val = headers['From']
 contact = re.sub(r'[^@. a-zA-Z]', '', from_val).split()
@@ -119,6 +130,11 @@ contact = dict_pop(contact, numbers)
 
 # print(first_name, last_name)
 print(contact)
+
+body = body_extractor(my_file)
+body = re.sub('<[^<]+?>', '', str(body)).replace('\\r', '\r').replace('\\n', '\n').replace('\\t', '')
+print(body)
+
 
 # emails = email_catcher(my_file)
 # print(emails)
