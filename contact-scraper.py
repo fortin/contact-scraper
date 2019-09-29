@@ -5,6 +5,7 @@
 #  Copyright (c) 2019 Antonio Fortin. All rights reserved.
 #
 
+import sys
 import re
 import email
 from email.parser import HeaderParser
@@ -21,6 +22,9 @@ def header_parser(filename):
     return(headers)
 
 def body_extractor(filename):
+    """
+    Extract body of email message from file.
+    """
     msg = email.message_from_file(open(filename, 'r'))
     body = ''
 
@@ -36,28 +40,37 @@ def body_extractor(filename):
     # not multipart - i.e. plain text, no attachments
     else:
         body = b.get_payload(decode=True)
+    body = re.sub('<[^<]+?>', '', str(body)).replace('\\r', '\r').replace('\\n', '\n').replace('\\t', '')
+    # is a a more general, additive way to do this?
     return(body)
 
 def num_catcher(filename):
-    # extract all US phone numbers from message
+    """
+    Extract all US phone numbers from message and return last one
+    """
     with open(filename, 'r') as msg:
         my_email = msg.read()
         numbers = set()
         for match in phonenumbers.PhoneNumberMatcher(my_email, "US"):
             numbers.add(phonenumbers.format_number(
                 match.number, phonenumbers.PhoneNumberFormat.E164))
-            if numbers != set():  # stop after first match (not ideal)
-                break
+            # if numbers != set():  # stop after first match (not ideal)
+            #     break
         if len(numbers) == 0:
             numbers = None
             return(numbers)
         # else:
         #     numbers = numbers[0]#str(numbers).replace("{'", "").replace("'}", "")
+    numbers = list(numbers)
+    numbers = numbers[-1]
     return(numbers)
 
 
 def email_catcher(filename):
-    # extract all email addresses from message (not necessary yet)
+    """
+    Extract all email addresses from message
+    Not used and probably not necessary
+    """
     pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
     emails = set()
     with open(filename) as f:
@@ -117,7 +130,7 @@ def dict_pop(contact, numbers):
     return(contact)
 
 m = NameDataset()
-my_file = 'BankWireReceived.eml'
+my_file = 'test_email.eml'
 
 headers = header_parser(my_file)
 
@@ -125,15 +138,23 @@ from_val = headers['From']
 contact = re.sub(r'[^@. a-zA-Z]', '', from_val).split()
 
 numbers = num_catcher(my_file)
-print(numbers)
-contact = dict_pop(contact, numbers)
+# print(numbers)
+contact_dict = dict_pop(contact, numbers)
 
-# print(first_name, last_name)
-print(contact)
+print(contact_dict)
 
 body = body_extractor(my_file)
-body = re.sub('<[^<]+?>', '', str(body)).replace('\\r', '\r').replace('\\n', '\n').replace('\\t', '')
 print(body)
+
+name = (contact[0] + ' ' + contact[1])
+print(name)
+for line in body:
+    match = re.findall(name, body)
+print(match)
+# for line in body:
+#     if (re.search(name)
+#
+# sys.exit()
 
 
 # emails = email_catcher(my_file)
