@@ -146,16 +146,8 @@ print(contact_dict)
 body = body_extractor(my_file)
 print(body)
 
-name = (contact[0] + ' ' + contact[1])
-print(name)
-for line in body:
-    match = re.findall(name, body)
-print(match)
-# for line in body:
-#     if (re.search(name)
-#
-# sys.exit()
-
+# name = (contact[0] + ' ' + contact[1])
+# print(name)
 
 # emails = email_catcher(my_file)
 # print(emails)
