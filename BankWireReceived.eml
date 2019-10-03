@@ -1,0 +1,143 @@
+Return-path: <Fidelity.Alerts@Fidelity.com>
+Envelope-to: fidelity@fortin.neomailbox.net
+Delivery-date: Wed, 25 Sep 2019 17:03:28 +0200
+Received: from _exim by s5.neomailbox.net with procmailed (envelope-from <Fidelity.Alerts@Fidelity.com>)
+	id 1iD8pA-0003aX-2N
+	for fidelity@fortin.neomailbox.net; Wed, 25 Sep 2019 17:03:24 +0200
+Received: from [127.0.0.1] (helo=s4.neomailbox.net)
+	by s5.neomailbox.net with esmtp (envelope-from <Fidelity.Alerts@Fidelity.com>)
+	id 1iD8p9-0008KW-BM
+	for fidelity@fortin.neomailbox.net; Wed, 25 Sep 2019 17:03:23 +0200
+Received: from _exim by s4.neomailbox.net with procmailed (envelope-from <Fidelity.Alerts@Fidelity.com>)
+	id 1iD8p7-0006ON-1A
+	for fidelity@fortin.neomailbox.net; Wed, 25 Sep 2019 17:03:21 +0200
+Received: from [155.199.204.10] (helo=PFFWRTP4PVAPP.fmr.com)
+	by s4.neomailbox.net with esmtps (TLSv1.2:AES256-GCM-SHA384:256)
+	(envelope-from <Fidelity.Alerts@Fidelity.com>)
+	id 1iD8p4-0004jm-8X
+	for fidelity@fortin.neomailbox.net; Wed, 25 Sep 2019 17:03:19 +0200
+Received: from pps.filterd (PFFWRTP4PVAPP.fmr.com [127.0.0.1])
+	by PFFWRTP4PVAPP.fmr.com (8.16.0.27/8.16.0.27) with SMTP id x8PF2hmq009906
+	for <fidelity@fortin.neomailbox.net>; Wed, 25 Sep 2019 11:03:16 -0400
+Date: Wed, 25 Sep 2019 11:03:16 -0400
+Message-Id: <201909251503.x8PF2hmq009906@PFFWRTP4PVAPP.fmr.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=fidelity.com; h=to : from : subject
+ : reply-to : content-transfer-encoding : mime-version : content-type;
+ s=2015-10-14; bh=OFWMwhNeGUBO09EfMLcw5r1HD/Taj/4rBHHDWTSuENs=;
+ b=MBaLPPeJr/RUNInJ9blc9SUlA9Pgj4QqxgK6ZBjolsj8szxFAr3KFUZ1fGQ9eZ/vyhvm
+ CV7o3amS+cEvvRcoaaeX+30gcy+YcdUK8ZHFzmgGuhAOwHrouXENf4kC9rdzKfTxUjFe
+ yJTi7aUl7W+2gEeZqu2K6bXCDes58/tKi5A= 
+Received: from server (ltm-fwus209-10.2.200.10-internal7-floating.fmr.com [10.2.200.10])
+	by PFFWRTP4PVAPP.fmr.com with ESMTP id 2v5f6x7hdd-2
+	for <fidelity@fortin.neomailbox.net>; Wed, 25 Sep 2019 11:03:14 -0400
+To: fidelity@fortin.neomailbox.net
+From: Fidelity Investments<Fidelity.Alerts@Fidelity.com>
+Subject: Bank Wire Received
+Reply-To: Fidelity_Investments_Service_DoNotReply@fidelity.com
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="b741e0ff-d809-46cc-827f-552c0bf970a7"
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:,, definitions=2019-09-25_07:,,
+ signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=96 malwarescore=0
+ phishscore=0 bulkscore=0 spamscore=0 mlxscore=0 mlxlogscore=769
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.0.1-1908290000 definitions=main-1909250144
+X-SA-Score: -3.9
+
+This is a multi-part message in MIME format
+--b741e0ff-d809-46cc-827f-552c0bf970a7
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">=0A<html>=
+=0A<head>=0A	<title>Bank Wire Received</title>=0A	<meta http-equiv=3D"cont=
+ent-style-type" content=3D"text/css">=0A	<style>=0A		body {font-family: ari=
+al;}=0A		p {font-family: arial;}=0A	</style>=0A</head>=0A=0A<body>=0A<table=
+ width=3D"640">=0A=0A=0A<tr valign=3D"middle">=0A	<!-- ~~~~~~~~~~~~~~~Headl=
+ine~~~~~~~~~~~~~~~ -->=0A	<td style=3D"padding-left:24px"><h1><strong style=
+=3D"font-size:22px">Bank Wire Received</strong></h1></td>=0A	<td align=3D"=
+right"><a href=3D"http://www.fidelity.com"><img src=3D"https://alertable.fi=
+delity.com/alerts/images/fidlogoblack.png" alt=3D"Fidelity Investments." bo=
+rder=3D"0"></a></td>=0A	<!-- ~~~~~~~~~~~~~~~END Headline~~~~~~~~~~~~~~~ -->=
+=0A</tr>=0A=0A<tr>=0A	<td colspan=3D"2" style=3D"height:10px"/>=0A</tr>=0A=
+=0A=0A<tr valign=3D"bottom" style=3D"height:21px">=0A	<td colspan=3D"2" bg=
+color=3D"#029247" style=3D"padding-left:24px; padding-right:10px">=0A	<!-- =
+~~~~~~~~~~~~~~ VARIABLE QUICK LINKS BAR ~~~~~~~~~~ -->=0A	<table width=3D"1=
+00%">=0A		<tr valign=3D"middle">=0A			<td width=3D"90" style=3D"height:21px=
+;" align=3D"left" valign=3D"middle">=0A				<p style=3D"color:#ffffff; font-=
+size:11px;"><b>Quick Links:</b></p>=0A			</td>=0A			<td width=3D"100" style=
+=3D"height:21px;" align=3D"center">=0A	<p style=3D"color:#ffffff; font-siz=
+e:11px;">=0A			<a href=3D"https://scs.fidelity.com/customeronly/alerts.shtm=
+l"=0A				style=3D"color:#ffffff;">Alerts Center</a>=0A	</p>=0A</td>=0A<td w=
+idth=3D"170" style=3D"height:21px;" align=3D"center">=0A	<p style=3D"color:=
+#ffffff; font-size:11px;">=0A			<a href=3D"https://scs.fidelity.com/custome=
+ronly/fens_delivery.shtml"=0A				style=3D"color:#ffffff;">Alerts Delivery P=
+references</a>=0A	</p>=0A</td>=0A<td width=3D"150" style=3D"height:21px;" a=
+lign=3D"center">=0A	<p style=3D"color:#ffffff; font-size:11px;">=0A			<a hr=
+ef=3D"https://scs.fidelity.com/customeronly/fens_alertstatus.shtml"=0A				s=
+tyle=3D"color:#ffffff;">Temporarily Stop Alerts</a>=0A	</p>=0A</td>=0A<td w=
+idth=3D"80" style=3D"height:21px;" align=3D"center">=0A	<p style=3D"color:#=
+ffffff; font-size:11px;">=0A			<a href=3D"https://www.fidelity.com/contactu=
+s"=0A				style=3D"color:#ffffff;">Contact Us</a>=0A	</p>=0A</td>=0A<td widt=
+h=3D"110" style=3D"height:21px;" align=3D"center">=0A	<p style=3D"color:#ff=
+ffff; font-size:11px;">=0A			<a href=3D"https://www.fidelity.com/terms-of-u=
+se"=0A				style=3D"color:#ffffff;">Legal Information</a>=0A	</p>=0A</td>		<=
+/tr>=0A	</table>=0A	<!-- ~~~~~~~~~~~~~~ END VARIABLE QUICK LINKS BAR ~~~~~~=
+~~~~ -->=0A	</td>=0A</tr>=0A=0A=0A<tr valign=3D"top">=0A	<td colspan=3D"2" =
+align=3D"right" style=3D"font-size:11px;">Wed Sep 25, 2019 11:03:11 AM EDT<=
+/td>=0A</tr>=0A=0A=0A<tr valign=3D"top">=0A	<!-- ~~~~~~~~~~~~~~~SUBHead~~~~=
+~~~~~~~~~~~ -->=0A	<td valign=3D"middle" colspan=3D"2" style=3D"height:24px=
+; padding-left:24px"><p><h1><strong style=3D"font-size:14px;"></strong></h1=
+></p></td>=0A	<!-- ~~~~~~~~~~~~~~~END SUBHead~~~~~~~~~~~~~~~ -->=0A</tr>=0A=
+=0A<tr>=0A	<td colspan=3D"2" style=3D"padding-left:24px;">=0A		<table widt=
+h=3D"100%">=0A		<tr valign=3D"top">=0A			<!--~~~~~~~~~~~~~~~PRIMARY CTA~~~~=
+~~~~~~~~~~~-->=0A			<td width=3D"16"><img src=3D"https://alertable.fidelity=
+.com/alerts/images/small_green_arrow.gif" width=3D"11" height=3D"12"></td>=
+=0A			<td><p style=3D"font-size:13px;">=0A						<a href=3D"https://www.fid=
+elity.com" style=3D"color:#0f57c2;"><strong>Bank Wire Received</strong></a>=
+=0A						</p></td>=0A			<!--~~~~~~~~~~~~~~~END OF PRIMARY CTA~~~~~~~~~~~~~=
+~~-->=0A		</tr>=0A		</table>=0A	</td>=0A</tr>=0A=0A<tr>=0A	<td colspan=3D"2=
+" style=3D"height:20px; padding-left:24px; font-size:11px;"/>=0A</tr>=0A=0A=
+<tr valign=3D"top">=0A	<!--~~~~~~~~~~~~~~~BODY CONTENT~~~~~~~~~~~~~~~-->=0A=
+	<td colspan=3D"2" valign=3D"middle" style=3D"font-size:13px; padding-left:=
+24px; padding-right:24px">=0A		For account ending in 3900:<br>=0AA Bank Wir=
+e you requested through your Bank was credited to your Fidelity account end=
+ing in 3900 on 09/25/2019. If you have any questions or believe this is an =
+error, please call 1-800-544-8666.=0A<br><br>=0A	</td>=0A</tr>=0A=0A=0A<tr>=
+=0A	<td colspan=3D"2" style=3D"padding-left:24px; padding-right:24px">=0A	=
+	<table width=3D"100%">	=0A					<tr valign=3D"top">=0A	<td width=3D"16"><im=
+g src=3D"https://alertable.fidelity.com/alerts/images/small_green_arrow.gif=
+" width=3D"11" height=3D"12"></td>=0A	<td><p style=3D"font-size:13px;"><a h=
+ref=3D"https://www.fidelity.com">View Bank Wire Details</a> - Login to view=
+ Account Transaction History.=0A</p></td>=0A</tr>=0A=0A<tr valign=3D"top">=
+=0A	<td width=3D"16"><img src=3D"https://alertable.fidelity.com/alerts/ima=
+ges/small_green_arrow.gif" width=3D"11" height=3D"12"></td>=0A	<td><p style=
+=3D"font-size:13px;">Please do not reply to this email.=0A	If you would li=
+ke to verify this email was sent by Fidelity Investments, log into your acc=
+ount and select Research > Alerts > View Your Alerts History.</p>=0A	</td>=
+=0A</tr>=0A	=0A				</table>=0A	</td>=0A=0A</tr>=0A=0A<tr>=0A	<td colspan=
+=3D"2" style=3D"height:20px"/>=0A</tr>=0A=0A=0A<tr>=0A	<td colspan=3D"2" b=
+gcolor=3D"#029247" valign=3D"top" style=3D"height:27px; padding-left:24px; =
+font-size:11px;"/>=0A</tr>=0A=0A=0A<tr>=0A	<td colspan=3D"2" valign=3D"top"=
+ style=3D"height:30px; padding-left:24px; padding-top:20px; padding-right:2=
+4px; font-size:11px;">=0A=0A<!-- ~~~~~~~~~~~~~~~ Legal Text ~~~~~~~~~~~~~~~=
+~~-->=0A			<p style=3D"margin-top:0px; margin-right:0px; margin-bottom:10px=
+; margin-left:0px;"></p> =0A<strong>Important information:</strong><br>=0A<=
+p style=3D"margin-top:0px; margin-right:0px; margin-bottom:10px; margin-lef=
+t:0px;"></p>=0AFidelity automatically emails certain alerts to customers wh=
+o have provided an email address. =0APlease <a href=3D"https://alertable.fi=
+delity.com/alerts/help/agreement.html" target=3D"_blank" class=3D"legallink=
+s">=0Aclick here</a> for the terms which govern these alerts.<br><br>=0A=0A=
+<p style=3D"margin-top:0px; margin-right:0px; margin-bottom:10px; margin-le=
+ft:0px;"></p>=0A	Fidelity Brokerage Services LLC, Member NYSE,<a href=3D"ht=
+tps://www.sipc.org">SIPC</a>, 900 Salem Street, Smithfield, RI 02917=0A<br>=
+537048<br>=0A&copy; Copyright 2019 FMR LLC<br>=0AAll rights reserved.<!-- ~=
+~~~~~~~~~~~~~~ END Legal Text ~~~~~~~~~~~~~~~~~-->=0A			<img src=3D"http://=
+fmx.fidelity.com/cgi-bin/fmxRedirect.pl?id=3D[[MESSAGE_REQUEST_ID:REQUIRED]=
+]&ev=3DHTML" width=3D1 height=3D1>=0A			<br><pre></pre><font size=3D"1" col=
+or=3D"#ffffff" face=3D"arial, helvetica, san-serif" style=3D"font-size:9px;=
+">D 01/20/09 85308 p04 r01</font>=0A	</td>=0A</tr>=0A</table>=0A=0A</body>=
+=0A</html>
+--b741e0ff-d809-46cc-827f-552c0bf970a7--
+
