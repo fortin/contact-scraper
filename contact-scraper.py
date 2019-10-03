@@ -40,8 +40,9 @@ def body_extractor(filename):
     # not multipart - i.e. plain text, no attachments
     else:
         body = b.get_payload(decode=True)
+    # strip HTML and remove \r, \t, \n
     body = re.sub('<[^<]+?>', '', str(body)).replace('\\r', '\r').replace('\\n', '\n').replace('\\t', '')
-    # is a a more general, additive way to do this?
+    # is there a more general, additive way to do this?
     return(body)
 
 def num_catcher(filename):
@@ -80,18 +81,8 @@ def email_catcher(filename):
     return(emails)
 
 
-def dict_pop(contact, numbers):
-    """
-    Populate dictionary with contact info from headers.
-
-    Arguments:
-    contact - cleaned-up From header comprising sender's name and email address
-    numbers - phone numbers scraped from body
-
-    Outputs:
-    Python dictionary with contact fields as keys and scraped info as values
-    """
-
+def dict_pplt(contact, numbers):
+    email_regex = re.compile(r"(^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$))")
     last_name = [ x for x in contact if m.search_last_name(x) ]
     first_name = [ x for x in contact if m.search_first_name(x) ]
     # catch cases where both names are valid last_names
@@ -107,15 +98,21 @@ def dict_pop(contact, numbers):
     # if only first_name is ambiguous, get it from first list element
     elif len(first_name) > 1:
         first_name = first_name[0]
+    elif (len(last_name) == 1) & (len(first_name) == 0):
+        last_name = last_name[0]
+    elif (len(last_name) == 0) & (len(first_name) == 1):
+        first_name = first_name[0]
+    else:
+        pass
     # strip non-alphanumeric characters and convert lists to strings
     last_name = re.sub(r'[^@. a-zA-Z]', '', str(last_name))
     first_name = re.sub(r'[^@. a-zA-Z]', '', str(first_name))
-    email = [ x for x in contact if "@" in x ]
+    try:
+        email = [ x for x in contact if bool(re.search(email_regex, x)) ][-1]
+    except:
+        email = None
     email = re.sub(r'[^@. a-zA-Z]', '', str(email))
-    domain = re.sub(r"[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)",
-                    r"\1",
-                    email)
-    # TODO is there a way to have a for loop that applies the regex to each variable as a string and overwrites the variable with the output?
+    domain = re.sub(email_regex, r"\2", email)
     try:
         contact = {
             'lastname': last_name,
@@ -124,7 +121,7 @@ def dict_pop(contact, numbers):
             'company': domain,
             'address': None,
             'phone': numbers
-        }
+            }
     except:
         pass
     return(contact)
@@ -139,7 +136,7 @@ contact = re.sub(r'[^@. a-zA-Z]', '', from_val).split()
 
 numbers = num_catcher(my_file)
 # print(numbers)
-contact_dict = dict_pop(contact, numbers)
+contact_dict = dict_pplt(contact, numbers)
 
 print(contact_dict)
 
