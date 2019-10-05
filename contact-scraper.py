@@ -80,39 +80,64 @@ def email_catcher(filename):
                 emails.update(match.groups())
     return(emails)
 
+def str_cleaner(x):
+    x = re.sub(r'[^@. a-zA-Z]', '', str(x))
+    return(x)
 
 def dict_pplt(contact, numbers):
     email_regex = re.compile(r"(^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$))")
     last_name = [ x for x in contact if m.search_last_name(x) ]
     first_name = [ x for x in contact if m.search_first_name(x) ]
-    # catch cases where both names are valid last_names
-    if len(last_name) > 1:
-        # catch cases where both names are valid first_names
+    a_from_b = re.compile(r"\[\'(.+?)\', \'(@|[Ff]rom)\', (\'.+), \'<(.+?)>\'\]")
+    # print(first_name, last_name)
+    # Andy from Tandy cases
+    if re.match(a_from_b, str(contact)):
+        if re.match(r"\[\'.+?\', \'" + str(first_name), str(last_name)):
+            first_name = last_name[0]
+            last_name = ''
+        else:
+            first_name = a_from_b.match(str(contact)).group(1)
+            last_name = ''
+        domain = a_from_b.match(str(contact)).group(3)
+        domain = str_cleaner(domain)
+    # cases where both names are valid last_names
+    elif len(last_name) > 1:
+        # cases where both names are valid first_names
         if len(first_name) > 1:
             # assign variables according to 'first_name last_name' order in header
             last_name = last_name[1]
             first_name = first_name[0]
+        # if first_name is second element in last_name, then first element of last_name is last name (i.e., From field is in last_name first_name order)
+        elif re.match(r"\[\'.+?\', \'" + str(first_name), str(last_name)):
+            last_name = last_name[0]
         else:
             # if only last_name is ambiguous, get it from the second list element
             last_name = last_name[1]
     # if only first_name is ambiguous, get it from first list element
     elif len(first_name) > 1:
         first_name = first_name[0]
+    # if there is one good last name and no first names, leave first name empty
     elif (len(last_name) == 1) & (len(first_name) == 0):
         last_name = last_name[0]
+        first_name = ''
+    # converse of above
     elif (len(last_name) == 0) & (len(first_name) == 1):
         first_name = first_name[0]
+    # if first and last name are identical, assume that it's just a first name
+    elif last_name == first_name:
+        last_name = ''
     else:
         pass
     # strip non-alphanumeric characters and convert lists to strings
-    last_name = re.sub(r'[^@. a-zA-Z]', '', str(last_name))
-    first_name = re.sub(r'[^@. a-zA-Z]', '', str(first_name))
+    last_name = str_cleaner(last_name)
+    first_name = str_cleaner(first_name)
     try:
         email = [ x for x in contact if bool(re.search(email_regex, x)) ][-1]
+        email = str_cleaner(email)
     except:
         email = None
-    email = re.sub(r'[^@. a-zA-Z]', '', str(email))
-    domain = re.sub(email_regex, r"\2", email)
+    if 'domain' not in locals():
+        domain = re.sub(email_regex, r"\2", email)
     try:
         contact = {
             'lastname': last_name,
@@ -131,17 +156,25 @@ my_file = 'test_email.eml'
 
 headers = header_parser(my_file)
 
-from_val = headers['From']
-contact = re.sub(r'[^@. a-zA-Z]', '', from_val).split()
+try:
+    from_val = headers['From']
+except:
+    try:
+        from_val = headers['Sender']
+    except:
+        print("Input is not an email. Try again")
+        sys.exit()
+
+contact = str_cleaner(from_val).split()
 
 numbers = num_catcher(my_file)
-# print(numbers)
+
 contact_dict = dict_pplt(contact, numbers)
 
 print(contact_dict)
 
-body = body_extractor(my_file)
-print(body)
+# body = body_extractor(my_file)
+# print(body)
 
 # name = (contact[0] + ' ' + contact[1])
 # print(name)
