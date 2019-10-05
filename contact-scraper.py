@@ -11,6 +11,8 @@ import email
 from email.parser import HeaderParser
 import phonenumbers
 from names_dataset import NameDataset
+import csv
+import os
 
 def header_parser(filename):
     # parse email headers
@@ -93,14 +95,10 @@ def dict_pplt(contact, numbers):
     if re.match(a_from_b, str(contact)):
         # first_name last_name @/from company
         name = a_from_b.match(str(contact)).group(1)
-        if re.search(r",", name):
+        if re.search(r", ", name):
             name = name.split()
             first_name = name[0]
             last_name = name[1]
-        # cases where first_name is ambiguous, leave last name empty
-        elif re.match(r"\[\'.+?\', \'" + str(first_name), str(last_name)):
-            first_name = last_name[0]
-            last_name = ''
         else:
         # cases where only one unambiguous first name is there
             first_name = a_from_b.match(str(contact)).group(1)
@@ -135,6 +133,8 @@ def dict_pplt(contact, numbers):
         last_name = ''
     else:
         pass
+    if last_name == first_name:
+        last_name = ''
     # strip non-alphanumeric characters and convert lists to strings
     last_name = str_cleaner(last_name)
     first_name = str_cleaner(first_name)
@@ -149,6 +149,7 @@ def dict_pplt(contact, numbers):
         contact = {
             'lastname': last_name,
             'firstname': first_name,
+            'job_title': None,
             'email': email,
             'company': domain,
             'address': None,
@@ -159,7 +160,7 @@ def dict_pplt(contact, numbers):
     return(contact)
 
 m = NameDataset()
-my_file = 'test_email.eml'
+my_file = 'test_email.eml' # Gmail API stuff goes here!
 
 headers = header_parser(my_file)
 
@@ -178,7 +179,12 @@ numbers = num_catcher(my_file)
 
 contact_dict = dict_pplt(contact, numbers)
 
-print(contact_dict)
+with open('contacts.csv', 'a') as f:
+    f.write("\n")
+    for key in contact_dict.keys():
+        f.write("%s,"%(contact_dict[key]))
+
+# print(contact_dict)
 
 # body = body_extractor(my_file)
 # print(body)
