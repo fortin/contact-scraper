@@ -85,17 +85,24 @@ def str_cleaner(x):
     return(x)
 
 def dict_pplt(contact, numbers):
-    email_regex = re.compile(r"(^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$))")
     last_name = [ x for x in contact if m.search_last_name(x) ]
     first_name = [ x for x in contact if m.search_first_name(x) ]
-    a_from_b = re.compile(r"\[\'(.+?)\', \'(@|[Ff]rom)\', (\'.+), \'<(.+?)>\'\]")
-    # print(first_name, last_name)
+    email_regex = re.compile(r"(^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$))")
     # Andy from Tandy cases
+    a_from_b = re.compile(r"\[(\'.+), \'(@|[Ff]rom)\', (\'.+), \'(.+?)\'\]")
     if re.match(a_from_b, str(contact)):
-        if re.match(r"\[\'.+?\', \'" + str(first_name), str(last_name)):
+        # first_name last_name @/from company
+        name = a_from_b.match(str(contact)).group(1)
+        if re.search(r",", name):
+            name = name.split()
+            first_name = name[0]
+            last_name = name[1]
+        # cases where first_name is ambiguous, leave last name empty
+        elif re.match(r"\[\'.+?\', \'" + str(first_name), str(last_name)):
             first_name = last_name[0]
             last_name = ''
         else:
+        # cases where only one unambiguous first name is there
             first_name = a_from_b.match(str(contact)).group(1)
             last_name = ''
         domain = a_from_b.match(str(contact)).group(3)
