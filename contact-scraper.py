@@ -14,6 +14,18 @@ from names_dataset import NameDataset
 import csv
 import os
 
+def read_files(path):
+    result = {}
+    for root, dir_names, file_names in os.walk(path):
+        for path in dir_names:
+            read_files(os.path.join(root, path))
+        for file_name in file_names:
+            file_path = os.path.join(root, file_name)
+            if os.path.isfile(file_path):
+                with open(file_path, 'r', encoding='latin-1') as data:
+                    result[file_name.split('.')[0]] = data.readlines()
+    return result
+
 def header_parser(filename):
     # parse email headers
     with open(filename, 'r') as msg:
@@ -160,6 +172,10 @@ def dict_pplt(contact, numbers):
     return(contact)
 
 m = NameDataset()
+
+sig_path = "data/sig"
+# nosig_test_path = "data/nosig_test"
+
 my_file = 'test_email.eml' # Gmail API stuff goes here!
 
 headers = header_parser(my_file)
