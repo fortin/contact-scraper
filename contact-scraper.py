@@ -13,18 +13,8 @@ import phonenumbers
 from names_dataset import NameDataset
 import csv
 import os
+import glob
 
-def read_files(path):
-    result = {}
-    for root, dir_names, file_names in os.walk(path):
-        for path in dir_names:
-            read_files(os.path.join(root, path))
-        for file_name in file_names:
-            file_path = os.path.join(root, file_name)
-            if os.path.isfile(file_path):
-                with open(file_path, 'r', encoding='latin-1') as data:
-                    result[file_name.split('.')[0]] = data.readlines()
-    return result
 
 def header_parser(filename):
     # parse email headers
@@ -114,7 +104,7 @@ def dict_pplt(contact, numbers):
         else:
         # cases where only one unambiguous first name is there
             first_name = a_from_b.match(str(contact)).group(1)
-            last_name = ''
+            last_name = 'None'
         domain = a_from_b.match(str(contact)).group(3)
         domain = str_cleaner(domain)
     # cases where both names are valid last_names
@@ -136,17 +126,21 @@ def dict_pplt(contact, numbers):
     # if there is one good last name and no first names, leave first name empty
     elif (len(last_name) == 1) & (len(first_name) == 0):
         last_name = last_name[0]
-        first_name = ''
+        first_name = 'None'
     # converse of above
     elif (len(last_name) == 0) & (len(first_name) == 1):
         first_name = first_name[0]
     # if first and last name are identical, assume that it's just a first name
     elif last_name == first_name:
-        last_name = ''
+        last_name = 'None'
     else:
         pass
-    if last_name == first_name:
-        last_name = ''
+    if first_name == []:
+        first_name = 'None'
+    elif last_name == []:
+        last_name = 'None'
+    elif last_name == first_name:
+        last_name = 'None'
     # strip non-alphanumeric characters and convert lists to strings
     last_name = str_cleaner(last_name)
     first_name = str_cleaner(first_name)
@@ -176,29 +170,29 @@ m = NameDataset()
 sig_path = "data/sig"
 # nosig_test_path = "data/nosig_test"
 
-my_file = 'test_email.eml' # Gmail API stuff goes here!
+for my_file in glob.glob(os.path.join(sig_path, '*.txt')):
 
-headers = header_parser(my_file)
+    headers = header_parser(my_file)
 
-try:
-    from_val = headers['From']
-except:
     try:
-        from_val = headers['Sender']
+        from_val = headers['From']
     except:
-        print("Input is not an email. Try again")
-        sys.exit()
+        try:
+            from_val = headers['Sender']
+        except:
+            print("Input is not an email. Try again")
+            sys.exit()
 
-contact = str_cleaner(from_val).split()
+    contact = str_cleaner(from_val).split()
 
-numbers = num_catcher(my_file)
+    numbers = num_catcher(my_file)
 
-contact_dict = dict_pplt(contact, numbers)
+    contact_dict = dict_pplt(contact, numbers)
 
-with open('contacts.csv', 'a') as f:
-    f.write("\n")
-    for key in contact_dict.keys():
-        f.write("%s,"%(contact_dict[key]))
+    with open('contacts.csv', 'a') as f:
+        f.write("\n")
+        for key in contact_dict.keys():
+            f.write("%s,"%(contact_dict[key]))
 
 # print(contact_dict)
 
