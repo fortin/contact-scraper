@@ -17,7 +17,9 @@ import glob
 
 
 def header_parser(filename):
-    # parse email headers
+    """
+    Parse email headers
+    """
     with open(filename, 'r') as msg:
         my_email = msg.read()
         parser = HeaderParser()
@@ -70,7 +72,6 @@ def num_catcher(filename):
     numbers = numbers[-1]
     return(numbers)
 
-
 def email_catcher(filename):
     """
     Extract all email addresses from message
@@ -84,11 +85,55 @@ def email_catcher(filename):
                 emails.update(match.groups())
     return(emails)
 
+def csv_writer(sig_path):
+    """
+    Processes directory of emails and appends contact dictionary to csv file.
+    """
+    for my_file in glob.glob(os.path.join(sig_path, '*.txt')):
+        headers = header_parser(my_file)
+        try:
+            if 'From' in headers:
+                if 'X-From' in headers:
+                    from_val = (headers['X-From']).replace("\'", "").replace(",", "").split(' ')
+                    from_hd = headers['From']
+                    from_val.append(from_hd)
+                    del from_val[-2]
+                    from_val = str(from_val)
+                    # sys.exit()
+                else:
+                    from_val = headers['From']
+            elif 'X-From' in headers:
+                from_val = headers['X-From']
+        except:
+            try:
+                from_val = headers['Sender']
+            except:
+                print("Input is not an email. Try again")
+                sys.exit()
+        contact = str_cleaner(from_val).split()
+        numbers = num_catcher(my_file)
+        contact_dict = dict_pplt(contact, numbers, my_file)
+        with open('contacts.csv', 'a') as f:
+            f.write("\n")
+            for key in contact_dict.keys():
+                f.write("%s,"%(contact_dict[key]))
+    return
+
 def str_cleaner(x):
     x = re.sub(r'[^@. a-zA-Z]', '', str(x))
     return(x)
 
-def dict_pplt(contact, numbers):
+def dict_pplt(contact, numbers, filename):
+    """
+    Populate dictionary with contact info from headers.
+
+    Arguments:
+    contact - cleaned-up From header comprising sender's name and email address
+    numbers - phone numbers scraped from body
+
+    Outputs:
+    Python dictionary with contact fields as keys and scraped info as values
+    """
     last_name = [ x for x in contact if m.search_last_name(x) ]
     first_name = [ x for x in contact if m.search_first_name(x) ]
     email_regex = re.compile(r"(^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$))")
@@ -104,7 +149,7 @@ def dict_pplt(contact, numbers):
         else:
         # cases where only one unambiguous first name is there
             first_name = a_from_b.match(str(contact)).group(1)
-            last_name = 'None'
+            last_name = None
         domain = a_from_b.match(str(contact)).group(3)
         domain = str_cleaner(domain)
     # cases where both names are valid last_names
@@ -126,21 +171,21 @@ def dict_pplt(contact, numbers):
     # if there is one good last name and no first names, leave first name empty
     elif (len(last_name) == 1) & (len(first_name) == 0):
         last_name = last_name[0]
-        first_name = 'None'
+        first_name = None
     # converse of above
     elif (len(last_name) == 0) & (len(first_name) == 1):
         first_name = first_name[0]
     # if first and last name are identical, assume that it's just a first name
     elif last_name == first_name:
-        last_name = 'None'
+        last_name = None
     else:
         pass
     if first_name == []:
-        first_name = 'None'
+        first_name = None
     elif last_name == []:
-        last_name = 'None'
+        last_name = None
     elif last_name == first_name:
-        last_name = 'None'
+        last_name = None
     # strip non-alphanumeric characters and convert lists to strings
     last_name = str_cleaner(last_name)
     first_name = str_cleaner(first_name)
@@ -153,54 +198,78 @@ def dict_pplt(contact, numbers):
         domain = re.sub(email_regex, r"\2", email)
     try:
         contact = {
+            'title': None,
             'lastname': last_name,
             'firstname': first_name,
             'job_title': None,
             'email': email,
             'company': domain,
             'address': None,
-            'phone': numbers
+            'phone': numbers,
+            'filename': filename
             }
     except:
         pass
     return(contact)
 
-m = NameDataset()
-
-sig_path = "data/sig"
-# nosig_test_path = "data/nosig_test"
-
-for my_file in glob.glob(os.path.join(sig_path, '*.txt')):
-
+def test_email(my_file):
     headers = header_parser(my_file)
-
     try:
-        from_val = headers['From']
+        if 'From' in headers:
+            from_hd = headers['From']
+            if 'X-From' in headers:
+                xfrom = headers['X-From']
+                print('bar')
+                if re.search(",", headers['X-From']):
+                    print('foo')
+                    xfrom = re.sub("(.+?), .? (.+?) .? .+?", r"\2 \1", xfrom)
+                    from_val = (xfrom)
+                else:
+                    from_val = (headers['X-From']).replace("\'", "").replace(",", "").split(' ')
+                # from_hd = headers['From']
+                from_val.append(from_hd)
+                del from_val[-2]
+                from_val = str(from_val)
+                # sys.exit()
+            else:
+                if re.search(",", headers['From']):
+                    print('foo')
+                    from_val = re.sub("(.+?), (.? )?(.+?) .+?", r"\3 \1", from_hd)
+                    from_val = str_cleaner(from_val)
+                    print(from_val)
+                    # from_val = (xfrom)
+                # from_val = headers['From']
+        elif 'X-From' in headers:
+            if re.search(",", headers['X-From']):
+                xfrom = re.sub("(.+?), .? (.+?) .? .+?", r"\2 \1")
+                from_val = (xfrom)
     except:
         try:
             from_val = headers['Sender']
+            xfrom_val = headers['X-From']
         except:
-            print("Input is not an email. Try again")
+            print("Input is not a valid email. Try again")
             sys.exit()
-
     contact = str_cleaner(from_val).split()
-
     numbers = num_catcher(my_file)
+    contact_dict = dict_pplt(contact, numbers, my_file)
+    return(contact_dict)
 
-    contact_dict = dict_pplt(contact, numbers)
+m = NameDataset()
 
-    with open('contacts.csv', 'a') as f:
-        f.write("\n")
-        for key in contact_dict.keys():
-            f.write("%s,"%(contact_dict[key]))
+sig_path = "data/sig"
+nosig_path = "data/nosig"
 
-# print(contact_dict)
+# csv_writer(sig_path)
+
+my_file = 'test_email.eml'
+contact_dict = test_email(my_file)
+
+print(contact_dict)
 
 # body = body_extractor(my_file)
 # print(body)
 
-# name = (contact[0] + ' ' + contact[1])
-# print(name)
 
 # emails = email_catcher(my_file)
 # print(emails)
