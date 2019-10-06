@@ -70,6 +70,7 @@ def num_catcher(filename):
         #     numbers = numbers[0]#str(numbers).replace("{'", "").replace("'}", "")
     numbers = list(numbers)
     numbers = numbers[-1]
+    # numbers = re.sub('^(.+)$', r'\"\1\"', str(numbers))
     return(numbers)
 
 def xfrom_from(headers):
@@ -78,13 +79,13 @@ def xfrom_from(headers):
         if 'From' in headers:
             from_hd = headers['From']
             try:
-                from_hd = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", from_hd)
+                from_hd = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", str(from_hd))
             except:
                 pass
             if 'X-From' in headers:
                 xfrom = headers['X-From']
                 try:
-                    xfrom = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", xfrom)
+                    xfrom = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", str(xfrom))
                 except:
                     pass
                 from_val = (xfrom, from_hd)
@@ -92,14 +93,17 @@ def xfrom_from(headers):
                 from_val = from_hd
         elif 'X-From' in headers:
             try:
-                xfrom = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", xfrom)
+                xfrom = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", str(xfrom))
             except:
                 pass
             from_val = xfrom
-        elif 'Sender' in headers:
-            sender_hd = headers['Sender']
-            xfrom = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", xfrom)
-            from_val = (xfrom_val, sender_hd)
+            if 'Sender' in headers:
+                sender_hd = headers['Sender']
+                try:
+                    sender_hd = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", str(sender_hd))
+                except:
+                    pass
+                from_val = (xfrom_val, sender_hd)
     except:
         print("Input is not a valid email. Try again")
     try:
@@ -162,7 +166,7 @@ def dict_pplt(contact, numbers, middle_name, filename):
     """
     last_name = [ x for x in contact if m.search_last_name(x) ]
     first_name = [ x for x in contact if m.search_first_name(x) ]
-    email_regex = re.compile(r"(^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$))")
+    email_regex = re.compile(r"(^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.)?([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$))")
     # Andy from Tandy cases
     a_from_b = re.compile(r"\[(\'.+), \'(@|[Ff]rom)\', (\'.+), \'(.+?)\'\]")
     if re.match(a_from_b, str(contact)):
@@ -221,7 +225,7 @@ def dict_pplt(contact, numbers, middle_name, filename):
     except:
         email = None
     if 'domain' not in locals():
-        domain = re.sub(email_regex, r"\2", email)
+        domain = re.sub(email_regex, r"\3", email)
     try:
         contact = {
             'title': None,
@@ -243,7 +247,8 @@ def test_email(my_file):
     headers = header_parser(my_file)
     from_val = xfrom_from(headers)
     try:
-        middle_name = re.search(r" (.)\.? ", str(from_val)).group(1)
+        middle_name = re.search(r" ([A-Z]\.?)? ", from_val).group(1)
+        from_val = from_val.replace(' ' + middle_name, '')
     except:
         middle_name = None
     contact = str_cleaner(from_val).split()
@@ -260,7 +265,7 @@ csv_writer(sig_path)
 
 # my_file = 'test_email.eml'
 # contact_dict = test_email(my_file)
-#
+
 # print(contact_dict)
 
 # body = body_extractor(my_file)
