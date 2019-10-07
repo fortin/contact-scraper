@@ -59,7 +59,7 @@ def body_extractor(filename):
                 break
     # not multipart - i.e. plain text, no attachments
     else:
-        body = b.get_payload(decode=True)
+        body = msg.get_payload(decode=True)
     # strip HTML and remove \r, \t, \n
     body = re.sub('<[^<]+?>', '', str(body)).replace('\\r', '\r').replace('\\n', '\n').replace('\\t', '')
     # is there a more general, additive way to do this?
@@ -268,7 +268,7 @@ job_titles = pd.read_csv("data/job_title_dictionary 2.txt")
 
 job_titles['Job Title'] = job_titles['Job Title'].apply(lambda x: x.casefold())
 # print(job_titles)
-csv_writer(sig_path)
+# csv_writer(sig_path)
 
 def is_title(x):
     x = " ".join(x.casefold().strip().split())
@@ -286,9 +286,9 @@ def is_title_sen(x):
 my_file3 = '/Users/antonio/Documents/Dropbox/Code/Python/Contact-Scraper/data/sig/arnold-j-67.txt'
 # contact_dict = test_email(my_file3)
 # print(contact_dict)
-# my_file1 = '/Users/antonio/Documents/Dropbox/Code/Python/Contact-Scraper/data/sig/crandell-s-35.txt'
-# my_file2 = '/Users/antonio/Documents/Dropbox/Code/Python/Contact-Scraper/data/sig/allen-p-30.txt'
-# my_file = 'test_email.eml'
+my_file1 = '/Users/antonio/Documents/Dropbox/Code/Python/Contact-Scraper/data/sig/crandell-s-35.txt'
+my_file2 = '/Users/antonio/Documents/Dropbox/Code/Python/Contact-Scraper/data/sig/allen-p-30.txt'
+my_file = 'test_email.eml'
 # contact_dict = test_email(my_file)
 # print(contact_dict)
 # contact_dict = test_email(my_file1)
@@ -299,15 +299,15 @@ my_file3 = '/Users/antonio/Documents/Dropbox/Code/Python/Contact-Scraper/data/si
 # print(m.search_last_name('Robertson'))
 # m.search_first_name(x)
 
-# print(is_title('scary Monster'))
-# print(is_title('  TeAchEr   '))
-# print(is_title('Data     SCientist'))
+print(is_title_sen('scary Monster'))
+print(is_title_sen('  TeAchEr   '))
+print(is_title_sen('Data     SCientist'))
 
-# print(is_title_sen(body_extractor(my_file)))
-#
-# print(is_title_sen('Ich    werde ein 3d scheisse'))
-# print(is_title_sen('I am a      Data     scientist     '))
-# print(is_title_sen('Calligrapher'))
+print(is_title_sen(body_extractor(my_file3)))
+
+print(is_title_sen('Ich    werde ein 3d scheisse'))
+print(is_title_sen('I am a      Data     scientist     '))
+print(is_title_sen('Calligrapher'))
 
 # body = body_extractor(my_file)
 # print(body)
