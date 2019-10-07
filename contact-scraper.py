@@ -14,7 +14,21 @@ from names_dataset import NameDataset
 import csv
 import os
 import glob
+import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
 
+def email_catcher(filename):
+    """
+    Extract all email addresses from message
+    Not used and probably not necessary
+    """
+    pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
+    emails = set()
+    with open(filename) as f:
+        for i, line in enumerate(f):
+            for match in re.finditer(pattern, line):
+                emails.update(match.groups())
+    return emails
 
 def header_parser(filename):
     """
@@ -25,7 +39,7 @@ def header_parser(filename):
         parser = HeaderParser()
         h = parser.parsestr(my_email)
         headers = dict(h.items())
-    return(headers)
+    return headers
 
 def body_extractor(filename):
     """
@@ -49,7 +63,7 @@ def body_extractor(filename):
     # strip HTML and remove \r, \t, \n
     body = re.sub('<[^<]+?>', '', str(body)).replace('\\r', '\r').replace('\\n', '\n').replace('\\t', '')
     # is there a more general, additive way to do this?
-    return(body)
+    return body
 
 def num_catcher(filename):
     """
@@ -71,87 +85,44 @@ def num_catcher(filename):
     numbers = list(numbers)
     numbers = numbers[-1]
     # numbers = re.sub('^(.+)$', r'\"\1\"', str(numbers))
-    return(numbers)
+    return numbers
 
 def xfrom_from(headers):
+    """
+    Parse headers and return tuple with available contact info.
+    """
     from_val = []
-    try:
-        if 'From' in headers:
-            from_hd = headers['From']
-            try:
-                from_hd = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", str(from_hd))
-            except:
-                pass
-            if 'X-From' in headers:
-                xfrom = headers['X-From']
-                try:
-                    xfrom = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", str(xfrom))
-                except:
-                    pass
-                from_val = (xfrom, from_hd)
-            else:
-                from_val = from_hd
-        elif 'X-From' in headers:
-            try:
-                xfrom = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", str(xfrom))
-            except:
-                pass
-            from_val = xfrom
-            if 'Sender' in headers:
-                sender_hd = headers['Sender']
-                try:
-                    sender_hd = re.sub("^(.+?) (.+?) (<\/.+?>)$", r"\1 \2", str(sender_hd))
-                except:
-                    pass
-                from_val = (xfrom_val, sender_hd)
-    except:
-        print("Input is not a valid email. Try again")
-    try:
-        from_val = re.sub("^(.+?), (.+?) (.+?)$", r"\2 \1 \3", str(from_val))
-    except:
-        try:
-            from_val = re.sub("^(.+?), (.+?) (. )?(.+?)$", r"\2 \1 \4", str(from_val))
-        except:
-            pass
-
-    return(from_val)
-
-def email_catcher(filename):
-    """
-    Extract all email addresses from message
-    Not used and probably not necessary
-    """
-    pattern = re.compile(r"([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)")
-    emails = set()
-    with open(filename) as f:
-        for i, line in enumerate(f):
-            for match in re.finditer(pattern, line):
-                emails.update(match.groups())
-    return(emails)
-
-def csv_writer(sig_path):
-    """
-    Processes directory of emails and appends contact dictionary to csv file.
-    """
-    for my_file in glob.glob(os.path.join(sig_path, '*.txt')):
-        headers = header_parser(my_file)
-        from_val = xfrom_from(headers)
-        try:
-            middle_name = re.search(r" (.)\.? ", str(from_val)).group(1)
-        except:
-            middle_name = None
-        contact = str_cleaner(from_val).split()
-        numbers = num_catcher(my_file)
-        contact_dict = dict_pplt(contact, numbers, middle_name, my_file)
-        with open('contacts.csv', 'a') as f:
-            f.write("\n")
-            for key in contact_dict.keys():
-                f.write("%s,"%(contact_dict[key]))
-    return
+    from_regex = re.compile('<\/.+?>')
+    # if no 'From' or 'X-From', check for 'Sender'
+    if ('From' not in headers) and ('X-From' not in headers):
+        if ('Sender' in headers):
+            from_val = headers['Sender']
+        else:
+            print("Input is not a valid email. Try again")
+            sys.exit()
+    # if From but no X-From, from_val is From, and conversely
+    if ('From' in headers) and ('X-From' not in headers):
+        from_val = headers['From']
+        from_val = from_val.replace('\"', '').replace("\'", "")
+    if ('From' not in headers) and ('X-From' in headers):
+        from_val = headers['X-From']
+        from_val = from_val.replace('\"', '').replace("\'", "")
+    # if both, concatenate them
+    if ('From' in headers) and ('X-From' in headers):
+        from_hd = headers['From']
+        from_hd = from_hd.replace('\"', '').replace("\'", "")
+        xfrom_hd = headers['X-From']
+        xfrom_hd = xfrom_hd.replace('\"', '').replace("\'", "")
+        from_val = xfrom_hd + ' ' + from_hd
+    from_val = [ x for x in from_val.split() if not from_regex.search(x) ]
+    if re.match(r"^.+?,\', .+?", str(from_val)):
+        from_val = re.sub("(\[)(.+?,)\', ((.+?)+?) (.+?)( .+?)?", r"\1\3 \2' ", str(from_val))
+        from_val = from_val.replace(',', '')
+    return from_val
 
 def str_cleaner(x):
     x = re.sub(r'[^@. a-zA-Z]', '', str(x))
-    return(x)
+    return x
 
 def dict_pplt(contact, numbers, middle_name, filename):
     """
@@ -199,20 +170,20 @@ def dict_pplt(contact, numbers, middle_name, filename):
     elif len(first_name) > 1:
         first_name = first_name[0]
     # if there is one good last name and no first names, leave first name empty
-    elif (len(last_name) == 1) & (len(first_name) == 0):
+    elif (len(last_name) == 1) and (len(first_name) == 0):
         last_name = last_name[0]
         first_name = None
     # converse of above
-    elif (len(last_name) == 0) & (len(first_name) == 1):
+    elif (len(last_name) == 0) and (len(first_name) == 1):
         first_name = first_name[0]
     # if first and last name are identical, assume that it's just a first name
     elif last_name == first_name:
         last_name = None
     else:
         pass
-    if first_name == []:
+    if not first_name:
         first_name = None
-    elif last_name == []:
+    elif not last_name:
         last_name = None
     elif last_name == first_name:
         last_name = None
@@ -241,32 +212,102 @@ def dict_pplt(contact, numbers, middle_name, filename):
             }
     except:
         pass
-    return(contact)
+    return contact
+
+def csv_writer(sig_path):
+    """
+    Processes directory of emails and appends contact dictionary to csv file.
+    """
+    from_regex = re.compile('<\/.+?>')
+    for my_file in glob.glob(os.path.join(sig_path, '*.txt')):
+        headers = header_parser(my_file)
+        from_val = xfrom_from(headers)
+        contact = str_cleaner(from_val).split()
+        if re.match(r"^[a-zA-Z]$", contact[1]):
+            middle_name = contact[1]
+            del contact[1]
+        elif re.match(r"^[a-zA-Z]$", contact[2]):
+            middle_name = contact[2]
+            del contact[2]
+        else:
+            middle_name = None
+        numbers = num_catcher(my_file)
+        contact_dict = dict_pplt(contact, numbers, middle_name, my_file)
+        with open('contacts.csv', 'a') as f:
+            f.write("\n")
+            for key in contact_dict.keys():
+                f.write("%s,"%(contact_dict[key]))
+    return
 
 def test_email(my_file):
     headers = header_parser(my_file)
     from_val = xfrom_from(headers)
-    try:
-        middle_name = re.search(r" ([A-Z]\.?)? ", from_val).group(1)
-        from_val = from_val.replace(' ' + middle_name, '')
-    except:
-        middle_name = None
     contact = str_cleaner(from_val).split()
+    print(contact)
+    if re.match(r"^[a-zA-Z]$", contact[1]):
+        middle_name = contact[1]
+        del contact[1]
+    elif re.match(r"^[a-zA-Z]$", contact[2]):
+        middle_name = contact[2]
+        del contact[2]
+    else:
+        middle_name = None
     numbers = num_catcher(my_file)
     contact_dict = dict_pplt(contact, numbers, middle_name, my_file)
-    return(contact_dict)
+    return contact_dict
+
 
 m = NameDataset()
+# cv = CountVectorizer()
 
 sig_path = "data/sig"
 nosig_path = "data/nosig"
 
+job_titles = pd.read_csv("data/job_title_dictionary 2.txt")
+# print(job_titles)
+
+job_titles['Job Title'] = job_titles['Job Title'].apply(lambda x: x.casefold())
+# print(job_titles)
 csv_writer(sig_path)
 
+def is_title(x):
+    x = " ".join(x.casefold().strip().split())
+    return x in job_titles['Job Title'].values
+
+def is_title_sen(x):
+    # loop through bigrams looking for job title
+    bigram_vectorizer = CountVectorizer(ngram_range=(1, 3),
+                                    token_pattern=r'\b\w+\b', min_df=1)
+    analyze = bigram_vectorizer.build_analyzer()
+    # print(sum(list(map(is_title, analyze(x)))))
+    # print(analyze(x))# >= 1)
+    return sum(list(map(is_title, analyze(x)))) >= 1
+
+my_file3 = '/Users/antonio/Documents/Dropbox/Code/Python/Contact-Scraper/data/sig/arnold-j-67.txt'
+# contact_dict = test_email(my_file3)
+# print(contact_dict)
+# my_file1 = '/Users/antonio/Documents/Dropbox/Code/Python/Contact-Scraper/data/sig/crandell-s-35.txt'
+# my_file2 = '/Users/antonio/Documents/Dropbox/Code/Python/Contact-Scraper/data/sig/allen-p-30.txt'
 # my_file = 'test_email.eml'
 # contact_dict = test_email(my_file)
-
 # print(contact_dict)
+# contact_dict = test_email(my_file1)
+# print(contact_dict)
+# contact_dict = test_email(my_file2)
+# print(contact_dict)
+
+# print(m.search_last_name('Robertson'))
+# m.search_first_name(x)
+
+# print(is_title('scary Monster'))
+# print(is_title('  TeAchEr   '))
+# print(is_title('Data     SCientist'))
+
+# print(is_title_sen(body_extractor(my_file)))
+#
+# print(is_title_sen('Ich    werde ein 3d scheisse'))
+# print(is_title_sen('I am a      Data     scientist     '))
+# print(is_title_sen('Calligrapher'))
 
 # body = body_extractor(my_file)
 # print(body)
